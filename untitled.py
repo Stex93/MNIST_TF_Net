@@ -1,1 +1,3 @@
-#ciao Friz
+# ciao Friz
+
+print("Ciao Friz")
