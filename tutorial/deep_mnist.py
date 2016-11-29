@@ -75,7 +75,7 @@ with tf.name_scope('layer'):
 
 with tf.name_scope('layer'):
     h_pool2 = max_pool_2x2(h_conv2)
-#h_pool2 = max_pool_2x2(h_conv2_2)
+# h_pool2 = max_pool_2x2(h_conv2_2)
 
 # Densely connected layer
 # Reshape tensor
@@ -106,7 +106,9 @@ accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 writer = tf.train.SummaryWriter("logs/", sess.graph)
 sess.run(tf.initialize_all_variables())
 
-for i in range(20000):
+
+# for i in range(20000):
+for i in range(8000):
     batch = mnist.train.next_batch(50)
     if i % 100 == 0:
         train_accuracy = accuracy.eval(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
