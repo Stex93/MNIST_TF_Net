@@ -45,14 +45,14 @@ x_image = tf.reshape(x, [-1, 28, 28, 1])
 # First convolutional layer - 32 features
 with tf.name_scope('layer'):
     with tf.name_scope('weights'):
-        W_conv1 = weight_variable([5, 5, 1, 32])
+        W_conv1 = weight_variable([5, 5, 1, 16])
     with tf.name_scope('biases'):
-        b_conv1 = bias_variable([32])
+        b_conv1 = bias_variable([16])
     with tf.name_scope('outputs'):
         h_conv1 = tf.nn.relu(conv2d(x_image, W_conv1) + b_conv1)
 
 # We could add another convolutional layer
-# W_conv1_2 = weight_variable([5, 5, 1, 32])
+# W_conv1_2 = weight_variable([5, 5, 32, 32])
 # b_conv1_2 = bias_variable([32])
 # h_conv1_2 = tf.nn.relu(conv2d(h_conv1, W_conv1_2) + b_conv1_2)
 
@@ -63,7 +63,7 @@ with tf.name_scope('layer'):
 # Second convolutional layer - 64 features
 with tf.name_scope('layer'):
     with tf.name_scope('weights'):
-        W_conv2 = weight_variable([5, 5, 32, 64])
+        W_conv2 = weight_variable([5, 5, 16, 64])
     with tf.name_scope('biases'):
         b_conv2 = bias_variable([64])
     with tf.name_scope('outputs'):
