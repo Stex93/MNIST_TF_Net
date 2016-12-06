@@ -107,7 +107,8 @@ def run_test(features1, features2):
     out_file.close()
 
 
-temp = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 32]
+temp = [2, 4, 8, 16, 32]
 
 for i in temp:
     run_test(i, 2*i)
+    tf.reset_default_graph()
