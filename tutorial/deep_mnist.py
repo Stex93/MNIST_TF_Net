@@ -110,5 +110,5 @@ def run_test(features1, features2):
 temp = [2, 4, 8, 16]
 
 for i in temp:
-    run_test(i, 2*i)
+    run_test(i, i)
     tf.reset_default_graph()
