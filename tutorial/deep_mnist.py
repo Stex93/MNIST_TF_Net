@@ -1,8 +1,10 @@
 from __future__ import print_function
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
+from datetime import datetime
 
-# Weight initialization
+
+# Weights initialization
 def weight_variable(shape):
     initial = tf.truncated_normal(shape, stddev=0.1)
     return tf.Variable(initial)
@@ -12,6 +14,7 @@ def bias_variable(shape):
     initial = tf.constant(0.1, shape=shape)
     return tf.Variable(initial)
 
+
 # Convolution and Pooling
 def conv2d(x, W):
     return tf.nn.conv2d(x, W, strides=[1, 1, 1, 1], padding='SAME')
@@ -20,19 +23,23 @@ def conv2d(x, W):
 def max_pool_2x2(x):
     return tf.nn.max_pool(x, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME')
 
+
 # Load MNIST Data
 mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
 
-def run_test(features1, features2):
 
+def run_test(features1, features2):
     # Start TensorFlow InteractiveSession
     sess = tf.InteractiveSession()
 
     log_file = open("./logs/conv_" + str(features1) + "_" + str(features2) + "_log.txt", "w")
     out_file = open("./logs/conv_" + str(features1) + "_" + str(features2) + ".csv", "w")
-
     log_file.write("Trying with " + str(features1) + " and " + str(features2) + " features...\n")
     print("Trying with " + str(features1) + " and " + str(features2) + " features...")
+
+    # Start time measurement
+    tic = datetime.now()
+    log_file.write("Starting at: " + str(tic.hour) + ":" + str(tic.minute) + ":" + str(tic.second) + "\n")
 
     # Build a Softmax Regression Model
 
@@ -49,14 +56,14 @@ def run_test(features1, features2):
     # Reshape x to a 4d tensor
     x_image = tf.reshape(x, [-1, 28, 28, 1])
 
-    # First convolutional layer - 32 features
+    # First convolutional layer
     W_conv1 = weight_variable([5, 5, 1, features1])
     b_conv1 = bias_variable([features1])
     h_conv1 = tf.nn.relu(conv2d(x_image, W_conv1) + b_conv1)
 
     h_pool1 = max_pool_2x2(h_conv1)
 
-    # Second convolutional layer - 64 features
+    # Second convolutional layer
     W_conv2 = weight_variable([5, 5, features1, features2])
     b_conv2 = bias_variable([features2])
     h_conv2 = tf.nn.relu(conv2d(h_pool1, W_conv2) + b_conv2)
@@ -88,27 +95,35 @@ def run_test(features1, features2):
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
     sess.run(tf.initialize_all_variables())
 
-    for i in range(20000):
+    for i in range(15000):
         batch = mnist.train.next_batch(50)
         if i % 100 == 0:
             train_accuracy = accuracy.eval(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
             log_file.write("step %d, training accuracy %g\n" % (i, train_accuracy))
-            out_file.write("%d;%g;\n"%(i, train_accuracy))
-            print("step %d, training accuracy %g"%(i, train_accuracy))
+            out_file.write("%d;%g;\n" % (i, train_accuracy))
+            print("step %d, training accuracy %g" % (i, train_accuracy))
         train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
 
     test_accuracy = accuracy.eval(feed_dict={
         x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0
     })
-    log_file.write("test accuracy %g" % test_accuracy)
+    log_file.write("test accuracy %g\n" % test_accuracy)
+
+    # End time measurement
+    tac = datetime.now()
+    log_file.write("Ending at: " + str(tac.hour) + ":" + str(tac.minute) + ":" + str(tac.second) + "\n")
+    log_file.write("Duration: " + str(tac - tic))
+
     print("test accuracy %g" % test_accuracy)
 
+    # Close logs and session
     log_file.close()
     out_file.close()
-
+    sess.close()
+    tf.reset_default_graph()
 
 temp = [2, 4, 8, 16]
 
 for i in temp:
     run_test(i, i)
-    tf.reset_default_graph()
+#    run_test(i, i * 2)
