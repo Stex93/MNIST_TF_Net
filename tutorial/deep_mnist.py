@@ -107,7 +107,7 @@ def run_test(features1, features2):
     out_file.close()
 
 
-temp = [2, 4, 8, 16, 32]
+temp = [2, 4, 8, 16]
 
 for i in temp:
     run_test(i, 2*i)
