@@ -1,7 +1,6 @@
 from __future__ import print_function
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
-from datetime import datetime
 
 
 # Weights initialization
@@ -27,19 +26,19 @@ def max_pool_2x2(x):
 # Load MNIST Data
 mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
 
+train_acc = []
+test_acc = []
 
-def run_test(features1, features2):
+# Set the number of features for each convlutional layer
+features1 = 2
+features2 = features1 * 2
+
+for j in range(10):
+
     # Start TensorFlow InteractiveSession
     sess = tf.InteractiveSession()
 
-    log_file = open("./logs/conv_" + str(features1) + "_" + str(features2) + "_log.txt", "w")
-    out_file = open("./logs/conv_" + str(features1) + "_" + str(features2) + ".csv", "w")
-    log_file.write("Trying with " + str(features1) + " and " + str(features2) + " features...\n")
     print("Trying with " + str(features1) + " and " + str(features2) + " features...")
-
-    # Start time measurement
-    tic = datetime.now()
-    log_file.write("Starting at: " + str(tic.hour) + ":" + str(tic.minute) + ":" + str(tic.second) + "\n")
 
     # Build a Softmax Regression Model
 
@@ -95,36 +94,32 @@ def run_test(features1, features2):
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
     sess.run(tf.initialize_all_variables())
 
+    acc = []
+
     for i in range(15000):
         batch = mnist.train.next_batch(50)
         if i % 100 == 0:
             train_accuracy = accuracy.eval(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
-            log_file.write("step %d, training accuracy %g\n" % (i, train_accuracy))
-            out_file.write("%d;%g;\n" % (i, train_accuracy))
+            acc.append(train_accuracy)
             print("step %d, training accuracy %g" % (i, train_accuracy))
         train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
+
+    train_acc.append(acc)
 
     test_accuracy = accuracy.eval(feed_dict={
         x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0
     })
-
-    log_file.write("test accuracy %g\n" % test_accuracy)
-
-    # End time measurement
-    tac = datetime.now()
-    log_file.write("Ending at: " + str(tac.hour) + ":" + str(tac.minute) + ":" + str(tac.second) + "\n")
-    log_file.write("Duration: " + str(tac - tic))
+    test_acc.append(test_accuracy)
 
     print("test accuracy %g\n" % test_accuracy)
 
-    # Close logs and session
-    log_file.close()
-    out_file.close()
+    # Close session
     tf.reset_default_graph()
     sess.close()
 
-temp = [2, 4, 8, 16]
-
-for i in temp:
-#    run_test(i, i)
-    run_test(i, i * 2)
+# Log file with average training accuracies
+out_file = open("./logs/conv_" + str(features1) + "_" + str(features2) + ".csv", "w")
+out = [sum(i) / len(train_acc) for i in zip(*train_acc)]
+for k in out:
+    out_file.write(str(k) + ";\n")
+out_file.close()
