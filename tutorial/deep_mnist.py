@@ -107,6 +107,7 @@ def run_test(features1, features2):
     test_accuracy = accuracy.eval(feed_dict={
         x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0
     })
+
     log_file.write("test accuracy %g\n" % test_accuracy)
 
     # End time measurement
@@ -114,16 +115,16 @@ def run_test(features1, features2):
     log_file.write("Ending at: " + str(tac.hour) + ":" + str(tac.minute) + ":" + str(tac.second) + "\n")
     log_file.write("Duration: " + str(tac - tic))
 
-    print("test accuracy %g" % test_accuracy)
+    print("test accuracy %g\n" % test_accuracy)
 
     # Close logs and session
     log_file.close()
     out_file.close()
-    sess.close()
     tf.reset_default_graph()
+    sess.close()
 
 temp = [2, 4, 8, 16]
 
 for i in temp:
-    run_test(i, i)
-#    run_test(i, i * 2)
+#    run_test(i, i)
+    run_test(i, i * 2)
