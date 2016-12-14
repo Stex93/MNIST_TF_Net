@@ -125,7 +125,7 @@ def plot_conv_weights(weights, name, channels_all=True):
             # get a single filter
             img = weights[:, :, channel, l]
             # put it on the grid
-            ax.imshow(img, vmin=w_min, vmax=w_max, interpolation='nearest', cmap='seismic')
+            ax.imshow(img, vmin=w_min, vmax=w_max, interpolation='nearest', cmap='Greys')
             # remove any labels from the axes
             ax.set_xticks([])
             ax.set_yticks([])
@@ -192,13 +192,13 @@ mnist = input_data.read_data_sets("MNIST_data", one_hot=True)
 
 # Parameters
 learning_rate = 1e-4
-training_epochs = 1000
+training_epochs = 15000
 batch_size = 50
 display_step = 100
 n_input = 784  # MNIST data input (img shape: 28*28)
 n_classes = 10  # MNIST total classes (0-9 digits)
 dropout = 0.5  # Dropout, probability to keep units
-features1 = 2
+features1 = 4
 features2 = 2 * features1
 
 # tf Graph input
@@ -273,7 +273,7 @@ with tf.Session() as sess:
         if step % display_step == 0:
             # Calculate batch loss and accuracy
             train_accuracy = sess.run(accuracy, feed_dict={x: batch_x, y_: batch_y, keep_prob: 1.})
-            print("Iteration " + str(step) + ", Training Accuracy= {:.5f}".format(train_accuracy), end='\n')
+            print("Iteration " + str(step) + ", Training Accuracy= {:.2f}".format(train_accuracy), end='\n')
         step += 1
 
     # Calculate accuracy on the test set
