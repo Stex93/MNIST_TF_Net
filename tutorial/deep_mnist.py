@@ -117,9 +117,19 @@ for j in range(10):
     tf.reset_default_graph()
     sess.close()
 
-# Log file with average training accuracies
-out_file = open("./logs/conv_" + str(features1) + "_" + str(features2) + ".csv", "w")
+# Log file with average training accuracy values
+out_file1 = open("./logs/train_conv_" + str(features1) + "_" + str(features2) + ".csv", "w")
 out = [sum(i) / len(train_acc) for i in zip(*train_acc)]
 for k in out:
-    out_file.write(str(k) + ";\n")
-out_file.close()
+    out_file1.write(str(k) + ";\n")
+out_file1.close()
+
+# Log file with test accuracy values
+out_file2 = open("./logs/test_conv_all.csv", "a")
+out_file2.write(str(features1) + "_" + str(features2) + ";")
+tot = 0
+for v in test_acc:
+    tot += v
+    out_file2.write(str(v) + ";")
+out_file2.write(str(tot / 10) + ";\n")
+out_file2.close()
