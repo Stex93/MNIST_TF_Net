@@ -30,7 +30,7 @@ train_acc = []
 test_acc = []
 
 # Set the number of features for each convlutional layer
-features1 = 2
+features1 = 16
 features2 = features1 * 2
 
 for j in range(10):
