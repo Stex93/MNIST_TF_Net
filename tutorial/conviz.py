@@ -198,7 +198,7 @@ display_step = 100
 n_input = 784  # MNIST data input (img shape: 28*28)
 n_classes = 10  # MNIST total classes (0-9 digits)
 dropout = 0.5  # Dropout, probability to keep units
-features1 = 4
+features1 = 8
 features2 = 2 * features1
 
 # tf Graph input
@@ -291,5 +291,4 @@ with tf.Session() as sess:
     conv_out = sess.run([tf.get_collection('conv_output')], feed_dict={x: mnist.test.images[:1]})
     for i, c in enumerate(conv_out[0]):
         plot_conv_output(c, 'conv{}'.format(i))
-
 
