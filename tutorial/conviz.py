@@ -11,6 +11,7 @@ from tensorflow.examples.tutorials.mnist import input_data
 
 PLOT_DIR = './plots'
 
+
 def get_grid_dim(x):
     """
     Transforms x into product of two integers
@@ -130,10 +131,10 @@ def plot_conv_weights(weights, name, channels_all=True):
             ax.set_xticks([])
             ax.set_yticks([])
         # save figure
-        plt.savefig(os.path.join(plot_dir, '{}-{}.png'.format(name, channel)), bbox_inches='tight')
+        plt.savefig(os.path.join(plot_dir, '{}-{}.png'.format(name, channel + 1)), bbox_inches='tight')
 
 
-def plot_conv_output(conv_img, name):
+def plot_conv_output(conv_img, name, number):
     """
     Makes plots of results of performing convolution
     :param conv_img: numpy array of rank 4
@@ -145,7 +146,7 @@ def plot_conv_output(conv_img, name):
     plot_dir = os.path.join(plot_dir, name)
 
     # create directory if does not exist, otherwise empty it
-    prepare_dir(plot_dir, empty=True)
+    prepare_dir(plot_dir)
 
     w_min = np.min(conv_img)
     w_max = np.max(conv_img)
@@ -163,25 +164,29 @@ def plot_conv_output(conv_img, name):
     # iterate filters
     for l, ax in enumerate(axes.flat):
         # get a single image
-        img = conv_img[0, :, :,  l]
+        img = conv_img[0, :, :, l]
         # put it on the grid
         ax.imshow(img, vmin=w_min, vmax=w_max, interpolation='bicubic', cmap='Greys')
         # remove any labels from the axes
         ax.set_xticks([])
         ax.set_yticks([])
     # save figure
-    plt.savefig(os.path.join(plot_dir, '{}.png'.format(name)), bbox_inches='tight')
+    plt.savefig(os.path.join(plot_dir, 'conv{}.png'.format(n)), bbox_inches='tight')
+    plt.close()
 
 def conv2d(x, W):
     return tf.nn.conv2d(x, W, strides=[1, 1, 1, 1], padding='SAME')
 
+
 def max_pool_2x2(x):
     return tf.nn.max_pool(x, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME')
+
 
 # Weights initialization
 def weight_variable(shape):
     initial = tf.truncated_normal(shape, stddev=0.1)
     return tf.Variable(initial)
+
 
 def bias_variable(shape):
     initial = tf.constant(0.1, shape=shape)
@@ -192,13 +197,13 @@ mnist = input_data.read_data_sets("MNIST_data", one_hot=True)
 
 # Parameters
 learning_rate = 1e-4
-training_epochs = 15000
+training_epochs = 1000
 batch_size = 50
 display_step = 100
 n_input = 784  # MNIST data input (img shape: 28*28)
 n_classes = 10  # MNIST total classes (0-9 digits)
 dropout = 0.5  # Dropout, probability to keep units
-features1 = 4
+features1 = 8
 features2 = 2 * features1
 
 # tf Graph input
@@ -284,12 +289,32 @@ with tf.Session() as sess:
     # no need for feed dictionary here
     conv_weights = sess.run([tf.get_collection('conv_weights')])
     for i, c in enumerate(conv_weights[0]):
-        plot_conv_weights(c, 'conv{}'.format(i))
+        plot_conv_weights(c, 'conv{}'.format(i + 1))
 
     # get output of all convolutional layers
     # here we need to provide an input image
-    conv_out = sess.run([tf.get_collection('conv_output')], feed_dict={x: mnist.test.images[:1]})
+    """
+    3:4 --> 0
+    2:3 --> 1
+    1:2 --> 2
+    18:19 --> 3
+    4:5 --> 4
+    8:9 --> 5
+    11:12 --> 6
+    0:1 --> 7
+    61:62 --> 8
+    7:8 --> 9
+    """
+    n = 0
+    list = [3, 2, 1, 18, 4, 8, 11, 0, 61, 7]
+    for y in list:
+        conv_out = sess.run([tf.get_collection('conv_outputs')], feed_dict={x: mnist.test.images[y:y + 1]})
+        for i, c in enumerate(conv_out[0]):
+            plot_conv_output(c, 'conv{}'.format(i + 1), n)
+        n += 1
+
+    """
+    conv_out = sess.run([tf.get_collection('conv_output')], feed_dict={x: mnist.test.images[3:4]})
     for i, c in enumerate(conv_out[0]):
-        plot_conv_output(c, 'conv{}'.format(i))
-
-
+        plot_conv_output(c, 'conv{}'.format(i + 1))
+    """
