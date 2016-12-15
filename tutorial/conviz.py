@@ -313,9 +313,3 @@ with tf.Session() as sess:
         for i, c in enumerate(conv_out[0]):
             plot_conv_output(c, 'conv{}'.format(i + 1), n)
         n += 1
-
-    """
-    conv_out = sess.run([tf.get_collection('conv_output')], feed_dict={x: mnist.test.images[3:4]})
-    for i, c in enumerate(conv_out[0]):
-        plot_conv_output(c, 'conv{}'.format(i + 1))
-    """
