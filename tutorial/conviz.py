@@ -139,10 +139,11 @@ def plot_conv_output(conv_img, name, number):
     Makes plots of results of performing convolution
     :param conv_img: numpy array of rank 4
     :param name: string, name of convolutional layer
+    :param number: int, digit in the image
     :return: nothing, plots are saved on the disk
     """
     # make path to output folder
-    plot_dir = os.path.join(PLOT_DIR, 'conv_output')
+    plot_dir = os.path.join(PLOT_DIR, 'conv_outputs')
     plot_dir = os.path.join(plot_dir, name)
 
     # create directory if does not exist, otherwise empty it
@@ -171,7 +172,7 @@ def plot_conv_output(conv_img, name, number):
         ax.set_xticks([])
         ax.set_yticks([])
     # save figure
-    plt.savefig(os.path.join(plot_dir, 'conv{}.png'.format(n)), bbox_inches='tight')
+    plt.savefig(os.path.join(plot_dir, 'conv{}.png'.format(number)), bbox_inches='tight')
     plt.close()
 
 def conv2d(x, W):
@@ -197,7 +198,7 @@ mnist = input_data.read_data_sets("MNIST_data", one_hot=True)
 
 # Parameters
 learning_rate = 1e-4
-training_epochs = 1000
+training_epochs = 15000
 batch_size = 50
 display_step = 100
 n_input = 784  # MNIST data input (img shape: 28*28)
@@ -308,7 +309,7 @@ with tf.Session() as sess:
     n = 0
     list = [3, 2, 1, 18, 4, 8, 11, 0, 61, 7]
     for y in list:
-        conv_out = sess.run([tf.get_collection('conv_outputs')], feed_dict={x: mnist.test.images[y:y + 1]})
+        conv_out = sess.run([tf.get_collection('conv_output')], feed_dict={x: mnist.test.images[y:y + 1]})
         for i, c in enumerate(conv_out[0]):
             plot_conv_output(c, 'conv{}'.format(i + 1), n)
         n += 1
