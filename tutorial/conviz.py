@@ -175,6 +175,7 @@ def plot_conv_output(conv_img, name, number):
     plt.savefig(os.path.join(plot_dir, 'conv{}.png'.format(number)), bbox_inches='tight')
     plt.close()
 
+
 def conv2d(x, W):
     return tf.nn.conv2d(x, W, strides=[1, 1, 1, 1], padding='SAME')
 
@@ -266,12 +267,15 @@ accuracy = tf.reduce_mean(tf.cast(correct_predictions, tf.float32))
 # Initializing the variables
 init = tf.initialize_all_variables()
 
+# Add ops to save and restore all the variables
+saver = tf.train.Saver()
+
 # Launch the graph
 with tf.Session() as sess:
     sess.run(init)
-    step = 0
+    step = 1
     # Keep training until reach max iterations
-    while step < training_epochs:
+    while step < training_epochs + 1:
         batch_x, batch_y = mnist.train.next_batch(batch_size)
         # Run optimization op (backprop)
         sess.run(optimizer, feed_dict={x: batch_x, y_: batch_y,
@@ -285,6 +289,9 @@ with tf.Session() as sess:
     # Calculate accuracy on the test set
     test_accuracy = sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.})
     print("Test Accuracy:", test_accuracy, end='\n')
+
+    save_path = saver.save(sess, "./bin/conv_mnist.ckpt")
+    print("Model saved in file: %s" % save_path)
 
     # get weights of all convolutional layers
     # no need for feed dictionary here
