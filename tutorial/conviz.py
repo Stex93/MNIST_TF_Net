@@ -206,7 +206,7 @@ n_input = 784  # MNIST data input (img shape: 28*28)
 n_classes = 10  # MNIST total classes (0-9 digits)
 dropout = 0.5  # Dropout, probability to keep units
 trainings = 30  # Number of trainings to perform
-features1 = 8  # Features in 1st conv. layer
+features1 = 2  # Features in 1st conv. layer
 features2 = 2 * features1  # Features in 2nd conv. layer
 save_logs = True  # Flag to save logs or not
 save_plots = False  # Flag to save plots (weights and outputs) or not
@@ -294,7 +294,7 @@ for i in range(trainings):
                 # Calculate batch loss and accuracy
                 train_accuracy = sess.run(accuracy, feed_dict={x: batch_x, y_: batch_y, keep_prob: 1.})
                 acc.append(train_accuracy)
-                print("Iteration " + str(step) + ", training accuracy= {:.2f}".format(train_accuracy), end='\n')
+                print(str(i + 1) + " - Iteration " + str(step) + ", training accuracy= {:.2f}".format(train_accuracy), end='\n')
             step += 1
 
         train_acc.append(acc)
