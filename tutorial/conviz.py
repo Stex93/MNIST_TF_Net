@@ -176,6 +176,29 @@ def plot_conv_output(conv_img, name, number):
     plt.close()
 
 
+def plot_inputs(img, name, number):
+    """
+    Makes plots of the inputs
+    :param img: numpy array of rank 4
+    :param name: string, name of convolutional layer
+    :param number: int, digit in the image
+    :return: nothing, plots are saved on the disk
+    """
+    # make path to output folder
+    plot_dir = os.path.join(PLOT_DIR, 'inputs')
+
+    # create directory if does not exist, otherwise empty it
+    prepare_dir(plot_dir)
+
+    fig = plt.figure()
+    ax = fig.add_subplot(1, 1, 1)
+    ax.matshow(img, cmap='Greys')
+    plt.xticks(np.array([]))
+    plt.yticks(np.array([]))
+    plt.savefig(os.path.join(plot_dir, 'input{}.png'.format(number)), bbox_inches='tight')
+    plt.close()
+
+
 def conv2d(x, W):
     return tf.nn.conv2d(x, W, strides=[1, 1, 1, 1], padding='SAME')
 
@@ -224,6 +247,7 @@ for i in range(trainings):
 
     # Reshape inputs
     x_reshaped = tf.reshape(x, shape=[-1, 28, 28, 1])
+    tf.add_to_collection('input', tf.reshape(x, shape=[28, 28]))
 
     # First convolutional layer
     W_conv1 = weight_variable([5, 5, 1, features1])
@@ -337,6 +361,9 @@ for i in range(trainings):
                 conv_out = sess.run([tf.get_collection('conv_output')], feed_dict={x: mnist.test.images[y:y + 1]})
                 for i, c in enumerate(conv_out[0]):
                     plot_conv_output(c, 'conv{}'.format(i + 1), n)
+                inputs = sess.run([tf.get_collection('input')], feed_dict={x: mnist.test.images[y:y + 1]})
+                for j, c in enumerate(inputs[0]):
+                    plot_inputs(c, 'input{}'.format(i + 1), n)
                 n += 1
 
     # Close session
