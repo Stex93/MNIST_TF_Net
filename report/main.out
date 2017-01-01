@@ -7,5 +7,6 @@
 \BOOKMARK [1][-]{acronyms.1}{Acronyms}{}% 7
 \BOOKMARK [0][]{chapter.1}{1 Introduction}{}% 8
 \BOOKMARK [0][]{chapter.2}{2 Convolutional neural networks}{}% 9
-\BOOKMARK [0][]{chapter.3}{3 Tensorflow basics}{}% 10
-\BOOKMARK [0][]{dummy.6}{References}{}% 11
+\BOOKMARK [1][-]{section.2.1}{2.1 Main features}{chapter.2}% 10
+\BOOKMARK [0][]{chapter.3}{3 Tensorflow basics}{}% 11
+\BOOKMARK [0][]{dummy.6}{References}{}% 12

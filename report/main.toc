@@ -10,8 +10,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}\spacedlowsmallcaps {Convolutional neural networks}}{2}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}\spacedlowsmallcaps {Tensorflow basics}}{3}{chapter.3}
+\contentsline {section}{\numberline {2.1}Main features}{2}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}\spacedlowsmallcaps {Tensorflow basics}}{6}{chapter.3}
 \defcounter {refsection}{0}\relax 
 \vspace {\beforebibskip }
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\spacedlowsmallcaps {References}}{4}{dummy.6}
+\contentsline {chapter}{\spacedlowsmallcaps {References}}{7}{dummy.6}

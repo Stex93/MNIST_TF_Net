@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6200 64-bit) (preloaded format=pdflatex 2016.12.30)  1 JAN 2017 16:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6200 64-bit) (preloaded format=pdflatex 2016.12.30)  1 JAN 2017 20:21
 entering extended mode
 **./main.tex
 (main.tex
@@ -1794,6 +1794,9 @@ Using KOMA-command "deffootnote" for footnote setup
 Package: scrtime 2016/06/14 v3.21 KOMA-Script package (time of LaTeX run)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\carlisle\remreset.sty")))
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
@@ -1821,29 +1824,29 @@ File: italian.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 (FrontBackmatter/Bibliography.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Try loading font information for T1+pplj on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Try loading font information for T1+pplj on input line 24.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pplj.fd"
 File: t1pplj.fd 2004/09/06 font definitions for T1/pplj.
 )
-LaTeX Info: Redefining \it@ocap on input line 54.
-LaTeX Info: Redefining \it@ccap on input line 54.
+LaTeX Info: Redefining \it@ocap on input line 24.
+LaTeX Info: Redefining \it@ccap on input line 24.
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -1852,17 +1855,17 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 54.
-Package biblatex Info: Reference segment=0 on input line 54.
+Package biblatex Info: Reference section=0 on input line 24.
+Package biblatex Info: Reference segment=0 on input line 24.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count360
-Package scrhack Info: undefining \float@addtolists on input line 54.
+Package scrhack Info: undefining \float@addtolists on input line 24.
 \AtBeginShipoutBox=\box49
-Package hyperref Info: Link coloring ON on input line 54.
+Package hyperref Info: Link coloring ON on input line 24.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1872,9 +1875,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count361
 )
-LaTeX Info: Redefining \ref on input line 54.
-LaTeX Info: Redefining \pageref on input line 54.
-LaTeX Info: Redefining \nameref on input line 54.
+LaTeX Info: Redefining \ref on input line 24.
+LaTeX Info: Redefining \pageref on input line 24.
+LaTeX Info: Redefining \nameref on input line 24.
 
 (main.out) (main.out)
 \@outlinefile=\write5
@@ -1907,7 +1910,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Info: Redefining \microtypecontext on input line 54.
+LaTeX Info: Redefining \microtypecontext on input line 24.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1923,7 +1926,7 @@ File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 
 
 (FrontBackmatter/Titlepage.tex
-<Images/logo.png, id=47, 572.1375pt x 582.175pt>
+<Images/logo.png, id=51, 572.1375pt x 582.175pt>
 File: Images/logo.png Graphic file (type png)
  <use Images/logo.png>
 Package pdftex.def Info: Images/logo.png used on input line 24.
@@ -1938,7 +1941,7 @@ go.png>])
 \openout2 = `FrontBackmatter/Abstract.aux'.
 
  (FrontBackmatter/Abstract.tex)
-LaTeX Font Info:    Try loading font information for U+zeur on input line 66.
+LaTeX Font Info:    Try loading font information for U+zeur on input line 36.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\eulervm\uzeur.fd"
 File: uzeur.fd 2005/01/11 v4.0 (WaS)
@@ -1946,7 +1949,7 @@ File: uzeur.fd 2005/01/11 v4.0 (WaS)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-eur.cfg"
 File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
 )
-LaTeX Font Info:    Try loading font information for U+zeus on input line 66.
+LaTeX Font Info:    Try loading font information for U+zeus on input line 36.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\eulervm\uzeus.fd"
 File: uzeus.fd 2005/01/11 v4.0 (WaS)
@@ -1954,12 +1957,12 @@ File: uzeus.fd 2005/01/11 v4.0 (WaS)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-eus.cfg"
 File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
 )
-LaTeX Font Info:    Try loading font information for U+zeuex on input line 66.
+LaTeX Font Info:    Try loading font information for U+zeuex on input line 36.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\eulervm\uzeuex.fd"
 File: uzeuex.fd 2005/01/11 v4.0 (WaS)
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 66.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 36.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1zplm.fd"
@@ -2021,7 +2024,13 @@ Package microtype Info: Character `029' is missing
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 31
 .
- (main.lof)
+ (main.lof
+Overfull \hbox (0.4936pt too wide) in paragraph at lines 15--15
+ [][] []\T1/pplj/m/n/10.95 Application of a fil-ter for edge de-tection (Photo 
+
+ []
+
+)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
@@ -2056,17 +2065,64 @@ chapter 1.
 
  (Chapters/Chapter02.tex
 chapter 2.
-) [2
+LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/pplj/b/n' tried instead on input line 5.
+Package acronym Info: Label `acro:MLP' newly defined as it shall be overridden
+although it is yet undefined on input line 13.
+
+Overfull \hbox (0.98753pt too wide) in paragraph at lines 13--14
+[]\T1/pplj/m/n/10.95 While tra-di-ti-o-nal [][][]Multylayer Per-cep-tron ([])[]
+ mo-dels were success-
+ []
+
+<Images/receptive_field.jpg, id=121, 473.77pt x 344.78813pt>
+File: Images/receptive_field.jpg Graphic file (type jpg)
+
+<use Images/receptive_field.jpg>
+Package pdftex.def Info: Images/receptive_field.jpg used on input line 25.
+(pdftex.def)             Requested size: 235.19897pt x 171.16782pt.
+ [2
 
 
 
 
 ]
+Overfull \hbox (6.25945pt too wide) in paragraph at lines 31--32
+[]\T1/pplj/m/n/10.95 Following the con-cept of re-cep-tive field, []\T1/pplj/m/
+n/9 s[]
+ []
+
+<Images/filter_application.jpg, id=139, 550.55687pt x 240.39813pt>
+File: Images/filter_application.jpg Graphic file (type jpg)
+
+<use Images/filter_application.jpg>
+Package pdftex.def Info: Images/filter_application.jpg used on input line 41.
+(pdftex.def)             Requested size: 235.19897pt x 102.69789pt.
+ [3 <./Images/receptive_field.jpg>]
+<Images/feature_maps.jpg, id=145, 453.19313pt x 212.29312pt>
+File: Images/feature_maps.jpg Graphic file (type jpg)
+
+<use Images/feature_maps.jpg>
+Package pdftex.def Info: Images/feature_maps.jpg used on input line 54.
+(pdftex.def)             Requested size: 235.19897pt x 110.17601pt.
+
+<Images/zero_padding.jpg, id=146, 248.42813pt x 221.82875pt>
+File: Images/zero_padding.jpg Graphic file (type jpg)
+
+<use Images/zero_padding.jpg>
+Package pdftex.def Info: Images/zero_padding.jpg used on input line 62.
+(pdftex.def)             Requested size: 235.19897pt x 210.01851pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [4 <./Images/filter_application.jpg> <./Images/feature_maps.jpg>] [5 <./Image
+s/zero_padding.jpg>]
 \openout2 = `Chapters/Chapter03.aux'.
 
  (Chapters/Chapter03.tex
 chapter 3.
-) [3
+) [6
 
 
 
@@ -2074,7 +2130,19 @@ chapter 3.
 ]
 \openout2 = `FrontBackmatter/Bibliography.aux'.
 
- (FrontBackmatter/Bibliography.tex) [4
+ (FrontBackmatter/Bibliography.tex)
+LaTeX Font Info:    Try loading font information for T1+fvm on input line 13.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\bera\t1fvm.fd"
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 9.30756pt on input line 13.
+Package microtype Info: Loading generic settings for font family
+(microtype)             `fvm' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [7
 
 
 
@@ -2082,14 +2150,14 @@ chapter 3.
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 92.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 92.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 62.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 62.
  (main.aux
 (FrontBackmatter/Titlepage.aux) (FrontBackmatter/Abstract.aux)
 (FrontBackmatter/Acknowledgments.aux) (FrontBackmatter/Contents.aux)
 (Chapters/Chapter01.aux) (Chapters/Chapter02.aux) (Chapters/Chapter03.aux)
 (FrontBackmatter/Bibliography.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 92.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 62.
 
 
  *File List*
@@ -2237,6 +2305,7 @@ titlesec.sty    2016/03/21 v2.10.2 Sectioning titles
  tocloft.sty    2013/05/02 v2.3f parameterised ToC, etc., typesetting
  scrtime.sty    2016/06/14 v3.21 KOMA-Script package (time of LaTeX run)
 remreset.sty    
+indentfirst.sty    1995/11/23 v1.03 Indent first paragraph (DPC)
  english.lbx    2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 american.lbx    2016/12/05 v3.7 biblatex localization (PK/JW/AB)
  italian.lbx    2016/12/05 v3.7 biblatex localization (PK/JW/AB)
@@ -2263,33 +2332,42 @@ FrontBackmatter/Acknowledgments.tex
 FrontBackmatter/Contents.tex
 Chapters/Chapter01.tex
 Chapters/Chapter02.tex
+Images/receptive_field.jpg
+Images/filter_application.jpg
+Images/feature_maps.jpg
+Images/zero_padding.jpg
 Chapters/Chapter03.tex
 FrontBackmatter/Bibliography.tex
+   t1fvm.fd    2004/09/07 scalable font definitions for T1/fvm.
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 92.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 62.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 42B0DA53E865CFE8BF99CB259F40BE58;548.
+(rerunfilecheck)             Checksum: E5D5F692376B0A3735D65C1B9C423A27;613.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31353 strings out of 493363
- 576707 string characters out of 3139776
- 1179163 words of memory out of 3000000
- 34344 multiletter control sequences out of 15000+200000
- 64246 words of font info for 90 fonts, out of 3000000 for 9000
+ 31492 strings out of 493363
+ 579249 string characters out of 3139776
+ 1182700 words of memory out of 3000000
+ 34441 multiletter control sequences out of 15000+200000
+ 77646 words of font info for 108 fonts, out of 3000000 for 9000
  1127 hyphenation exceptions out of 8191
- 59i,20n,84p,10499b,1804s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 66i,22n,90p,10499b,2006s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/euler/eurb10.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/fpl/fplrc8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/
-uplri8a.pfb>
-Output written on main.pdf (9 pages, 201173 bytes).
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/euler/eurb10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/euler/eurm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/fpl/fplrc8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/bera/fvmr8a.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (12 pages, 486321 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
- 12894 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 214 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 14970 words of extra memory for PDF output out of 17280 (max. 10000000)
 
