@@ -36,6 +36,56 @@ In particular, \acsp{CNN} have the following distinguishing features:
 
 Together, these properties allow convolutional neural networks to achieve better generalization performances in vision problems. Moreover, th weight sharing helps by dramatically reducing the number of free parameters being learnt, thus lowering the memory requirements for running the network. Decreasing the memory footprint allows the training of larger, more powerful networks.
 
+\section{The convolution operation}
+
+In its most general form, convolution is an operation on two functions of a real-valued argument. It produces a third function, that is typically viewed as a modified version of one of the original functions, giving the integral of the point-wise multiplication of the two functions as a function of the amount that one of the original functions is translated. It is typically
+denoted with an asterisk and it is defined as:
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Images/convolution}
+	\caption{Visual explanation of the convolution operation}\label{fig:convolution}
+\end{figure}
+
+\begin{equation} \notag
+	s(t) = (f * g)(t) = \int_{-\infty}^{\infty}f(\tau)g(t-\tau)\,d\tau
+\end{equation}
+
+The convolution formula can be described as a weighted average of the function $f(\tau)$ at moment $t$ where the weighting is given by $g(-\tau)$ simply shifted by amount $t$. As $t$ changes, the weighting function emphasizes different parts of the input function. The output is sometimes referred to as \textbf{feature} or  \textbf{activation map}.
+
+Figure \ref{fig:convolution} shows a visual explanation of the operation. Wherever the two functions intersect, the integral of their product is found. In other words, it computes a sliding, \ie  a weighted-sum of function $f(\tau)$, where the weighting function is $g(-\tau)$.
+
+If we now assume that $f$ and $g$ are defined only on integer $t$, we
+can define the discrete convolution as:
+
+\begin{equation} \notag
+	s(t) = (f * g)(t) = \sum_{-\infty}^{\infty}f(\tau)g(t-\tau)
+\end{equation}
+
+In convolutional networks terminology, the first argument of the convolution is often referred to as input and the second as kernel or filter. In machine learning applications, the input is usually a multidimensional array (\ie a tensor)
+of data and the kernel is usually a multidimensional array of parameters that are
+adapted by the learning algorithm.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Images/convolution_example}
+	\caption{Example of 2-D convolution without kernel-flipping, as reported in [\cite{Goodfellow-et-al-2016}]}\label{fig:convolution_example}
+\end{figure}
+
+Figure \ref{fig:convolution_example} shows an example of convolution (without kernel flipping) applied to a 2-D tensor. In this case, the output is restricted to only positions where the kernel lies entirely within the image.
+
+\section{Architecture}
+
+A \acs{CNN} architecture is formed by a stack of distinct layers that transform the input volume into an output volume through a differentiable function. A few distinct types of layers are commonly used and they are described below.
+
+\subsection{Convolutional layer}
+
+The convolutional layer is the core building block of a \acs{CNN}. The layer's parameters consist of a set of learnable filters (or kernels), which have a small receptive field, but extend through the full depth of the input volume. During the forward pass, each filter is convolved across the dimensions of the input volume, computing the dot product between the entries of the filter and the input and producing a feature map of that filter.
+
+The amount of units by which the filter shifts is called \textbf{stride} and it controls how the filter convolves around the input volume.
+
+As a result of this process, the network learns filters that activate when they detect some specific type of features in a given spatial position in the input.
+
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\textwidth]{Images/filter_application}
@@ -43,11 +93,11 @@ Together, these properties allow convolutional neural networks to achieve better
 		Goodfellow)}\label{fig:filter_application}
 \end{figure}
 
-The output of a convolutional layer, \ie the the matrix formed by sliding a given filter over the input and and computing the dot product, is called \textbf{feature map}. It is evident that different filters will produce different feature maps for the same input. Figure \ref{fig:filter_application} shows the result of the application of a filter for edge detection to a given image. The image on the right was formed by taking
-each pixel in the original image and subtracting the value of its neighboring pixel on the left. This shows the strength of all of the vertically oriented edges in the input image,
-which can be a useful operation for object detection.
+It is evident that different filters will produce different feature maps for the same input. Figure \ref{fig:filter_application} shows the result of the application of a filter for edge detection to a given image. The image on the right was formed by taking each pixel in the original image and subtracting the value of its neighboring pixel on the left. This shows the strength of all of the vertically oriented edges in the input image, which can be a useful operation for object detection.
 
-In order to recognize an image, we'll need more than one filter. For this reason, the output of a full convolutional layer will be a set of feature maps with the following structure:
+Stacking the activation maps for all filters along the depth dimension forms the full output volume of the convolution layer. Every entry in the output volume can thus also be interpreted as an output of a neuron that looks at a small region in the input and shares parameters with neurons in the same activation map.
+
+In fact, in order to recognize an image, we'll need more than one filter. For this reason, the output of a full convolutional layer will be a set of feature maps with a structure similar to the one in figure \ref{fig:feature_maps}.
 
 \begin{figure}[h]
 	\centering
@@ -55,19 +105,32 @@ In order to recognize an image, we'll need more than one filter. For this reason
 	\caption{Application of three filters to a given input producing three different feature maps}\label{fig:feature_maps}
 \end{figure}
 
-The amount by which the filter shifts is called \textbf{stride} and it controls how the filter convolves around the input volume.
-
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{Images/zero_padding}
 	\caption{Zero padding of two applied to a $32x32x3$ picture}\label{fig:zero_padding}
 \end{figure}
 
-In order to have an output of the same size of the input, it is necessary to add some additional pixels to the input image, this is called \textbf{padding}. For instance, a zero padding like the one in figure \ref{fig:zero_padding} pads the input volume with zeros all around the border.
+Sometimes it is convenient to have an output of the same size of the input. In this case it is necessary to add some additional pixels to the input image, this is called \textbf{padding}. For instance, a zero padding like the one in figure \ref{fig:zero_padding} pads the input volume with zeros all around the border.
+The size of this zero-padding is an optional hyperparameter. Zero padding, in particular, provides control of the output volume spatial size.
 
 In general, the formula for calculating the output size for any given convolutional layer is:
 
 \begin{equation} \notag
 	O=\frac{W-K+2P}{S}+1
 \end{equation}
-where O is the output height/length, W is the input height/length, K is the filter size, P is the padding, and S is the stride.
+where O is the output height/length, W is the input height/length, K is the filter size, P is the padding, and S is the stride. If this number is not an integer, then the strides are set incorrectly and the neurons cannot be tiled to fit across the input volume in a symmetric way.
+
+Setting the padding to
+\begin{equation} \notag
+	P=\frac{K-1}{2}
+\end{equation}
+when the stride is $S=1$ ensures that the input volume and output volume will have the same size spatially.
+
+\subsection{Pooling layer}
+
+Another important concept of \acsp{CNN} is pooling, which is a form of non-linear down-sampling. There are several non-linear functions to implement pooling among which \textbf{max pooling} is the most common. It partitions the input image into a set of non-overlapping rectangles and, for each such sub-region, outputs the maximum value. The intuition is that once a feature has been found, its exact location isn't as important as its rough location relative to other features. The function of the pooling layer is to progressively reduce the spatial size of the representation to reduce the amount of parameters and computation in the network, and hence to control overfitting, too. It is common to periodically insert a pooling layer in-between successive convolutional layers in a \acs{CNN} architecture. The pooling operation also provides a form of translation invariance.
+The pooling layer operates independently on every depth slice of the input and resizes it spatially. The most common form is a pooling layer with filters of size $2x2$ applied with a stride of 2. Every operation would in this case be taking a max over 4 numbers.
+
+In addition to max pooling, the pooling units can also perform other functions, such as average pooling and even L2-norm pooling. Average pooling was often used historically but has recently fallen out of favor compared to the max pooling operation, which has been found to work better in practice.[34]
+Due to the aggressive reduction in the size of the representation (which is helpful only for smaller datasets to control overfitting), the current trend in the literature is towards using smaller filters[35] or discarding the pooling layer altogether.[36]

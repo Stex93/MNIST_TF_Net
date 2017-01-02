@@ -2146,7 +2146,9 @@
   <bcf:section number="0">
     <bcf:citekey order="1">knuth:1974</bcf:citekey>
     <bcf:citekey order="2">knuth:1974</bcf:citekey>
-    <bcf:citekey order="3">Goodfellow-et-al-2016</bcf:citekey>
+    <bcf:citekey order="4">Goodfellow-et-al-2016</bcf:citekey>
+    <bcf:citekey order="5">Goodfellow-et-al-2016</bcf:citekey>
+    <bcf:citekey order="6">Goodfellow-et-al-2016</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt/global/" type="entry" sortscheme="nyt" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>

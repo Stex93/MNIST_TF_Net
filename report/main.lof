@@ -12,10 +12,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {1}{\ignorespaces Implementation of a $5x5$ receptive field in a \acs {CNN}\relax }}{3}{figure.caption.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces Application of a filter for edge detection (Photo credit: Paula Goodfellow)\relax }}{4}{figure.caption.10}
+\contentsline {figure}{\numberline {2}{\ignorespaces Visual explanation of the convolution operation\relax }}{4}{figure.caption.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3}{\ignorespaces Application of three filters to a given input producing three different feature maps\relax }}{4}{figure.caption.11}
+\contentsline {figure}{\numberline {3}{\ignorespaces Example of 2-D convolution without kernel-flipping, as reported in [\cite {Goodfellow-et-al-2016}]\relax }}{5}{figure.caption.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces Zero padding of two applied to a $32x32x3$ picture\relax }}{5}{figure.caption.12}
+\contentsline {figure}{\numberline {4}{\ignorespaces Application of a filter for edge detection (Photo credit: Paula Goodfellow)\relax }}{6}{figure.caption.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5}{\ignorespaces Application of three filters to a given input producing three different feature maps\relax }}{7}{figure.caption.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6}{\ignorespaces Zero padding of two applied to a $32x32x3$ picture\relax }}{7}{figure.caption.14}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
