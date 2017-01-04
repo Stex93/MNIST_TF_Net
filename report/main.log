@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6200 64-bit) (preloaded format=pdflatex 2016.12.30)  4 JAN 2017 23:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6200 64-bit) (preloaded format=pdflatex 2016.12.30)  5 JAN 2017 00:03
 entering extended mode
 **./main.tex
 (main.tex
@@ -1917,7 +1917,7 @@ File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 
 
 (FrontBackmatter/Titlepage.tex
-<Images/logo.png, id=111, 572.1375pt x 582.175pt>
+<Images/logo.png, id=115, 572.1375pt x 582.175pt>
 File: Images/logo.png Graphic file (type png)
  <use Images/logo.png>
 Package pdftex.def Info: Images/logo.png used on input line 24.
@@ -2081,18 +2081,18 @@ although it is yet undefined on input line 5.
 LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/pplj/b/n' tried instead on input line 5.
 Package acronym Info: Label `acro:MLP' newly defined as it shall be overridden
-although it is yet undefined on input line 13.
+although it is yet undefined on input line 15.
 
-Overfull \hbox (0.98753pt too wide) in paragraph at lines 13--14
+Overfull \hbox (0.98753pt too wide) in paragraph at lines 15--16
 []\T1/pplj/m/n/10.95 While tra-di-ti-o-nal [][][]Multylayer Per-cep-tron ([])[]
  mo-dels were success-
  []
 
-<Images/receptive_field.jpg, id=224, 473.77pt x 344.78813pt>
+<Images/receptive_field.jpg, id=234, 473.77pt x 344.78813pt>
 File: Images/receptive_field.jpg Graphic file (type jpg)
 
 <use Images/receptive_field.jpg>
-Package pdftex.def Info: Images/receptive_field.jpg used on input line 25.
+Package pdftex.def Info: Images/receptive_field.jpg used on input line 27.
 (pdftex.def)             Requested size: 235.19897pt x 171.16782pt.
  [2
 
@@ -2100,51 +2100,50 @@ Package pdftex.def Info: Images/receptive_field.jpg used on input line 25.
 
 
 ]
-Overfull \hbox (6.25945pt too wide) in paragraph at lines 31--32
+Overfull \hbox (6.25945pt too wide) in paragraph at lines 33--34
 []\T1/pplj/m/n/10.95 Following the con-cept of re-cep-tive field, []\T1/pplj/m/
 n/9 s[]
  []
 
 [3 <./Images/receptive_field.jpg>]
-<Images/convolution.png, id=244, 601.24625pt x 680.5425pt>
+<Images/convolution.png, id=254, 601.24625pt x 680.5425pt>
 File: Images/convolution.png Graphic file (type png)
 
 <use Images/convolution.png>
-Package pdftex.def Info: Images/convolution.png used on input line 46.
+Package pdftex.def Info: Images/convolution.png used on input line 48.
 (pdftex.def)             Requested size: 235.19897pt x 266.22047pt.
- [4 <./Images/convolution.png>]
-<Images/convolution_example.jpg, id=254, 375.4025pt x 371.88937pt>
+ [4 <./Images/convolution.png>]pdfTeX warning (ext4): destination with the same
+ identifier (name{equation.2.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.63 \begin{equation}
+                      \notag
+<Images/convolution_example.jpg, id=264, 375.4025pt x 371.88937pt>
 File: Images/convolution_example.jpg Graphic file (type jpg)
 
 <use Images/convolution_example.jpg>
-Package pdftex.def Info: Images/convolution_example.jpg used on input line 69.
+Package pdftex.def Info: Images/convolution_example.jpg used on input line 71.
 (pdftex.def)             Requested size: 235.19897pt x 233.0034pt.
- [5pdfTeX warning (ext4): destination with the same identifier (name{equation.2
-.2.1}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.82 
-      <./Images/convolution_example.jpg>]
-<Images/filter_application.jpg, id=264, 550.55687pt x 240.39813pt>
+ [5 <./Images/convolution_example.jpg>]
+<Images/filter_application.jpg, id=274, 550.55687pt x 240.39813pt>
 File: Images/filter_application.jpg Graphic file (type jpg)
 
 <use Images/filter_application.jpg>
-Package pdftex.def Info: Images/filter_application.jpg used on input line 89.
+Package pdftex.def Info: Images/filter_application.jpg used on input line 91.
 (pdftex.def)             Requested size: 235.19897pt x 102.69789pt.
 
-<Images/feature_maps.jpg, id=267, 453.19313pt x 212.29312pt>
+<Images/feature_maps.jpg, id=277, 453.19313pt x 212.29312pt>
 File: Images/feature_maps.jpg Graphic file (type jpg)
 
 <use Images/feature_maps.jpg>
-Package pdftex.def Info: Images/feature_maps.jpg used on input line 102.
+Package pdftex.def Info: Images/feature_maps.jpg used on input line 104.
 (pdftex.def)             Requested size: 235.19897pt x 110.17601pt.
 
-<Images/zero_padding.jpg, id=268, 248.42813pt x 221.82875pt>
+<Images/zero_padding.jpg, id=278, 248.42813pt x 221.82875pt>
 File: Images/zero_padding.jpg Graphic file (type jpg)
 
 <use Images/zero_padding.jpg>
-Package pdftex.def Info: Images/zero_padding.jpg used on input line 108.
+Package pdftex.def Info: Images/zero_padding.jpg used on input line 110.
 (pdftex.def)             Requested size: 235.19897pt x 210.01851pt.
  [6 <./Images/filter_application.jpg>] [7pdfTeX warning (ext4): destination wit
 h the same identifier (name{equation.2.3.1}) has been already used, duplicate i
@@ -2152,24 +2151,24 @@ gnored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.131 \begin{equation}
+l.133 \begin{equation}
                        \notag <./Images/feature_maps.jpg> <./Images/zero_paddin
-g.jpg>] <Images/relu_function.png, id=280, 578.16pt x 433.62pt>
+g.jpg>] <Images/relu_function.png, id=290, 578.16pt x 433.62pt>
 File: Images/relu_function.png Graphic file (type png)
 
 <use Images/relu_function.png>
-Package pdftex.def Info: Images/relu_function.png used on input line 137.
+Package pdftex.def Info: Images/relu_function.png used on input line 139.
 (pdftex.def)             Requested size: 168.0pt x 125.998pt.
- <Images/relu.png, id=286, 513.92pt x 192.72pt>
+ <Images/relu.png, id=296, 513.92pt x 192.72pt>
 File: Images/relu.png Graphic file (type png)
 
 <use Images/relu.png>
-Package pdftex.def Info: Images/relu.png used on input line 147.
+Package pdftex.def Info: Images/relu.png used on input line 149.
 (pdftex.def)             Requested size: 235.19897pt x 88.1994pt.
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 148.
+(Font)              scaled to size 8.50006pt on input line 150.
 
-Underfull \hbox (badness 3229) in paragraph at lines 148--148
+Underfull \hbox (badness 3229) in paragraph at lines 150--150
 [][]|[][] \T1/pplj/m/n/10 ope-ra-tion. Source [][]$\T1/fvm/m/n/10 http : / / ml
 ss . tuebingen . mpg . de / 2015 /
  []
@@ -2179,44 +2178,44 @@ ss . tuebingen . mpg . de / 2015 /
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.153 \subsection{Pooling layer}
+l.155 \subsection{Pooling layer}
                                  <./Images/relu_function.png> <./Images/relu.pn
-g>] <Images/max_pooling.png, id=303, 572.1375pt x 331.2375pt>
+g>] <Images/max_pooling.png, id=313, 572.1375pt x 331.2375pt>
 File: Images/max_pooling.png Graphic file (type png)
 
 <use Images/max_pooling.png>
-Package pdftex.def Info: Images/max_pooling.png used on input line 163.
+Package pdftex.def Info: Images/max_pooling.png used on input line 165.
 (pdftex.def)             Requested size: 235.19897pt x 136.1671pt.
  [9 <./Images/max_pooling.png>] [10]
 
-LaTeX Warning: Reference `' on page 11 undefined on input line 201.
+LaTeX Warning: Reference `' on page 11 undefined on input line 203.
 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.204 \begin{equation}
+l.206 \begin{equation}
                        \notag
-<Images/conv_architecture.png, id=325, 513.92pt x 180.675pt>
+<Images/conv_architecture.png, id=335, 513.92pt x 180.675pt>
 File: Images/conv_architecture.png Graphic file (type png)
 
 <use Images/conv_architecture.png>
-Package pdftex.def Info: Images/conv_architecture.png used on input line 217.
+Package pdftex.def Info: Images/conv_architecture.png used on input line 219.
 (pdftex.def)             Requested size: 302.39795pt x 106.31335pt.
  [11]
 Package acronym Info: Label `acro:mlp' newly defined as it shall be overridden
-although it is yet undefined on input line 228.
+although it is yet undefined on input line 230.
 
 
-Package acronym Warning: Acronym `mlp' is not defined on input line 228.
+Package acronym Warning: Acronym `mlp' is not defined on input line 230.
 
 
-Package acronym Warning: Acronym `mlp' is not defined on input line 228.
+Package acronym Warning: Acronym `mlp' is not defined on input line 230.
 
 LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <9> not available
-(Font)              Font shape `T1/pplj/b/n' tried instead on input line 228.
+(Font)              Font shape `T1/pplj/b/n' tried instead on input line 230.
 [12 <./Images/conv_architecture.png>]
-Overfull \hbox (2.02211pt too wide) in paragraph at lines 239--240
+Overfull \hbox (2.02211pt too wide) in paragraph at lines 241--242
 []\T1/pplj/m/n/10.95 For many ap-pli-ca-ti-ons, only a small amount
  []
 
@@ -2225,6 +2224,14 @@ Overfull \hbox (2.02211pt too wide) in paragraph at lines 239--240
 
  (Chapters/Chapter03.tex
 chapter 3.
+Package acronym Info: Label `acro:TF' newly defined as it shall be overridden
+although it is yet undefined on input line 4.
+
+Overfull \hbox (0.98561pt too wide) in paragraph at lines 14--15
+[]\T1/pplj/m/n/10.95 TensorFlow com-pu-ta-ti-ons are ex-pres-sed as sta-te-ful 
+da-taf-low graphs.
+ []
+
 ) [15
 
 
@@ -2233,7 +2240,13 @@ chapter 3.
 ]
 \openout2 = `FrontBackmatter/Bibliography.aux'.
 
- (FrontBackmatter/Bibliography.tex) [16
+ (FrontBackmatter/Bibliography.tex)
+Overfull \hbox (3.01419pt too wide) in paragraph at lines 57--57
+\T1/pplj/m/n/10.95 on He-te-ro-ge-ne-ous Dis-tri-bu-ted Sy-s-tems. In: \T1/ppl
+j/m/it/10.95 CoRR \T1/pplj/m/n/10.95 abs/1603.04467.
+ []
+
+[16
 
 
 
@@ -2443,7 +2456,7 @@ FrontBackmatter/Bibliography.tex
 
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 61.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4A712650F3A0D22EE9B6C5610A44D5A5;1714.
+(rerunfilecheck)             Checksum: 43C6EF0A5F7E65ED5D570D125EADEA14;1774.
 
 LaTeX Warning: There were undefined references.
 
@@ -2452,10 +2465,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31567 strings out of 493363
- 581322 string characters out of 3139776
- 1185432 words of memory out of 3000000
- 34444 multiletter control sequences out of 15000+200000
+ 31597 strings out of 493363
+ 581802 string characters out of 3139776
+ 1185775 words of memory out of 3000000
+ 34466 multiletter control sequences out of 15000+200000
  77029 words of font info for 117 fonts, out of 3000000 for 9000
  1127 hyphenation exceptions out of 8191
  65i,23n,90p,10499b,2741s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2472,9 +2485,9 @@ m Files/MiKTeX 2.9/fonts/type1/bera/fvmr8a.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/p
 alatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8
 a.pfb>
-Output written on main.pdf (23 pages, 1012600 bytes).
+Output written on main.pdf (23 pages, 1019335 bytes).
 PDF statistics:
- 497 PDF objects out of 1000 (max. 8388607)
- 100 named destinations out of 1000 (max. 500000)
- 13584 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 522 PDF objects out of 1000 (max. 8388607)
+ 108 named destinations out of 1000 (max. 500000)
+ 13592 words of extra memory for PDF output out of 14400 (max. 10000000)
 
