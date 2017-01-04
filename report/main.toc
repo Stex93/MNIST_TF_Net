@@ -18,10 +18,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.1}Convolutional layer}{6}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}Pooling layer}{8}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.2}ReLU layer}{8}{subsection.2.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}\spacedlowsmallcaps {Tensorflow basics}}{9}{chapter.3}
+\contentsline {subsection}{\numberline {2.3.3}Pooling layer}{9}{subsection.2.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.4}Fully connected layer}{10}{subsection.2.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.5}Dropout layer}{10}{subsection.2.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.6}Loss layer}{11}{subsection.2.3.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Tuning}{12}{section.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}\spacedlowsmallcaps {Tensorflow basics}}{13}{chapter.3}
 \defcounter {refsection}{0}\relax 
 \vspace {\beforebibskip }
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\spacedlowsmallcaps {References}}{10}{dummy.6}
+\contentsline {chapter}{\spacedlowsmallcaps {References}}{14}{dummy.6}

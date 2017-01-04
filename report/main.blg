@@ -1,15 +1,17 @@
 [1] Config.pm:354> INFO - This is Biber 2.7
-[3] Config.pm:357> INFO - Logfile is 'main.blg'
-[135] biber-MSWIN64:303> INFO - === 
-[281] Biber.pm:359> INFO - Reading 'main.bcf'
-[715] Biber.pm:835> INFO - Found 2 citekeys in bib section 0
-[806] Biber.pm:3670> INFO - Processing section 0
-[897] Biber.pm:3840> INFO - Looking for bibtex format file 'References.bib' for section 0
-[910] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[929] bibtex.pm:1292> INFO - Found BibTeX data source 'References.bib'
-[1011] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1011] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1011] Biber.pm:3499> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'en-US'
-[1012] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
-[1022] bbl.pm:608> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[1025] bbl.pm:712> INFO - Output to main.bbl
+[1] Config.pm:357> INFO - Logfile is 'main.blg'
+[82] biber-MSWIN64:303> INFO - === 
+[156] Biber.pm:359> INFO - Reading 'main.bcf'
+[430] Biber.pm:835> INFO - Found 10 citekeys in bib section 0
+[465] Biber.pm:3670> INFO - Processing section 0
+[504] Biber.pm:3840> INFO - Looking for bibtex format file 'References.bib' for section 0
+[512] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[524] bibtex.pm:1292> INFO - Found BibTeX data source 'References.bib'
+[568] Utils.pm:164> WARN - month field 'November' in entry 'lecun-98' is not an integer - this will probably not sort properly.
+[681] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[681] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[681] Biber.pm:3499> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'en-US'
+[681] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
+[706] bbl.pm:608> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[710] bbl.pm:712> INFO - Output to main.bbl
+[713] Biber.pm:109> INFO - WARNINGS: 1

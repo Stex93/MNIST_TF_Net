@@ -11,6 +11,11 @@
 \BOOKMARK [1][-]{section.2.2}{2.2 The convolution operation}{chapter.2}% 11
 \BOOKMARK [1][-]{section.2.3}{2.3 Architecture}{chapter.2}% 12
 \BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 Convolutional layer}{section.2.3}% 13
-\BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 Pooling layer}{section.2.3}% 14
-\BOOKMARK [0][]{chapter.3}{3 Tensorflow basics}{}% 15
-\BOOKMARK [0][]{dummy.6}{References}{}% 16
+\BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 ReLU layer}{section.2.3}% 14
+\BOOKMARK [2][-]{subsection.2.3.3}{2.3.3 Pooling layer}{section.2.3}% 15
+\BOOKMARK [2][-]{subsection.2.3.4}{2.3.4 Fully connected layer}{section.2.3}% 16
+\BOOKMARK [2][-]{subsection.2.3.5}{2.3.5 Dropout layer}{section.2.3}% 17
+\BOOKMARK [2][-]{subsection.2.3.6}{2.3.6 Loss layer}{section.2.3}% 18
+\BOOKMARK [1][-]{section.2.4}{2.4 Tuning}{chapter.2}% 19
+\BOOKMARK [0][]{chapter.3}{3 Tensorflow basics}{}% 20
+\BOOKMARK [0][]{dummy.6}{References}{}% 21

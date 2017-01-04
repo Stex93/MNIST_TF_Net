@@ -2145,10 +2145,17 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">knuth:1974</bcf:citekey>
-    <bcf:citekey order="2">knuth:1974</bcf:citekey>
+    <bcf:citekey order="3">Goodfellow-et-al-2016</bcf:citekey>
     <bcf:citekey order="4">Goodfellow-et-al-2016</bcf:citekey>
     <bcf:citekey order="5">Goodfellow-et-al-2016</bcf:citekey>
-    <bcf:citekey order="6">Goodfellow-et-al-2016</bcf:citekey>
+    <bcf:citekey order="6">icml2010_NairH10</bcf:citekey>
+    <bcf:citekey order="7">Scherer:2010</bcf:citekey>
+    <bcf:citekey order="8">DBLP:journals/corr/Graham14a</bcf:citekey>
+    <bcf:citekey order="9">DBLP:journals/corr/SpringenbergDBR14</bcf:citekey>
+    <bcf:citekey order="10">Srivastava:2014:DSW:2627435.2670313</bcf:citekey>
+    <bcf:citekey order="11">lecun-98</bcf:citekey>
+    <bcf:citekey order="12">krizhevsky2012imagenet</bcf:citekey>
+    <bcf:citekey order="13">DBLP:journals/corr/SzegedyLJSRAEVR14</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt/global/" type="entry" sortscheme="nyt" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>
