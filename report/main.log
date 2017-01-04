@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6200 64-bit) (preloaded format=pdflatex 2016.12.30)  4 JAN 2017 23:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6200 64-bit) (preloaded format=pdflatex 2016.12.30)  4 JAN 2017 23:23
 entering extended mode
 **./main.tex
 (main.tex
@@ -1805,7 +1805,7 @@ Package biblatex Info: ... file 'italian.lbx' found.
 File: italian.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 ) (main.aux
 (FrontBackmatter/Titlepage.aux) (FrontBackmatter/Abstract.aux)
-(FrontBackmatter/Acknowledgments.aux) (FrontBackmatter/Contents.aux)
+(FrontBackmatter/Dedication.aux) (FrontBackmatter/Contents.aux)
 (Chapters/Chapter01.aux) (Chapters/Chapter02.aux) (Chapters/Chapter03.aux)
 (FrontBackmatter/Bibliography.aux))
 \openout1 = `main.aux'.
@@ -1970,18 +1970,12 @@ Package microtype Info: Loading generic settings for font family
 
 
 ]
-\openout2 = `FrontBackmatter/Acknowledgments.aux'.
+\openout2 = `FrontBackmatter/Dedication.aux'.
 
 
-(FrontBackmatter/Acknowledgments.tex
+(FrontBackmatter/Dedication.tex
 LaTeX Font Info:    Font shape `T1/pplj/m/sl' in size <10.95> not available
-(Font)              Font shape `T1/pplj/m/it' tried instead on input line 6.
-
-Overfull \hbox (2.90268pt too wide) in paragraph at lines 27--37
-[]\T1/pplj/m/n/10.95 Regarding the typo-graphy and ot-her help, many thanks go 
-to Marco
- []
-
+(Font)              Font shape `T1/pplj/m/it' tried instead on input line 11.
 ) [3
 
 
@@ -2256,7 +2250,7 @@ iction in Structure-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 61.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
  (main.aux (FrontBackmatter/Titlepage.aux) (FrontBackmatter/Abstract.aux)
-(FrontBackmatter/Acknowledgments.aux) (FrontBackmatter/Contents.aux)
+(FrontBackmatter/Dedication.aux) (FrontBackmatter/Contents.aux)
 (Chapters/Chapter01.aux) (Chapters/Chapter02.aux) (Chapters/Chapter03.aux)
 (FrontBackmatter/Bibliography.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
@@ -2428,7 +2422,7 @@ FrontBackmatter/Abstract.tex
   mt-eus.cfg    2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
   uzeuex.fd    2005/01/11 v4.0 (WaS)
  ot1zplm.fd    2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
-FrontBackmatter/Acknowledgments.tex
+FrontBackmatter/Dedication.tex
 FrontBackmatter/Contents.tex
    t1fvm.fd    2004/09/07 scalable font definitions for T1/fvm.
 Chapters/Chapter01.tex
@@ -2449,7 +2443,7 @@ FrontBackmatter/Bibliography.tex
 
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 61.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BB93698D22BF27974358A9414F3895D4;1724.
+(rerunfilecheck)             Checksum: 4A712650F3A0D22EE9B6C5610A44D5A5;1714.
 
 LaTeX Warning: There were undefined references.
 
@@ -2458,13 +2452,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31600 strings out of 493363
- 581910 string characters out of 3139776
- 1185433 words of memory out of 3000000
- 34472 multiletter control sequences out of 15000+200000
- 86304 words of font info for 134 fonts, out of 3000000 for 9000
+ 31567 strings out of 493363
+ 581322 string characters out of 3139776
+ 1185432 words of memory out of 3000000
+ 34444 multiletter control sequences out of 15000+200000
+ 77029 words of font info for 117 fonts, out of 3000000 for 9000
  1127 hyphenation exceptions out of 8191
- 65i,23n,90p,10499b,2743s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 65i,23n,90p,10499b,2741s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/euler/euex10.pfb><C:/Program Files/MiKTeX 2.9/font
@@ -2478,9 +2472,9 @@ m Files/MiKTeX 2.9/fonts/type1/bera/fvmr8a.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/p
 alatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8
 a.pfb>
-Output written on main.pdf (23 pages, 1011449 bytes).
+Output written on main.pdf (23 pages, 1012600 bytes).
 PDF statistics:
  497 PDF objects out of 1000 (max. 8388607)
  100 named destinations out of 1000 (max. 500000)
- 16144 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 13584 words of extra memory for PDF output out of 14400 (max. 10000000)
 
