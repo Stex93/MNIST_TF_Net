@@ -16,6 +16,12 @@
 \BOOKMARK [2][-]{subsection.2.3.4}{2.3.4 Fully connected layer}{section.2.3}% 16
 \BOOKMARK [2][-]{subsection.2.3.5}{2.3.5 Dropout layer}{section.2.3}% 17
 \BOOKMARK [2][-]{subsection.2.3.6}{2.3.6 Loss layer}{section.2.3}% 18
-\BOOKMARK [1][-]{section.2.4}{2.4 Tuning}{chapter.2}% 19
-\BOOKMARK [0][]{chapter.3}{3 Tensorflow basics}{}% 20
-\BOOKMARK [0][]{dummy.6}{References}{}% 21
+\BOOKMARK [1][-]{section.2.4}{2.4 Hyperparameters}{chapter.2}% 19
+\BOOKMARK [1][-]{section.2.5}{2.5 Applications}{chapter.2}% 20
+\BOOKMARK [2][-]{subsection.2.5.1}{2.5.1 Image recognition}{section.2.5}% 21
+\BOOKMARK [2][-]{subsection.2.5.2}{2.5.2 Video analysis}{section.2.5}% 22
+\BOOKMARK [2][-]{subsection.2.5.3}{2.5.3 Natural language processing}{section.2.5}% 23
+\BOOKMARK [2][-]{subsection.2.5.4}{2.5.4 Drug discovery}{section.2.5}% 24
+\BOOKMARK [2][-]{subsection.2.5.5}{2.5.5 Playing Go}{section.2.5}% 25
+\BOOKMARK [0][]{chapter.3}{3 Tensorflow basics}{}% 26
+\BOOKMARK [0][]{dummy.6}{References}{}% 27

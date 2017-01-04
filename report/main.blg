@@ -1,17 +1,20 @@
-[1] Config.pm:354> INFO - This is Biber 2.7
-[1] Config.pm:357> INFO - Logfile is 'main.blg'
-[82] biber-MSWIN64:303> INFO - === 
-[156] Biber.pm:359> INFO - Reading 'main.bcf'
-[430] Biber.pm:835> INFO - Found 10 citekeys in bib section 0
-[465] Biber.pm:3670> INFO - Processing section 0
-[504] Biber.pm:3840> INFO - Looking for bibtex format file 'References.bib' for section 0
-[512] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[524] bibtex.pm:1292> INFO - Found BibTeX data source 'References.bib'
-[568] Utils.pm:164> WARN - month field 'November' in entry 'lecun-98' is not an integer - this will probably not sort properly.
-[681] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[681] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[681] Biber.pm:3499> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'en-US'
-[681] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
-[706] bbl.pm:608> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[710] bbl.pm:712> INFO - Output to main.bbl
-[713] Biber.pm:109> INFO - WARNINGS: 1
+[2] Config.pm:354> INFO - This is Biber 2.7
+[3] Config.pm:357> INFO - Logfile is 'main.blg'
+[183] biber-MSWIN64:303> INFO - === 
+[315] Biber.pm:359> INFO - Reading 'main.bcf'
+[834] Biber.pm:835> INFO - Found 16 citekeys in bib section 0
+[916] Biber.pm:3670> INFO - Processing section 0
+[1044] Biber.pm:3840> INFO - Looking for bibtex format file 'References.bib' for section 0
+[1069] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[1103] bibtex.pm:1292> INFO - Found BibTeX data source 'References.bib'
+[1234] Utils.pm:164> WARN - month field 'November' in entry 'lecun-98' is not an integer - this will probably not sort properly.
+[1266] Utils.pm:164> WARN - month field 'June' in entry '6248110' is not an integer - this will probably not sort properly.
+[1276] Utils.pm:164> WARN - month field 'Jan' in entry '554195' is not an integer - this will probably not sort properly.
+[1297] Utils.pm:164> WARN - month field 'Jan' in entry '6165309' is not an integer - this will probably not sort properly.
+[1670] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1671] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1671] Biber.pm:3499> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'en-US'
+[1672] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
+[1748] bbl.pm:608> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[1762] bbl.pm:712> INFO - Output to main.bbl
+[1767] Biber.pm:109> INFO - WARNINGS: 4

@@ -19,6 +19,110 @@
 
 \refsection{0}
   \sortlist[entry]{nyt/global/}
+    \entry{6248110}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=e3893f611be4acdb180b5d6b66e7755c}{%
+           family={Ciregan},
+           familyi={C\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{uniquename=0,hash=5821de7a87e01dc921053447c30a0aef}{%
+           family={Meier},
+           familyi={M\bibinitperiod},
+           given={U.},
+           giveni={U\bibinitperiod}}}%
+        {{uniquename=0,hash=08804cf84eaa686cdd2168f68feb5b0f}{%
+           family={Schmidhuber},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{d074d73a44a0a369a1db77fb302dd442}
+      \strng{fullhash}{d074d73a44a0a369a1db77fb302dd442}
+      \strng{authornamehash}{d074d73a44a0a369a1db77fb302dd442}
+      \strng{authorfullhash}{d074d73a44a0a369a1db77fb302dd442}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2012 IEEE Conference on Computer Vision and Pattern Recognition}
+      \field{issn}{1063-6919}
+      \field{month}{6}
+      \field{title}{Multi-column deep neural networks for image classification}
+      \field{year}{2012}
+      \field{pages}{3642\bibrangedash 3649}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/CVPR.2012.6248110
+      \endverb
+      \keyw{graphics processing units;handwritten character recognition;image classification;image recognition;learning (artificial intelligence);neural nets;MNIST handwriting benchmark;artificial neural network architectures;computer vision;convolutional winner-take-all neurons;fast training;graphics cards;handwritten digits recognition;human performance;image classification;machine learning;multicolumn deep neural networks;retina;sparsely connected neural layers;traffic sign recognition benchmark;traffic signs;visual cortex;Benchmark testing;Computer architecture;Error analysis;Graphics processing unit;Neurons;Training}
+    \endentry
+    \entry{DBLP:journals/corr/ClarkS14}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=9edd3110f9350150b9a22ef5b7d45d25}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+        {{uniquename=0,hash=3fb5e7163107c46ea6288e7e7d2a0f3f}{%
+           family={Storkey},
+           familyi={S\bibinitperiod},
+           given={Amos\bibnamedelima J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{9cb2977fab16c018e7f24509811b1c7e}
+      \strng{fullhash}{9cb2977fab16c018e7f24509811b1c7e}
+      \strng{authornamehash}{9cb2977fab16c018e7f24509811b1c7e}
+      \strng{authorfullhash}{9cb2977fab16c018e7f24509811b1c7e}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{CoRR}
+      \field{title}{Teaching Deep Convolutional Neural Networks to Play Go}
+      \field{volume}{abs/1412.3409}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://arxiv.org/abs/1412.3409
+      \endverb
+    \endentry
+    \entry{DBLP:journals/corr/FarfadeSL15}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=92d71407075afe97e6f335fa9b29bef5}{%
+           family={Farfade},
+           familyi={F\bibinitperiod},
+           given={Sachin\bibnamedelima Sudhakar},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{uniquename=0,hash=a869ea34ae1e65b78ef8766c92b2130b}{%
+           family={Saberian},
+           familyi={S\bibinitperiod},
+           given={Mohammad\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{uniquename=0,hash=c7ff59237c6a3dc7269cec2e218f4640}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Li{-}Jia},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{97e9680a3ecc1ca04a94699d0a92ac68}
+      \strng{fullhash}{97e9680a3ecc1ca04a94699d0a92ac68}
+      \strng{authornamehash}{97e9680a3ecc1ca04a94699d0a92ac68}
+      \strng{authorfullhash}{97e9680a3ecc1ca04a94699d0a92ac68}
+      \field{sortinit}{F}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{CoRR}
+      \field{title}{Multi-view Face Detection Using Deep Convolutional Neural Networks}
+      \field{volume}{abs/1502.02766}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://arxiv.org/abs/1502.02766
+      \endverb
+    \endentry
     \entry{Goodfellow-et-al-2016}{book}{}
       \name{author}{3}{}{%
         {{uniquename=0,hash=5d2585c11210cf1d4512e6e0a03ec315}{%
@@ -77,6 +181,52 @@
       \verb{url}
       \verb http://arxiv.org/abs/1412.6071
       \endverb
+    \endentry
+    \entry{6165309}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=2d41823df6160614a90863714467e0ab}{%
+           family={Ji},
+           familyi={J\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{uniquename=0,hash=ba77f48973a656795eeba7787647bdd9}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{uniquename=0,hash=93ef14cd2681e05473f6f03a73ce9bab}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{uniquename=0,hash=cde667d169dfe28fa4feb92066902332}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{42b4048d075d8f1ebe346b1ece825a6f}
+      \strng{fullhash}{151300e82f0eb92e156f38bc85ea176a}
+      \strng{authornamehash}{42b4048d075d8f1ebe346b1ece825a6f}
+      \strng{authorfullhash}{151300e82f0eb92e156f38bc85ea176a}
+      \field{sortinit}{J}
+      \field{sortinithash}{c86bd6cced82a15683b396c2169909ef}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0162-8828}
+      \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine Intelligence}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{3D Convolutional Neural Networks for Human Action Recognition}
+      \field{volume}{35}
+      \field{year}{2013}
+      \field{pages}{221\bibrangedash 231}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/TPAMI.2012.59
+      \endverb
+      \keyw{feature extraction;gesture recognition;image classification;image motion analysis;image representation;neural nets;spatiotemporal phenomena;video surveillance;3D CNN model;3D convolutional neural networks;airport surveillance videos;automated human action recognition;baseline methods;complex handcrafted features;deep model;feature representation;high-level features;motion information encoding;spatial dimensions;temporal dimensions;Computational modeling;Computer architecture;Feature extraction;Kernel;Solid modeling;Three dimensional displays;Videos;3D convolution;Deep learning;action recognition;convolutional neural networks;model combination;Algorithms;Decision Support Techniques;Image Interpretation,Computer-Assisted;Imaging,Three-Dimensional;Movement;Neural Networks (Computer);Pattern Recognition,Automated;Subtraction Technique}
     \endentry
     \entry{knuth:1974}{article}{}
       \name{author}{1}{}{%
@@ -141,6 +291,52 @@
       \field{year}{2012}
       \field{pages}{1097\bibrangedash 1105}
       \range{pages}{9}
+    \endentry
+    \entry{554195}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=87dd2c6eaec680468384bb97217b019a}{%
+           family={Lawrence},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{uniquename=0,hash=d6cd4fe99e0f438812d7f28e0ab6ef0a}{%
+           family={Giles},
+           familyi={G\bibinitperiod},
+           given={C.\bibnamedelimi L.},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{uniquename=0,hash=bad8c3458d4ad9db77a764f7bfaed629}{%
+           family={Tsoi},
+           familyi={T\bibinitperiod},
+           given={Ah\bibnamedelima Chung},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{uniquename=0,hash=6da0b0b89462d9b61c49cada9a9659cc}{%
+           family={Back},
+           familyi={B\bibinitperiod},
+           given={A.\bibnamedelimi D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{bbad84d1a9ceda062a7d73de9dba7215}
+      \strng{fullhash}{9dac4739968545138d2f7bd1eb33727b}
+      \strng{authornamehash}{bbad84d1a9ceda062a7d73de9dba7215}
+      \strng{authorfullhash}{9dac4739968545138d2f7bd1eb33727b}
+      \field{sortinit}{L}
+      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1045-9227}
+      \field{journaltitle}{IEEE Transactions on Neural Networks}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Face recognition: a convolutional neural-network approach}
+      \field{volume}{8}
+      \field{year}{1997}
+      \field{pages}{98\bibrangedash 113}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1109/72.554195
+      \endverb
+      \keyw{computational complexity;convolution;face recognition;feature extraction;image matching;quantisation (signal);self-organising feature maps;topology;computational complexity;convolutional neural-network;dimensionality reduction;face recognition;feature extraction;invariance;local image sampling;quantization;self-organizing map;template matching;topological space;Face recognition;Feature extraction;Humans;Image databases;Image sampling;Karhunen-Loeve transforms;Multilayer perceptrons;Neural networks;Quantization;Spatial databases}
     \endentry
     \entry{lecun-98}{article}{}
       \name{author}{4}{}{%
@@ -431,6 +627,41 @@
       \field{year}{2014}
       \verb{url}
       \verb http://arxiv.org/abs/1409.4842
+      \endverb
+    \endentry
+    \entry{DBLP:journals/corr/WallachDH15}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=7ccffcd38759d7007337667679a4281f}{%
+           family={Wallach},
+           familyi={W\bibinitperiod},
+           given={Izhar},
+           giveni={I\bibinitperiod}}}%
+        {{uniquename=0,hash=354e85389cd3e6cb6b0d5b3d04a4d915}{%
+           family={Dzamba},
+           familyi={D\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{uniquename=0,hash=70a6603ba69fc00cdc314c3028bf9e3f}{%
+           family={Heifets},
+           familyi={H\bibinitperiod},
+           given={Abraham},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab049a90217065cb5ae9198254d980e8}
+      \strng{fullhash}{ab049a90217065cb5ae9198254d980e8}
+      \strng{authornamehash}{ab049a90217065cb5ae9198254d980e8}
+      \strng{authorfullhash}{ab049a90217065cb5ae9198254d980e8}
+      \field{sortinit}{W}
+      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{CoRR}
+      \field{title}{AtomNet: {A} Deep Convolutional Neural Network for Bioactivity Prediction in Structure-based Drug Discovery}
+      \field{volume}{abs/1510.02855}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://arxiv.org/abs/1510.02855
       \endverb
     \endentry
   \endsortlist

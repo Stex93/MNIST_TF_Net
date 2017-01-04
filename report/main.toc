@@ -28,10 +28,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.6}Loss layer}{11}{subsection.2.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Tuning}{12}{section.2.4}
+\contentsline {section}{\numberline {2.4}Hyperparameters}{12}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}\spacedlowsmallcaps {Tensorflow basics}}{13}{chapter.3}
+\contentsline {section}{\numberline {2.5}Applications}{13}{section.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.1}Image recognition}{13}{subsection.2.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.2}Video analysis}{13}{subsection.2.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.3}Natural language processing}{14}{subsection.2.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.4}Drug discovery}{14}{subsection.2.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.5}Playing Go}{14}{subsection.2.5.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}\spacedlowsmallcaps {Tensorflow basics}}{15}{chapter.3}
 \defcounter {refsection}{0}\relax 
 \vspace {\beforebibskip }
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\spacedlowsmallcaps {References}}{14}{dummy.6}
+\contentsline {chapter}{\spacedlowsmallcaps {References}}{16}{dummy.6}

@@ -2156,6 +2156,14 @@
     <bcf:citekey order="11">lecun-98</bcf:citekey>
     <bcf:citekey order="12">krizhevsky2012imagenet</bcf:citekey>
     <bcf:citekey order="13">DBLP:journals/corr/SzegedyLJSRAEVR14</bcf:citekey>
+    <bcf:citekey order="15">Scherer:2010</bcf:citekey>
+    <bcf:citekey order="16">6248110</bcf:citekey>
+    <bcf:citekey order="17">554195</bcf:citekey>
+    <bcf:citekey order="18">DBLP:journals/corr/SzegedyLJSRAEVR14</bcf:citekey>
+    <bcf:citekey order="19">DBLP:journals/corr/FarfadeSL15</bcf:citekey>
+    <bcf:citekey order="20">6165309</bcf:citekey>
+    <bcf:citekey order="21">DBLP:journals/corr/WallachDH15</bcf:citekey>
+    <bcf:citekey order="22">DBLP:journals/corr/ClarkS14</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt/global/" type="entry" sortscheme="nyt" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>

@@ -10,24 +10,24 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Implementation of a $5x5$ receptive field in a \acs {CNN}\relax }}{3}{figure.caption.10}
+\contentsline {figure}{\numberline {1}{\ignorespaces Implementation of a $5x5$ receptive field in a \acs {CNN}\relax }}{3}{figure.caption.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces Visual explanation of the convolution operation\relax }}{4}{figure.caption.11}
+\contentsline {figure}{\numberline {2}{\ignorespaces Visual explanation of the convolution operation\relax }}{4}{figure.caption.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3}{\ignorespaces Example of 2-D convolution without kernel-flipping, as reported in [\cite {Goodfellow-et-al-2016}]\relax }}{5}{figure.caption.12}
+\contentsline {figure}{\numberline {3}{\ignorespaces Example of -D convolution without kernel-flipping, as reported in [\cite {Goodfellow-et-al-2016}]\relax }}{5}{figure.caption.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces Application of a filter for edge detection (Photo credit: Paula Goodfellow)\relax }}{6}{figure.caption.13}
+\contentsline {figure}{\numberline {4}{\ignorespaces Application of a filter for edge detection (Photo credit: Paula Goodfellow)\relax }}{6}{figure.caption.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5}{\ignorespaces Application of three filters to a given input producing three different feature maps\relax }}{7}{figure.caption.14}
+\contentsline {figure}{\numberline {5}{\ignorespaces Application of three filters to a given input producing three different feature maps\relax }}{7}{figure.caption.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6}{\ignorespaces Zero padding of two applied to a $32x32x3$ picture\relax }}{7}{figure.caption.15}
+\contentsline {figure}{\numberline {6}{\ignorespaces Zero padding of two applied to a $32x32x3$ picture\relax }}{7}{figure.caption.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7}{\ignorespaces \ac {ReLU} function\relax }}{8}{figure.caption.16}
+\contentsline {figure}{\numberline {7}{\ignorespaces \ac {ReLU} function\relax }}{8}{figure.caption.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8}{\ignorespaces \ac {ReLU} operation. Source \url {http://mlss.tuebingen.mpg.de/2015/slides/fergus/Fergus_1.pdf}\relax }}{8}{figure.caption.17}
+\contentsline {figure}{\numberline {8}{\ignorespaces \ac {ReLU} operation. Source \url {http://mlss.tuebingen.mpg.de/2015/slides/fergus/Fergus_1.pdf}\relax }}{8}{figure.caption.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {9}{\ignorespaces Max pooling with a $2x2$ filter and stride $S=2$\relax }}{9}{figure.caption.18}
+\contentsline {figure}{\numberline {9}{\ignorespaces Max pooling with a $2x2$ filter and stride $S=2$\relax }}{9}{figure.caption.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10}{\ignorespaces Convolutional neural network for the classification of an image\relax }}{11}{figure.caption.19}
+\contentsline {figure}{\numberline {10}{\ignorespaces Convolutional neural network for the classification of an image\relax }}{12}{figure.caption.20}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
