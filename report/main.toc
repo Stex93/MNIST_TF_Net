@@ -46,6 +46,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Overview}{15}{section.3.1}
 \defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}\spacedlowsmallcaps {A basic Tensorflow model}}{16}{chapter.4}
+\defcounter {refsection}{0}\relax 
 \vspace {\beforebibskip }
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\spacedlowsmallcaps {References}}{16}{dummy.7}
+\contentsline {chapter}{\spacedlowsmallcaps {References}}{17}{dummy.7}
