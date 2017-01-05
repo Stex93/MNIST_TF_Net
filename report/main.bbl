@@ -925,6 +925,16 @@
       \verb http://arxiv.org/abs/1409.4842
       \endverb
     \endentry
+    \entry{tensorflow}{misc}{}
+      \field{sortinit}{T}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.tensorflow.org/}}
+      \field{note}{Accessed: 2017-01-05}
+      \field{title}{{Tensorflow}, An open-source software library for Machine Intelligence}
+      \field{year}{2017}
+    \endentry
     \entry{DBLP:journals/corr/WallachDH15}{article}{}
       \name{author}{3}{}{%
         {{uniquename=0,hash=7ccffcd38759d7007337667679a4281f}{%
