@@ -2,6 +2,76 @@
 \chapter{A basic Tensorflow model}\label{ch:basic_tf_model}
 %*****************************************
 
-In this chapter we will discover a basic Tensorflow model developed in order to classify images from the MNIST dataset. Our scope is to illustrate the structure of a \acsp{CNN} and how that basic model can be readjust as needed, gathering data about training accuracy during the epochs and test accuracy on known and unknown images from the dataset.
+In this chapter we will discover a basic Tensorflow model developed in order to classify images from the MNIST dataset. Our scope is to illustrate the structure of a \acs{CNN} and how that basic model can be readjust as needed, gathering data about training accuracy during the epochs and test accuracy on known and unknown images from the dataset.
 
-After an introduction to the MNIST dataset, we will study in deep the structure of the Convolutional Neural Network used in our experiments, trying to understand which parameters are relevant to the improvement of the results, and how the structure can influence most of all on the accuracy of the network during the training.
+After an introduction to the MNIST dataset, we will study in deep the structure of the Convolutional Neural Network used in our experiments, trying to understand which parameters are relevant to the improvement of results, and how the structure can influence most of all on the accuracy of the network during training.
+
+We identify two levels where we can intervene to modify the neural network. A architectural one, where we add, move and remove convolutional or pooling levels, and a parameter level, where we modify number of features, patch dimension, etc. The first one is more important, the second is a more precise intervention.
+
+Before beginning, let us focus on MNIST database, which is widely used in machine learning for training and testing.. The acronym MNIST stands for Mixed National Institute of Standards and Technology because this database contains a large number of handwritten digits, it is a re-mixing of a previous dataset and collects 60000 images of $28x28$ pixels, which are not only black and white, but the grayscale levels were introduced. The images were taken half from the American Census Bureau employees and half from American high school students.
+
+\section{Main structure}
+
+We introduced in Chapter 2 the different types of layers useful to build a \acs{CNN}], now we can analyze how they are combined in our Tensorflow model. This architecture was not modified, so it is exactly the one suggested in the Tensorflow example.
+
+After the MNIST images are loaded, the Tensorflow session started and the variables initialized, we start building the multilayer \acs{CNN}.
+
+\subsection{First convolutional layer}
+
+The following code lines introduce the first block: a convlutional layer followed by the ReLU layer and the pooling layer. In the first two lines there is the initialization of weight and bias; weights are random values from a truncated normal distribution, bias is a constant tensor. Then on the third line there are convolution and ReLU operation, followed on the fourth line by the max pooling.
+
+That kind of structure in the block we described is not the only solution, the different layers can be combined in different ways, e.g. we can add in this block a second convolutional layer instead of one before ReLU and max pooling.
+
+\begin{lstlisting}
+W_conv1 = weight_variable([5, 5, 1, features1])
+b_conv1 = bias_variable([features1])
+h_conv1 = tf.nn.relu(conv2d(x_image, W_conv1) + b_conv1)
+h_pool1 = max_pool_2x2(h_conv1)
+\end{lstlisting}
+
+\subsection{Second convolutional layer}
+
+Similarly to the previous subsection we can add a second block which has exactly the same structure of the first one: a convolutional layer with ReLU and pooling operations. The following code is equal to the previous, it does the same operations.
+
+\begin{lstlisting}
+W_conv2 = weight_variable([5, 5, features1, features2])
+b_conv2 = bias_variable([features2])
+h_conv2 = tf.nn.relu(conv2d(h_pool1, W_conv2) + b_conv2)
+h_pool2 = max_pool_2x2(h_conv2)
+\end{lstlisting}
+
+The only difference between the two blocks we newly added is in the hyperparameters, in particular the number of features the network recognises analyzing the images in input.
+
+Any changes are possible: not only a single convolutional level con be added, but a whole block like the two we described right now. A more structured \acs{CNN} can be built with more complex task.
+
+\subsection{Densely connected layer}
+
+The densely connected layer is the core of classifying process in our \acs{CNN}, it is implemented as matrix multiplication added to a bias offset. With that layer it is also possible to learn combinations of features.
+
+\begin{lstlisting}
+W_fc1 = weight_variable([7 * 7 * features2, 1024])
+b_fc1 = bias_variable([1024])
+h_pool2_flat = tf.reshape(h_pool2, [-1, 7 * 7 * features2])
+h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)	contenuto...
+\end{lstlisting}
+
+\subsection{Dropout leyer}
+
+In order to reduce overfitting we introduce a dropout layer, which is very important to perform better wih new examples. The implementation of that operations is really simple: a random set of activations is setted to zero, so the pruned nodes are reinitialized and reinserted into the network. Dropout layer is used only during training, not during testing.
+
+\begin{lstlisting}
+keep_prob = tf.placeholder(tf.float32)
+h_fc1_drop = tf.nn.dropout(h_fc1, keep_prob)	contenuto...
+\end{lstlisting}
+
+\subsection{Loss (readout) layer}
+
+The loss layer is the last one but also the core of regression model in our \acs{CNN}, here we find the implementation of regression model with the loss function: a multiplication of vectorized input images by the weight matrix, added to bias.
+
+Our loss function is the cross entropy between the target and the softmax activation function applied to the model's prediction.
+
+\begin{lstlisting}
+W_fc2 = weight_variable([1024, 10])
+b_fc2 = bias_variable([10])
+y_conv = tf.nn.softmax(tf.matmul(h_fc1_drop, W_fc2) + b_fc2)
+\end{lstlisting}
