@@ -6,15 +6,63 @@ In this chapter we will discover a basic Tensorflow model developed in order to 
 
 After an introduction to the MNIST dataset, we will study in deep the structure of the Convolutional Neural Network used in our experiments, trying to understand which parameters are relevant to the improvement of results, and how the structure can influence most of all on the accuracy of the network during training.
 
-We identify two levels where we can intervene to modify the neural network. A architectural one, where we add, move and remove convolutional or pooling levels, and a parameter level, where we modify number of features, patch dimension, etc. The first one is more important, the second is a more precise intervention.
+We identify two levels where we can intervene to modify the neural network. A architectural one, where we add, move and remove convolutional or pooling levels, and a parameter level, where we modify number of features, patch dimension, etc. The first one is more important, the second one is a more precise intervention.
 
-Before beginning, let us focus on MNIST database, which is widely used in machine learning for training and testing.. The acronym MNIST stands for Mixed National Institute of Standards and Technology because this database contains a large number of handwritten digits, it is a re-mixing of a previous dataset and collects 60000 images of $28x28$ pixels, which are not only black and white, but the grayscale levels were introduced. The images were taken half from the American Census Bureau employees and half from American high school students.
+\section{A focus on MNIST dataset}
 
-\section{Main structure}
+Before beginning, let us focus on MNIST database, which is widely used in machine learning for training and testing. The acronym MNIST stands for Mixed National Institute of Standards and Technology because this database contains a large number of handwritten digits, it is a re-mixing of a previous dataset (NIST dataset) and collects $60000$ images for training and $10000$ for testing. The images were taken half from the American Census Bureau employees and half from American high school students and includes labels telling which digit it is.
+
+\subsection{Usage in the machine learning}
+
+As mentioned earlier, MNIST dataset is widely used for training and testing neural networks, because it is a reference dataset in machine learning. During the years, lots of solution in neural networks research trained and tested on this dataset. Sometimes exciting results led to stale that neural networks achieved "near-human performance". But first attempts obtained mediocre results: a linear classifier had a error rate from $12.0 \%$ to $7.6 \%$, which is really not satisfying for such a simple task.
+
+Other solutions led to better results. Non-linear classifier drastically reduced error rate to $3.3 \%$, but more appreciable results were obtained with 2-layers ($784-800-10$) neural networks, error rate: $1.6 \%$, $0.7 \%$ with elastic distortion. Boosted stumps achieved an error rate of $0.87 \%$, support vector machines $0.56 \%$, K-nearest neighbours $0.52 \%$ and 6-layer deep neural network $0.35 \%$.
+
+The best result have been achieved with \acsp{CNN}: different kinds of \acs{CNN} reached the lowest error rate, from $0.31 \%$ to $0.21 \%$. Although the problem is quite simple, it clear that this kind of neural network is more powerful than others.
+
+\subsection{Technical informations about images}
+
+The digits have been size-normalized and centered in a fixed-size image of $28x28$ pixels. The dataset includes labels for each image telling us which digit it is.
+
+Originally NIST dataset contained black and white, bilevel images. As a result of anti-aliasing technique used in normalization algorithms, images now contain grey levels. Digits were centered by computing the center of mass of the pixels and properly translating them.
+
+Images are not in a standard image format, the data is stored in a very simple format designed for storing vectors and multidimensional matices. Clearly labels values are 0 to 9, while pixel values are 0 to 255, 0 is white and means background, 255 is black and means foreground; pixels are organized row-wise
+
+More detailed informations about data format are not useful to read and compute the files in the dataset.
+
+\section{The hyperparameters level}
+
+Editing hyperparameters of the network is very delicate, it is a precision intervention which hopefully allows uf to improve training and performance, or reduce in the worst case. We will consider the following parameters: number of features to identify in convolutional layers, patch size, stride size, number of input and output channels and padding of images.
+
+\begin{description}
+	
+	\item[Number of features] That is one of the most important parameters to set, because here is specified how many features the network can learn. There is not a formula which allows us to find the perfect number of features based on the complexity of a task, but after several attempts with different values for this parameter we find a good solution for MNIST images. It can be concluded that a simple task, e.g. classify $28x28$ greyscale images of digits, requires a small amount of features: 8 in first convolutional layer, 16 in the second one. When we will analyze the result with different values of this parameter, we will find that extraordinary performance can be obtained with 2 and 4 features. Most difficult task with bigger and higher quality images, probably will require tens or hundreds features. An opposite problem is a too high value, the result is that some features can be equal or very similar, so it could be not really useful and performing.
+
+	\item[Patch size] Patch size value allows us to adjust the size of the area where the network find features. Contrary to expectations, this parameter will not change from a convolutional and pooling layer to the next, because while it is a fixed value, the image dimension is reduced, so the patch cover a greater area and allows the recognition of more complex features in more space.  In our example with $28x28$ images a good patch size value is $5x5$. Obviously a bigger image require appropriate sized patch.
+	
+	\item[Stride size] According to the vanilla version proposed in the example, our stride value is 1. This value is combined with the padding in convolution ad pooling in order to obtain an input of the same size of the input.
+	
+	\item[Input and output channels] These parameters can vary from a convolutional layer to another. In the first layer the input channel is linked to the colours of the input images, so in our example we have the value 1; output channel value depends on the number of features recognized in the layer. In later layers the input channel must correspond to the output channel of previous layer, and output channel to the features recognized in the layer.
+	
+	\item[Padding dimension] As described previously with the formula, we determined the zero padding dimension. It is very important because with the stride size value permit to keep stable dimensions of input and output layer after layer.
+
+\end{description}
+
+\section{Main structure: the architetural level}
 
 We introduced in Chapter 2 the different types of layers useful to build a \acs{CNN}], now we can analyze how they are combined in our Tensorflow model. This architecture was not modified, so it is exactly the one suggested in the Tensorflow example.
 
 After the MNIST images are loaded, the Tensorflow session started and the variables initialized, we start building the multilayer \acs{CNN}.
+
+\subsection{Weights initialization}
+
+First of all we need to define a matrix of weights, its dimensions depend on images dimensions, so if images are $28x28$ pixel and we have $10$ categories, weights matrix have to be [$28*28$, $10$], so [$784$, $10$] dimensioned. At first weights are random values from a truncated normal distribution, the following code lines shows their initialization.
+
+\begin{lstlisting}
+def weight_variable(shape):
+  initial = tf.truncated_normal(shape, stddev=0.1)
+  return tf.Variable(initial)
+\end{lstlisting}
 
 \subsection{First convolutional layer}
 
@@ -52,7 +100,7 @@ The densely connected layer is the core of classifying process in our \acs{CNN},
 W_fc1 = weight_variable([7 * 7 * features2, 1024])
 b_fc1 = bias_variable([1024])
 h_pool2_flat = tf.reshape(h_pool2, [-1, 7 * 7 * features2])
-h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)	contenuto...
+h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)
 \end{lstlisting}
 
 \subsection{Dropout leyer}
@@ -61,7 +109,7 @@ In order to reduce overfitting we introduce a dropout layer, which is very impor
 
 \begin{lstlisting}
 keep_prob = tf.placeholder(tf.float32)
-h_fc1_drop = tf.nn.dropout(h_fc1, keep_prob)	contenuto...
+h_fc1_drop = tf.nn.dropout(h_fc1, keep_prob)
 \end{lstlisting}
 
 \subsection{Loss (readout) layer}
@@ -75,3 +123,38 @@ W_fc2 = weight_variable([1024, 10])
 b_fc2 = bias_variable([10])
 y_conv = tf.nn.softmax(tf.matmul(h_fc1_drop, W_fc2) + b_fc2)
 \end{lstlisting}
+
+\subsection{Training, testing and evaluating the model}
+
+\paragraph{Training}
+
+We build our \acs{CNN} layer by layer, convolution by convolution and finally we defined the loss function. Now it is time to train that model and test its capabilities.
+
+Train with Tensorflow allows to use automatic differentiation to find the gradient of the loss with respect to each of the variables. In the wide range of built-in optimization algorithms offered by Tensorflow we choose the Adam optimizer. The optimizer adds new operations, which include ones to compute gradients, compute parameter update steps, and applied update steps to the parameters.
+
+\begin{lstlisting}
+cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y_conv), reduction_indices=[1]))
+train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
+correct_prediction = tf.equal(tf.argmax(y_conv, 1), tf.argmax(y_, 1))
+accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+\end{lstlisting}
+
+Training the model can be therefore be accomplished repeatedly running the train\_step for a number of epochs.
+
+\paragraph{Testing and evaluating}
+
+After a long training session, we want to evaluate performances of our network. It is possible with the following code line, where a percentage value of the accuracy is calculated.
+
+\begin{lstlisting}
+test_accuracy = accuracy.eval(feed_dict={x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0})
+\end{lstlisting}
+
+Similarly we can evaluate the learning trend during training epochs. It is one of the most important measurement we made during lot of tests with different parametrized \acs{CNN}.
+
+\section{Modifications of the architecture}
+
+Previously we talk about architectural interventions, classifying them as more structural modifications. We reinvented the wheel during the first tests, where we tried to change something in the layers structure adding convolutional levels. Disastrous results led us to the conclusions that in case of quite simple task, like digits classification, ad excessive amount of layers ends in unsatisfactory results.
+
+Just like the number of features should be assessed on the basis of task complexity, also the structure must be proportionate to it much more than hyperparameters.
+
+Certainly task like facial recognition or high-defined images classification requires more complex structures, with more convolution levels and much more features.
