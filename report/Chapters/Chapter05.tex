@@ -6,12 +6,94 @@ In order to reach satisfying conclusions, we will analyze carefully the collecte
 
 \section{Gathering data}
 
-To begin with, we will describe the gathering data process, focusing on what, when and why we recorded during network training and testing. It is important to understand the core of our analysis and the conclusions we will reach at the end of this report.
+To begin with, we will describe the gathering data process focusing on what, when and why we recorded data during network executions. It is important to understand the core of our analysis and the conclusions we will reach at the end of this project report.
 
 \subsection{What, when, why}
+
+Now will follow an accurate description of the data we gathered, focusing also on when they were recorded and explaining reasons which moved to. Choosing what and when to record data is very important, because that data project us into the TensorFlow model and permit to understand behaviour, performance and results.
+
+Gathered data can be summarized in accuracy during training phase and test accuracy after training, both strongly connected to the number of features we set to the convolutional network. Now we explain them in detail:
+
+\paragraph{Training accuracy}
+
+An important measurement is the accuracy during training phase because it allows us to focus on learning trend and discover the behaviour of networks with different number of features. As we will see later with the help of some graphics, we can deduce lots of useful information. These values are between 0 and 1 and were recorded every 10 epochs, guaranteeing dense and rich sampling for a good analysis.
+
+\paragraph{Final test accuracy}
+
+An important value as the previous is the measurement of accuracy in testing phase, after training. With these values we can analyze performances of networks with different number of features. Focusing on these results we will conclude possible guidelines useful to set a number of features commensurate to our necessities.
+
+\paragraph{Execution times}
+
+Measurements of execution times were not made with precision or recorded, but we took notes about faster or slower nets to understand how structural changes or different number of features can affect training duration.
+
+These informations, in relation to analysis on performances in training and testing phases, will help us to draw conclusions about diverse structures and parameterized \acs{CNN}.
 
 \subsection{Storage format}
 
 Data gathered during executions were first saved in arrays and then written to a CSV file. For each different network, a CSV file was created with recorded data of training accuracy during all executions. So, in each column of the file we find the training accuracy of an execution sampled every 10 epochs.
 
 Regarding measurements of accuracy after training, a unique CSV file was created with all test accuracy for each different network and for each execution. Data are organized by rows, on a row we find: the number of features of the network, the values of test accuracy, a final average value of all test accuracy values for the network. These average values will be the measure to evaluate and compare networks with different numbers of features.
+
+\section{Executions and parameters choice}
+
+This short section will introduce and explain some contextual informations about how and why we set number of executions and parameters values in diverse convolutional networks. These choices are preserved on all executions and are fundamental in our incoming analysis.
+
+\subsection{Number of executions}
+
+Gathering data of a single execution and with too large sampling did not give us satisfying and considerable graphs because data were not sufficient and lines too variable. To overcome these problems we executed multiple times training and test of the same TensorFlow model, a good compromise between availability of time, computing power and sufficient amount of data is $30$ executions, but previous attempts were limited to $10$ executions.
+
+A higher number of executions produce a bigger amount of data, more complete and statistically more significant. Another advantage is that the lines in graphs are more stable and plain, afterwards we will see the graphs and appreciate the results.
+
+\subsection{Number of epochs}
+
+The first version of this TensorFlow model provided $20000$ epochs, after first executions we concluded that such a big number was exaggerate, so we reduced training epochs to $15000$. That amount is amply sufficient to observe a good convergence and stabilization of training trend, and allows us after lots of executions to save time.
+
+Another advantage of fewer epochs is a representation of data in the graphs that is less compressed, than it turns out to be more clear, informative and readable.
+
+\subsection{Number of features}
+
+We executed four different TensorFlow models, the only difference is the number of features we choose for each one. Probably it is the most important and influent parameter for performance during training and test phases, and the following analysis will be based on this parameter.
+
+We choose an increasing number of features and in the convolutional layer we followed the rule of doubling, selected values are summarized in Table \ref{tab:features_number}.
+
+\begin{table}
+	\caption{Selected numbers of features in diverse TensorFlow models}
+	\label{tab:features_number}
+	\centering
+	\begin{tabular}{ccc}
+		\hline 
+		& \multicolumn{2}{c}{\textbf{Number of features}} \\ 
+		& 1st conv. layer & 2nd conv. layer \\ 
+		\hline 
+		\textbf{Model 1} & 2 & 4 \\ 
+		\textbf{Model 2} & 4 & 8 \\ 
+		\textbf{Model 3} & 8 & 16 \\ 
+		\textbf{Model 4} & 16 & 32 \\ 
+		\hline 
+	\end{tabular}
+\end{table}
+
+\section{Analysis of training accuracy}
+
+After a long wait, necessary for introduce useful informations, finally we arrive hopefully to the most interesting section of this project report. Now we are prepared to introduce an accurate analysis of the diverse TensorFlow models described.
+
+We will focus mainly on:
+\begin{itemize}
+	\item Training speed
+	\item Training stability
+	\item Training performance
+	\item Training duration
+	\item Parameters affecting training duration
+\end{itemize}
+
+\subsection{Training speed}
+
+\subsection{Training stability}
+
+\subsection{Training performance}
+
+\subsection{Training duration}
+
+\subsection{Parameters affecting training duration}
+
+\section{Analysis of test accuracy}
