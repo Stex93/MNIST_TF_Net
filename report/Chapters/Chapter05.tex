@@ -1,5 +1,17 @@
 %*****************************************
-\chapter{Analysis of the collected data}\label{ch:data_analysis}
+\chapter{Analysis of collected data}\label{ch:data_analysis}
 %*****************************************
 
-In order to reach satisfying conclusions, we will analyze carefully the collected data every time the structure of the network has been changed, trying to understand how it performs, what kind of adjustment we can do to improve the results, and comparing the different structured networks performances on the same classifying task.
+In order to reach satisfying conclusions, we will analyze carefully the collected data every time the structure of the network has been changed, trying to understand how it performs, what kind of adjustment we can do to improve the results, and comparing the different structured networks performances on the same classifying task with MNIST images.
+
+\section{Gathering data}
+
+To begin with, we will describe the gathering data process, focusing on what, when and why we recorded during network training and testing. It is important to understand the core of our analysis and the conclusions we will reach at the end of this report.
+
+\subsection{What, when, why}
+
+\subsection{Storage format}
+
+Data gathered during executions were first saved in arrays and then written to a CSV file. For each different network, a CSV file was created with recorded data of training accuracy during all executions. So, in each column of the file we find the training accuracy of an execution sampled every 10 epochs.
+
+Regarding measurements of accuracy after training, a unique CSV file was created with all test accuracy for each different network and for each execution. Data are organized by rows, on a row we find: the number of features of the network, the values of test accuracy, a final average value of all test accuracy values for the network. These average values will be the measure to evaluate and compare networks with different numbers of features.
