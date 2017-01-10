@@ -73,6 +73,7 @@ We choose an increasing number of features and in the convolutional layer we fol
 	\end{tabular}
 \end{table}
 
+In next section we will also quibble on a too high number of features, trying to understand if it can be evil or not, if the network find features which are equal each other and how can realize that we have chosen satisfying values.
 
 \section{Analysis of training accuracy}
 
@@ -100,14 +101,14 @@ Always considering all graphics:
 
 \subsection{Training speed}
 
-\begin{figure}[t]
+The first perspective we explore is the speed of training phase, or rather how quickly the convolutional network learns from the example images. It is interesting to inspect this, because as we shall see in the graphics, in front of a greater number of features we find a more training speed. In other words it means: more features, more rapid learning.
+
+\begin{figure}
 	\caption{Comparison of training speeds of the four TensorFlow models with different number of features}
 	\label{fig:training_speed}
 	\centering
 	\includegraphics[width=1\textwidth]{Images/training_speed}
 \end{figure}
-
-The first perspective we explore is the speed of training phase, or rather how quickly the convolutional network learns from the example images. It is interesting to inspect this, because as we shall see in the graphics, in front of a greater number of features we find a more training speed. In other words it means: more features, more rapid learning.
 
 Figure \ref{fig:training_speed} shows the first part of the training phase, about the first half. It allows us to focus on the most interesting part of the graphic for the analysis we are going to do.
 
@@ -136,7 +137,7 @@ Even without focusing on precise number of epochs, we can notice at a glance the
 
 \subsection{Training stability}
 
-A second perspective in our analysis is the stability of training, particularly towards the end part of training phase. 
+A second perspective in our analysis is the stability of training, particularly towards the end part of training phase. Figure \ref{fig:training_stability} shows the training curve in its adolescence to its adulthood, about from epoch $5000$ to $15000$. In this range we can observe a progressive stabilizations of learning, and similarly to training speed, here the number of features we set influence the stability.
 
 \begin{figure}
 	\caption{Comparison of training stability of the four TensorFlow models with different number of features}
@@ -145,7 +146,19 @@ A second perspective in our analysis is the stability of training, particularly 
 	\includegraphics[width=1\textwidth]{Images/training_stability}
 \end{figure}
 
+Without the need for explain each curve, we can focus on ups and downs: with fewer features we find more pronunced peaks, while increasing the number of features we obtain more stable learning curve.
+
+An important conclusion of these observations is that we can have better and more stable learning with an appropriate and sufficient number of features. In case of too low value training will be instable and require more epochs. But be careful: remember that good and stable training accuracy does not imply directly a good test accuracy, so keep your head even if you do not obtain the most stable learning curve, it could be worse (e.g. your neural network can do a really bad generalization).
+
 \subsection{Training performance}
+
+After an interesting analysis of how quick and stable can be the training phase, finally we can focus on the most important aspect: performances. It is clear, now, that is strictly connected to the previous perspectives, and we can naturally imagine the following fact: more feature means better results. After all we have already said, it is a logical deduction, and effectively it is true.
+
+Figure \ref{fig:cfr_all} shows a complete graphics of the diverse learning curve of training phases in our four different TensorFlow models. Analyzing this chart we can see immediately that the features number greatly influences performances, the figure speaks for itself.
+
+Together with the two previous perspective, we can also observe that improvements are not proportional to the number of features. Rather we have greater improvement between the models 2\_4 and 4\_8, instead of between 8\_16 and 16\_32. In the first case we can observe visible differences in training speed, stability and performance, which are less marked in the second case. We can observe much better these aspects in Figure \ref{fig:cfr_low} where the focus is on models 2\_4 and 4\_8 and Figure \ref{fig:cfr_high} where there are only models 8\_16 and 16\_32.
+
+The observation we just made is really important because it allows us to understand with experiments the extent to which it is convenient, or we consider convenient, increase the number of features that the network should recognize. Until we consider useful a certain improvement of these perspectives, we can set higher values. 
 
 \begin{landscape}
 	\begin{figure}
@@ -156,8 +169,67 @@ A second perspective in our analysis is the stability of training, particularly 
 	\end{figure}
 \end{landscape}
 
+\begin{landscape}
+\begin{figure}
+	\centering
+	\caption{Comparison of training accuracy curves of two TensorFlow models with lower number of features}
+	\label{fig:cfr_low}
+	\includegraphics[width=1\textheight]{Images/cfr_2_4_vs_4_8}
+\end{figure}
+\end{landscape}
+
+\begin{landscape}
+\begin{figure}
+	\centering
+	\caption{Comparison of training accuracy curves of two TensorFlow models with higher number of features}
+	\label{fig:cfr_high}
+	\includegraphics[width=1\textheight]{Images/cfr_8_16_vs_16_32}
+\end{figure}
+\end{landscape}
+
 \subsection{Training duration}
 
+A non-trivial aspect that common people with limited computing power always consider is: how much time does it take? It is a legitimate question, and we will promptly broach the subject.
+
+Despite we do not gathered data about execution times, as we said before, we take some notes about. Consider data in Table \ref{tab:approx_times} non precise, but indicative.
+
+\begin{table}
+	\caption{Approximate times measurements of diverse TensorFlow models executions}
+	\label{tab:approx_times}
+	\centering
+	\begin{tabular}{cc}
+		\hline 
+		& \textbf{Number of features} \\ 
+		\hline 
+		\textbf{Model 2\_4} & 7 minutes \\ 
+		\textbf{Model 4\_8} & 7 minutes \\ 
+		\textbf{Model 8\_16} & 7 minutes \\ 
+		\textbf{Model 16\_32} & 7 minutes \\ 
+		\hline 
+	\end{tabular}
+\end{table}
+
+In order to complete time measurements in Table \ref{tab:approx_times}, here are some technical informations about relevant hardware characteristics:
+\begin{itemize}
+	\item Ultrabook Toshiba Satellite;
+	\item Processor Intel Core i5;
+	\item CPU frequency $1.7$ GHz;
+	\item OS Ubuntu 16.10
+	\item No cluster
+	\item No GPU
+\end{itemize}
+
 \subsection{Influences of parameters on the network}
+
+What we are about to say has already been said in the previous pages, while we were analyzing all the perspectives. Now we try to summarize the aspect of how diverse numbers of features influenced network performances and times.
+
+It is clear that better trainings can be obtained with higher number of features. But it is also clear that there in not direct proportion between number of features and training speed, stability, accuracy and time execution; so we have to conclude that increasing this key parameter is the way to improve our \acs{CNN}, but how to increase the values is at your own risk, according to:
+\begin{itemize}
+	\item computing power availability;
+	\item time availability;
+	\item desired performances.
+\end{itemize}
+
+We can not leave out an important observation: training a high-valued parameters model can be expensive, very expensive, but we have to consider that this phase is only required the first time, and then we can have a well trained network with very good performances. It might be worth it.
 
 \section{Analysis of test accuracy}
