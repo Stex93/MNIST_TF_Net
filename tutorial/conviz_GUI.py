@@ -37,7 +37,7 @@ targets = None
 n_input = 784  # MNIST data input (img shape: 28*28)
 n_classes = 10  # MNIST total classes (0-9 digits)
 dropout = 0.5  # Dropout, probability to keep units
-features1 = 8
+features1 = 16
 features2 = 2 * features1
 
 # tf Graph input
@@ -112,7 +112,7 @@ def main():
     image_canvas = Canvas(root, width=28 * 10, height=28 * 10, bg='blue')
     image_canvas.grid(row=0, column=1, padx=5, pady=5)
     image_canvas.config(highlightthickness=1)
-    showing_result_canvas = Canvas(root, height=60, background='greenyellow')
+    showing_result_canvas = Canvas(root, height=60, background='grey')
     showing_result_canvas.create_text(20, 40, anchor=W, font=("Ubuntu", 20),
                                       text="Draw any digit you want")
     showing_result_canvas.grid(row=1, column=0, columnspan=2, sticky=E+W)
