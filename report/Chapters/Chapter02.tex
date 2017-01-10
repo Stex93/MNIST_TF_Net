@@ -2,22 +2,22 @@
 \chapter{Convolutional neural networks}\label{ch:conv_nets}
 %*****************************************
 
-\acp{CNN} are a kind of deep artificial feed-forward neural network in which the organization of the connections between the neurons is inspired by the animal visual cortex. Actually, individual cortical neurons respond to stimuli in a restricted region of space known as \textbf{receptive field}. The receptive fields of different neurons partially overlap such that they tile the whole visual field. Similarly, in \acp{CNN} each neuron is connected with only a small subset of inputs from the previous layer.
+\acp{CNN} are a kind of deep artificial feed-forward neural network in which the organization of the connections between the neurons is inspired by the animal visual cortex. Actually, individual cortical neurons respond to stimuli in a restricted region of space known as \textbf{receptive field}. The receptive fields of different neurons partially overlap such that they tile the whole visual field. Similarly, in \acp{CNN} each neuron is connected only with a small subset of inputs from the previous layer.
 
 These networks are extremely useful when dealing with data with a grid-like topology, such as time-series data or images.
 
 The name "convolutional neural network" indicates that the network employs a specialized kind of linear operation called \textbf{convolution}. In short, as stated in [\cite{Goodfellow-et-al-2016}], \emph{convolutional networks are simply neural networks that use convolution in place of general matrix multiplication in at least one of their layers}.
 
-This chapter starts with a list of the main features of a convolutional neural network. Then, the building blocks of the \ac{CNN} architecture are analysed with particular attention to the tuning of hyperparameters. In the last part, some applications of this model are proposed.
+This chapter starts with a list of the main features of every convolutional neural network. Then, the building blocks of the \ac{CNN} architecture are analyzed with particular attention to the hyperparameters tuning. In the last part, some applications of this model are proposed.
 
 \section{Main features}
 
-While traditional \acf{MLP} models were successfully used in the past for image recognition, due to the full connectivity between nodes they suffer from the curse of dimensionality and, thus, they do not scale well to higher resolution images.
+While traditional \acf{MLP} models were successfully used in the past for image recognition, they now suffer from the curse of dimensionality due to the full connectivity between nodes and, thus, they do not scale well to higher resolution images.
 
-For instance, in the CIFAR-10 dataset, images are of size $32x32x3$ (32 wide, 32 high, 3 color channels), so a single fully connected neuron in the first hidden layer of a regular \ac{MLP} would have $32*32*3 = 3,072$ weights. A $200x200$ image, however, would lead to neurons that have $200*200*3 = 120,000$ weights.
-Such network architecture does not take into account the spatial structure of data, treating input pixels which are far apart or close together exactly in the same way. The full connectivity of neurons is wasteful in the framework of image recognition, and the huge number of parameters quickly leads to overfitting.
+For instance, in the CIFAR-10 dataset, images are of size $32x32x3$ (32 wide, 32 high, 3 color channels). A single fully connected neuron in the first hidden layer of a regular \ac{MLP} would have $32*32*3 = 3,072$ weights. A $200x200$ image, however, would lead to neurons that have $200*200*3 = 120,000$ weights.
+Moreover, such network architecture does not take into account the spatial structure of data, treating input pixels which are far apart or close together exactly in the same way. The full connectivity of neurons is wasteful in the framework of image recognition, and the huge number of parameters quickly leads to overfitting.
 
-As said before, convolutional neural networks are biologically inspired variants of multilayer perceptrons, designed to emulate the behaviour of the visual cortex. These models mitigate the challenges posed by the \ac{MLP} architecture by exploiting the strong spatially local correlation present in natural images.
+As said before, convolutional neural networks are biologically inspired variants of multilayer perceptrons, designed to emulate the behavior of the visual cortex. These models mitigate the challenges posed by the \ac{MLP} architecture by exploiting the strong spatially local correlation present in natural images.
 In particular, \acsp{CNN} have the following distinguishing features:
 
 \begin{description}
@@ -89,8 +89,7 @@ As a result of this process, the network learns filters that activate when they 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\textwidth]{Images/filter_application}
-	\caption{Application of a filter for edge detection (Photo credit: Paula
-		Goodfellow)}\label{fig:filter_application}
+	\caption{Application of a filter for edge detection (Source: [\cite{Goodfellow-et-al-2016}])}\label{fig:filter_application}
 \end{figure}
 
 It is evident that different filters will produce different feature maps for the same input. Figure \ref{fig:filter_application} shows the result of the application of a filter for edge detection to a given image. The image on the right was formed by taking each pixel in the original image and subtracting the value of its neighboring pixel on the left. This shows the strength of all of the vertically oriented edges in the input image, which can be a useful operation for object detection.
