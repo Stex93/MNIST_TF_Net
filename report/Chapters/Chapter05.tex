@@ -40,15 +40,15 @@ This short section will introduce and explain some contextual informations about
 
 \subsection{Number of executions}
 
-Gathering data of a single execution and with too large sampling did not give us satisfying and considerable graphs because data were not sufficient and lines too variable. To overcome these problems we executed multiple times training and test of the same TensorFlow model, a good compromise between availability of time, computing power and sufficient amount of data is $30$ executions, but previous attempts were limited to $10$ executions.
+Gathering data of a single execution and with too large sampling did not give us satisfying and considerable graphics because data were not sufficient and lines too variable. To overcome these problems we executed multiple times training and test of the same TensorFlow model, a good compromise between availability of time, computing power and sufficient amount of data is $30$ executions, but previous attempts were limited to $10$ executions.
 
-A higher number of executions produce a bigger amount of data, more complete and statistically more significant. Another advantage is that the lines in graphs are more stable and plain, afterwards we will see the graphs and appreciate the results.
+A higher number of executions produce a bigger amount of data, more complete and statistically more significant. Another advantage is that the lines in graphics are more stable and plain, afterwards we will see the graphics and appreciate the results.
 
 \subsection{Number of epochs}
 
 The first version of this TensorFlow model provided $20000$ epochs, after first executions we concluded that such a big number was exaggerate, so we reduced training epochs to $15000$. That amount is amply sufficient to observe a good convergence and stabilization of training trend, and allows us after lots of executions to save time.
 
-Another advantage of fewer epochs is a representation of data in the graphs that is less compressed, than it turns out to be more clear, informative and readable.
+Another advantage of fewer epochs is a representation of data in the graphics that is less compressed, than it turns out to be more clear, informative and readable.
 
 \subsection{Number of features}
 
@@ -65,13 +65,14 @@ We choose an increasing number of features and in the convolutional layer we fol
 		& \multicolumn{2}{c}{\textbf{Number of features}} \\ 
 		& 1st conv. layer & 2nd conv. layer \\ 
 		\hline 
-		\textbf{Model 1} & 2 & 4 \\ 
-		\textbf{Model 2} & 4 & 8 \\ 
-		\textbf{Model 3} & 8 & 16 \\ 
-		\textbf{Model 4} & 16 & 32 \\ 
+		\textbf{Model 2\_4} & 2 & 4 \\ 
+		\textbf{Model 4\_8} & 4 & 8 \\ 
+		\textbf{Model 8\_16} & 8 & 16 \\ 
+		\textbf{Model 16\_32} & 16 & 32 \\ 
 		\hline 
 	\end{tabular}
 \end{table}
+
 
 \section{Analysis of training accuracy}
 
@@ -83,17 +84,80 @@ We will focus mainly on:
 	\item Training stability
 	\item Training performance
 	\item Training duration
-	\item Parameters affecting training duration
+	\item Influences of parameters on the network
+\end{itemize}
+
+For each of these perspectives we will conduct a thorough analysis with the help of graphics.
+
+\subsection{Graphics and notations}
+
+Always considering all graphics:
+\begin{itemize}
+	\item[y-axis] On this axis we find the training accuracies in the range from $0.85$ to $1$. We cut out the part of the graphic below the value $0.85$ because it is not really useful and mainly because it allows us to focus on the most interesting area.
+	\item[x-axis] On this axis we find the time values: the epochs. We will consider different time windows according to the needs, but usually we find all the epochs of training phase.
+	\item[Legend] In every graphics of this section will refer to the four TensorFlow model with a notation based on the number of features in the two convolutional layer: number of features in first layer + \_ + number of features in second layer.
 \end{itemize}
 
 \subsection{Training speed}
 
+\begin{figure}[t]
+	\caption{Comparison of training speeds of the four TensorFlow models with different number of features}
+	\label{fig:training_speed}
+	\centering
+	\includegraphics[width=1\textwidth]{Images/training_speed}
+\end{figure}
+
+The first perspective we explore is the speed of training phase, or rather how quickly the convolutional network learns from the example images. It is interesting to inspect this, because as we shall see in the graphics, in front of a greater number of features we find a more training speed. In other words it means: more features, more rapid learning.
+
+Figure \ref{fig:training_speed} shows the first part of the training phase, about the first half. It allows us to focus on the most interesting part of the graphic for the analysis we are going to do.
+
+Focusing on Figure \ref{fig:training_speed} we can clearly observe that more features imply a more rapid learning. We can notice this in two ways, two points of view.
+
+Considering the same training value, e.g. $0.85$, we observe the following facts. that the model with fewer features (Model $2_4$) reaches the referring value in more than $500$ epochs.
+
+\paragraph{Model 2\_4}
+
+The TensorFlow model with fewer features reaches the referring value of training accuracy in more than $500$ epochs.
+
+\paragraph{Model 4\_8}
+
+Increasing the number of features we obtain the same training accuracy value of $0.85$ in about $350$ epochs.
+
+\paragraph{Model 8\_16}
+
+The model with $8$ and $16$ features on first and second convolutional layer reach that training accuracy value in about $200/250$ epochs.
+
+\paragraph{Model 16\_32}
+
+The last model with the higher number of features is the fastest, reaching the referring training accuracy value in about $150$ epochs.
+\\
+\\
+Even without focusing on precise number of epochs, we can notice at a glance the slower and faster model. The same observations we just made, can be done considering a precise epoch during the first part of the training phase where the learning curve mainly grows.
+
 \subsection{Training stability}
+
+A second perspective in our analysis is the stability of training, particularly towards the end part of training phase. 
+
+\begin{figure}
+	\caption{Comparison of training stability of the four TensorFlow models with different number of features}
+	\label{fig:training_stability}
+	\centering
+	\includegraphics[width=1\textwidth]{Images/training_stability}
+\end{figure}
 
 \subsection{Training performance}
 
+\begin{landscape}
+	\begin{figure}
+		\centering
+		\caption{Comparison of training accuracy curves of the four TensorFlow models with different number of features}
+		\label{fig:cfr_all}
+		\includegraphics[width=1\textheight]{Images/cfr_all}
+	\end{figure}
+\end{landscape}
+
 \subsection{Training duration}
 
-\subsection{Parameters affecting training duration}
+\subsection{Influences of parameters on the network}
 
 \section{Analysis of test accuracy}
