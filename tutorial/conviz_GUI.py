@@ -108,12 +108,12 @@ def main():
     drawing_canvas.bind("<ButtonRelease-1>", b1up)
     drawing_canvas.bind("<Button-3>",
                         lambda x: drawing_canvas.delete('all'))  # clear canvas when user click right button
-    drawing_canvas.create_rectangle((10, 10, 270, 270))
+    #drawing_canvas.create_rectangle((10, 10, 270, 270))
     image_canvas = Canvas(root, width=28 * 10, height=28 * 10, bg='blue')
     image_canvas.grid(row=0, column=1, padx=5, pady=5)
     image_canvas.config(highlightthickness=1)
     showing_result_canvas = Canvas(root, height=60, background='greenyellow')
-    showing_result_canvas.create_text(20, 40, anchor=W, font=("Purisa", 20),
+    showing_result_canvas.create_text(20, 40, anchor=W, font=("Ubuntu", 20),
                                       text="Draw any digit you want")
     showing_result_canvas.grid(row=1, column=0, columnspan=2, sticky=E+W)
 
@@ -152,7 +152,9 @@ def b1up(event):
             temp_prev = temp
             i_max = i
         i += 1
-    print("The digit is a %s" % str(i_max))
+    showing_result_canvas.delete('all')
+    showing_result_canvas.create_text(20, 40, anchor=W, font=("Corbel", 20),
+                                      text="The digit is: %s" % str(i_max))
 
     # display image after being processes
     img1 = img.resize((28 * 9 + 20, 28 * 9 + 20))
