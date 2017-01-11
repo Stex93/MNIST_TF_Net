@@ -16,7 +16,7 @@ Gathered data can be summarized in accuracy during training phase and test accur
 
 \paragraph{Training accuracy}
 
-An important measurement is the accuracy during training phase because it allows us to focus on learning trend and discover the behaviour of networks with different number of features. As we will see later with the help of some graphics, we can deduce lots of useful information. These values are between 0 and 1 and were recorded every 10 epochs, guaranteeing dense and rich sampling for a good analysis.
+An important measurement is the accuracy during training phase because it allows us to focus on learning trend and discover the behaviour of networks with different number of features. As we will see later with the help of some charts, we can deduce lots of useful information. These values are between 0 and 1 and were recorded every 10 epochs, guaranteeing dense and rich sampling for a good analysis.
 
 \paragraph{Final test accuracy}
 
@@ -40,15 +40,15 @@ This short section will introduce and explain some contextual informations about
 
 \subsection{Number of executions}
 
-Gathering data of a single execution and with too large sampling did not give us satisfying and considerable graphics because data were not sufficient and lines too variable. To overcome these problems we executed multiple times training and test of the same TensorFlow model, a good compromise between availability of time, computing power and sufficient amount of data is $30$ executions, but previous attempts were limited to $10$ executions.
+Gathering data of a single execution and with too large sampling did not give us satisfying and considerable plots because data were not sufficient and lines too variable. To overcome these problems we executed multiple times training and test of the same TensorFlow model, a good compromise between availability of time, computing power and sufficient amount of data is $30$ executions, but previous attempts were limited to $10$ executions.
 
-A higher number of executions produce a bigger amount of data, more complete and statistically more significant. Another advantage is that the lines in graphics are more stable and plain, afterwards we will see the graphics and appreciate the results.
+A higher number of executions produce a bigger amount of data, more complete and statistically more significant. Another advantage is that the lines in charts are more stable and plain, afterwards we will see the plots and appreciate the results.
 
 \subsection{Number of epochs}
 
 The first version of this TensorFlow model provided $20000$ epochs, after first executions we concluded that such a big number was exaggerate, so we reduced training epochs to $15000$. That amount is amply sufficient to observe a good convergence and stabilization of training trend, and allows us after lots of executions to save time.
 
-Another advantage of fewer epochs is a representation of data in the graphics that is less compressed, than it turns out to be more clear, informative and readable.
+Another advantage of fewer epochs is a representation of data in the charts that is less compressed, than it turns out to be more clear, informative and readable.
 
 \subsection{Number of features}
 
@@ -88,20 +88,20 @@ We will focus mainly on:
 	\item Influences of parameters on the network
 \end{itemize}
 
-For each of these perspectives we will conduct a thorough analysis with the help of graphics.
+For each of these perspectives we will conduct a thorough analysis with the help of plots.
 
 \subsection{Graphics and notations}
 
-Always considering all graphics:
+Always considering all charts:
 \begin{itemize}
-	\item[y-axis] On this axis we find the training accuracies in the range from $0.85$ to $1$. We cut out the part of the graphic below the value $0.85$ because it is not really useful and mainly because it allows us to focus on the most interesting area.
+	\item[y-axis] On this axis we find the training accuracies in the range from $0.85$ to $1$. We cut out the part of the chart below the value $0.85$ because it is not really useful and mainly because it allows us to focus on the most interesting area.
 	\item[x-axis] On this axis we find the time values: the epochs. We will consider different time windows according to the needs, but usually we find all the epochs of training phase.
-	\item[Legend] In every graphics of this section will refer to the four TensorFlow model with a notation based on the number of features in the two convolutional layer: number of features in first layer + \_ + number of features in second layer.
+	\item[Legend] In every plots of this section will refer to the four TensorFlow model with a notation based on the number of features in the two convolutional layer: number of features in first layer + \_ + number of features in second layer.
 \end{itemize}
 
 \subsection{Training speed}
 
-The first perspective we explore is the speed of training phase, or rather how quickly the convolutional network learns from the example images. It is interesting to inspect this, because as we shall see in the graphics, in front of a greater number of features we find a more training speed. In other words it means: more features, more rapid learning.
+The first perspective we explore is the speed of training phase, or rather how quickly the convolutional network learns from the example images. It is interesting to inspect this, because as we shall see in the plots, in front of a greater number of features we find a more training speed. In other words it means: more features, more rapid learning.
 
 \begin{figure}
 	\caption{Comparison of training speeds of the four TensorFlow models with different number of features}
@@ -110,7 +110,7 @@ The first perspective we explore is the speed of training phase, or rather how q
 	\includegraphics[width=1\textwidth]{Images/training_speed}
 \end{figure}
 
-Figure \ref{fig:training_speed} shows the first part of the training phase, about the first half. It allows us to focus on the most interesting part of the graphic for the analysis we are going to do.
+Figure \ref{fig:training_speed} shows the first part of the training phase, about the first half. It allows us to focus on the most interesting part of the chart for the analysis we are going to do.
 
 Focusing on Figure \ref{fig:training_speed} we can clearly observe that more features imply a more rapid learning. We can notice this in two ways, two points of view.
 
@@ -154,7 +154,7 @@ An important conclusion of these observations is that we can have better and mor
 
 After an interesting analysis of how quick and stable can be the training phase, finally we can focus on the most important aspect: performances. It is clear, now, that is strictly connected to the previous perspectives, and we can naturally imagine the following fact: more feature means better results. After all we have already said, it is a logical deduction, and effectively it is true.
 
-Figure \ref{fig:cfr_all} shows a complete graphics of the diverse learning curve of training phases in our four different TensorFlow models. Analyzing this chart we can see immediately that the features number greatly influences performances, the figure speaks for itself.
+Figure \ref{fig:cfr_all} shows a complete plots of the diverse learning curve of training phases in our four different TensorFlow models. Analyzing this chart we can see immediately that the features number greatly influences performances, the figure speaks for itself.
 
 Together with the two previous perspective, we can also observe that improvements are not proportional to the number of features. Rather we have greater improvement between the models 2\_4 and 4\_8, instead of between 8\_16 and 16\_32. In the first case we can observe visible differences in training speed, stability and performance, which are less marked in the second case. We can observe much better these aspects in Figure \ref{fig:cfr_low} where the focus is on models 2\_4 and 4\_8 and Figure \ref{fig:cfr_high} where there are only models 8\_16 and 16\_32.
 

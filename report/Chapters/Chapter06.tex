@@ -2,13 +2,23 @@
 \chapter{Conclusions and future work}\label{ch:conclusions}
 %*****************************************
 
-Importance of beeing Ernest
+Research in machine learning area attempts to make better representations, more performing, possibly limiting computational costs in terms of time and space. Some remarkable results were obtained with a new kind of \acsp{DNN}: Convolutional Neural Networks (\acsp{CNN}). Thus we analyzed a \acs{CNN} model built with TensorFlow framework, an open source distribution by Google.
 
-Why CNN are so beautiful
+TensoFlow was chosen for its flexible architecture, which allows to deploy the computation to one or more \acsp{CPU} or \acsp{GPU} in a desktop, server, or mobile device with a single API.
 
-TensorFlow is the most beautiful framework ever in our modest opinion
+Chapter \ref{ch:conv_nets} introduced the main features and building blocks of convolutional neural netowrks architecture, with special regard to the parameters which have been taken into account when designing one of them.
 
-Our TF model and its results
+Chapter \ref{ch:tensorflow_basics} focused on the TensorFlow framework; the main data structures and available operations were presented and a very simple model was shown.
+
+Chapter \ref{ch:basic_tf_model} described the Convolutional Neural Network model built for classifying task of images from the MNIST dataset, focusing on every layer and the respective lines of code, and finally presenting attempts to change the architecture and the parameters settings.
+
+Chapter \ref{ch:data_analysis} showed the main data related results obtained during the experiments, with respect to different perspectives of analysis on the data gathered with diverse tested solutions.
+
+Finally we can draw the conclusions of the work done in this project: \acsp{CNN} are a more powerful kind of Deep Neural Network, because they allow to obtain better results on more complex tasks, with not exorbitant training computational costs. The reducing of computational costs and memory space is obtained with fewer weights, i.e. fewer connections between neurons, which are also more performing than fully connected neural networks.
+
+With the Convolutional Neural Network model built and the achieved results, we can conclude that the performances are very satisfactory, against computational costs and execution times quite content.
+
+...
 
 What a beautiful work you can do next:
 - changing the padding? What will happen?

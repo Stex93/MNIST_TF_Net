@@ -142,7 +142,7 @@ Even if we have so far tried to be clear and comprehensive describing this first
 	\includegraphics[width=1\textwidth]{Images/conv_layers}
 \end{figure}
 
-\subsection{Short digression on the convolution and pooling functions}
+\subsection{Digression on the convolution and pooling functions}
 
 We introduced two convolutional layers, but we only saw the call of mask functions, both for convolution and pooling. Now we can focus a little bit on these parts in the code, so below we will find the respective functions.
 
@@ -271,6 +271,6 @@ The processed image is then mapped to a $28x28$ numeric matrix which is the inpu
 
 \section{Save and restore a TensorFlow model}
 
-As we hint in Chapter \ref{ch:tensorflow_basics} ad the end of the section about the variables, there is the possibility of save and restore the trained network, all the variables or only in part.
+As we hint in Chapter \ref{ch:tensorflow_basics} at the end of the section about the variables, there is the possibility of save and restore the trained network, all the variables or only in part.
 
 We used this functionality to train a network with $8$ features in the first convolutional layer and $16$ on the second, then reloading the saved variables we used the model to recognize handwritten digits with the GUI referred to in the previous section.
