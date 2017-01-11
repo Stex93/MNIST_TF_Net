@@ -7,7 +7,7 @@
 
 This library of algorithms originated from Google's need to instruct neural networks, to learn and reason similarly to how humans do, so that new applications can be derived which are able to assume roles and functions previously reserved only for capable humans; the name TensorFlow itself derives from the operations which such neural networks perform on multidimensional data arrays. These multidimensional arrays are referred to as "tensors" but this concept is not identical to the mathematical concept of tensors. Its purpose is to train neural networks to detect and decipher patterns and correlations.
 
-The aim of this chapter is to present the main data structures and operations provided by \acs{TF} as well as to explain their basic usage. In particular the notions of computation graph, constant, variable and feed will be explained. Then, TensorBoard, a powerful tool for visualizing learning, will be presented. Finally, the last section includes a very simple example model built using TensorFlow.
+The aim of this chapter is to present the main data structures and operations provided by \acs{TF} as well as to explain their basic usage. In particular the notions of computation graph, constants, variables and feeds will be explained. Then, TensorBoard, a powerful tool for visualizing learning, will be presented. Finally, the last section includes a very simple example model built using TensorFlow.
 
 The material provided in this chapter is taken form [\cite{tensorflow}].
 
@@ -29,7 +29,7 @@ For example, it is common to create a graph to represent a neural network in the
 
 \subsection{Building the graph}
 
-To build a graph it's useful start with ops that do not need any input (source ops), such as \lstinline|Constant|, and pass their output to other ops that do computation. The ops constructors in the Python library return objects that stand for the output of the constructed ops. You can pass these to other ops constructors to use as inputs.
+To build a graph it's useful start with ops that do not need any input (source ops), such as \lstinline|Constant|, and pass their output to other ops that do computation. The ops constructors in the Python library return objects that stand for the output of the constructed ops. You can pass these to other ops constructors to use them as inputs.
 
 The TensorFlow Python library has a default graph to which ops constructors add nodes that is sufficient for many applications. However, it is possible to explicitly manage multiple graphs.
 
@@ -48,9 +48,9 @@ In order to actually multiply the matrices, and get the result of the multiplica
 
 \subsection{Launching the graph}
 
-Launching follows construction. To launch a graph, a \lstinline|Session| object. Without arguments the session constructor launches the default graph.
+Launching follows construction. To launch a graph, a \lstinline|Session| object must be created. Without arguments the session constructor launches the default graph.
 
-The following code creates a session, launches the previously created graph and prints he result of the matrix multiplication.
+The following code creates a session, launches the previously created graph and prints the result of the matrix multiplication.
 
 \begin{lstlisting}
 # Launch the default graph
@@ -94,7 +94,7 @@ Calling \lstinline|tf.Variable()| adds several ops to the graph:
 
 \begin{itemize}
 	\item A \lstinline|Variable| op the holds the variable value;
-	\item An initializer op that sets the variable to its initial value;
+	\item An initializer op which sets the variable to its initial value;
 	\item The ops for the initial value (\eg the \lstinline|zeros| op for \lstinline|biases|).
 \end{itemize}
 
@@ -166,7 +166,7 @@ The names and variables to save can be easily specified by passing to the \lstin
 
 The examples above introduced tensors into the computation graph by storing them in constants and variables. \acs{TF} also provides a feed mechanism for patching a tensor directly into any operation in the graph.
 
-A feed temporarily replaces the output of an operation with a tensor value. Deed data are supplied as an argument to a \lstinline|run()| call. The feed is only used for the run call to which it is passed.
+A feed temporarily replaces the output of an operation with a tensor value. Feed data are supplied as an argument to a \lstinline|run()| call. The feed is only used for the run call to which it is passed.
 
 The most common use case involves designating specific operations to be "feed" operations by using \lstinline|tf.placeholder()| to create them:
 

@@ -28,15 +28,15 @@ In particular, \acsp{CNN} have the following distinguishing features:
 		\caption{Implementation of a $5x5$ receptive field in a \acs{CNN}}\label{fig:receptive_field}
 	\end{figure}
 	
-	\item[3D volumes of neurons] The layers of a \acs{CNN} have neurons arranged in 3 dimensions: width, height and depth. Neurons inside a layer are only connected to a small region of the layer before it, called a receptive field. Figure \ref{fig:receptive_field}, for instance, shows a $5x5$ receptive field from the input neurons to the first hidden layer, with a $28x28$ input. Distinct types of layers, both locally and completely connected, are stacked to form the \acs{CNN} architecture.
+	\item[3D volumes of neurons] Neurons inside a \acs{CNN} are arranged in 3 dimensions: width, height and depth. Neurons inside a layer are only connected to a small region of the layer before it, called a receptive field. Figure \ref{fig:receptive_field}, for instance, shows a $5x5$ receptive field from the input neurons to the first hidden layer, with a $28x28$ input.
 	
-	\item[Local connectivity] Following the concept of receptive field, \acsp{CNN} exploit spatially local correlation by enforcing a local connectivity pattern between neurons of adjacent layers. The architecture, thus, ensures that every \textbf{filter} (\ie weight patch) learnt produces the strongest response to a spatially local input pattern. Stacking many of such layers leads to non-linear filters that become increasingly "global" (\ie responsive to a larger region of input space). This allows the network to first create good representations of small parts of the input, then assemble representations of larger areas from them.
+	\item[Local connectivity] Following the concept of receptive field, \acsp{CNN} exploit spatially local correlation by enforcing a local connectivity pattern between neurons of adjacent layers. The architecture, thus, ensures that every \textbf{filter} (\ie weight patch) learnt produces the strongest response to a spatially local input pattern. Stacking many of such layers leads to non-linear filters that become increasingly "global" (\ie responsive to a larger region of input space). This allows the network to first create good representations of small parts of the input, then assemble representations of larger areas from them.  Distinct types of layers, both locally and completely connected, are stacked to form the \acs{CNN} architecture.
 	
 	\item[Shared weights] In \acsp{CNN}, each filter is replicated across the entire visual field. These replicated units share the same parameterization (weight vector and bias) and produce a feature map. This means that all the neurons in a given convolutional layer detect exactly the same features. Replicating units in this way allows for features to be detected regardless of their position in the visual field, thus constituting the property of translation invariance.
 	
 \end{description}
 
-Together, these properties allow convolutional neural networks to achieve better generalization performances in vision problems. Moreover, the weight sharing helps by dramatically reducing the number of free parameters being learnt, thus lowering the memory requirements for running the network. Decreasing the memory footprint allows the training of larger and more powerful networks.
+Together, these properties allow convolutional neural networks to achieve better generalization performances in vision problems. Moreover, the weight sharing helps by dramatically reducing the number of free parameters the network has to learn, thus lowering the memory requirements for running the network. Decreasing the memory footprint allows the training of larger and more powerful networks.
 
 \section{The convolution operation}
 
@@ -80,7 +80,7 @@ A \acs{CNN} architecture is formed by a stack of distinct layers that transform 
 
 \subsection{Convolutional layer}
 
-The \textbf{convolutional layer} is the core building block of a \acs{CNN}. The layer's parameters consist of a set of learnable filters (or kernels), which have a small receptive field, but extend through the full depth of the input volume. During the forward pass, each filter is convolved across the dimensions of the input volume, computing the dot product between the entries of the filter and the input and producing a feature map of that filter.
+The \textbf{convolutional layer} is the core building block of a \acs{CNN}. The layer's parameters consist of a set of learnable filters (or kernels), which have a small receptive field, but extend through the full depth of the input volume. During the forward pass, each filter is convolved across the dimensions of the input volume, computing the dot product between the entries of the filter and the input, producing a feature map of that filter.
 
 The amount of units by which the filter shifts is called \textbf{stride} and it controls how the filter convolves around the input volume.
 
@@ -128,7 +128,7 @@ when the stride is $S=1$ ensures that the input volume and output volume will ha
 
 \subsection{ReLU layer}
 
-After a convolutional layer, it is convention to apply a non-linear layer (or activation layer) immediately afterward. The purpose of this layer is to introduce non-linearity to a system that basically has just been computing linear operations during the convolution operation (just element wise multiplications and summations). This is a layer of neurons that applies the non-saturating activation function:
+After a convolutional layer, it is convention to apply a non-linear layer (or activation layer) immediately afterward. The purpose of this layer is to introduce non-linearity to a system that basically has just been computing linear operations during the convolution operation (just element wise multiplications and summations). This is a layer of neurons which applies the non-saturating activation function:
 \begin{equation} \notag
 	f(x)=\max(0,x)
 \end{equation}
@@ -139,7 +139,7 @@ After a convolutional layer, it is convention to apply a non-linear layer (or ac
 	\caption{\ac{ReLU} function}\label{fig:relu_function}
 \end{figure}
 
-This increases the non-linear properties of the decision function and of the overall network without affecting the receptive fields of the convolution layer. The output of this layer known as \textbf{rectified feature map}.
+This increases the non-linear properties of the decision function and of the overall network without affecting the receptive fields of the convolution layer. The output of this layer is known as \textbf{rectified feature map}.
 
 In the past, non-linear functions like $tanh$ and sigmoid were used, but researchers found out that \ac{ReLU} layers work far better because the network is able to train a lot faster (because of the computational efficiency) without significant reductions in the accuracy [\cite{icml2010_NairH10}]. Using a \ac{ReLU} function also helps to alleviate the vanishing gradient problem, which is the issue where the lower layers of the network train very slowly because the gradient decreases exponentially through the layers.
 
@@ -183,9 +183,9 @@ Apart from classification, adding a fully-connected layer is also a cheap way of
 
 \subsection{Dropout layer}
 
-\textbf{Dropout layers} have a very specific function in neural networks; they reduce overfitting. The problem of overfitting is very important in machine learning. It happens when after training, the weights of the network are so tuned to the training examples they are given that the network doesn't perform well when given new examples (\ie it doesn't generalize).
+\textbf{Dropout layers} have a very specific function in neural networks: they reduce overfitting. The problem of overfitting is very important in machine learning. It happens when after training, the weights of the network are so tuned to the training examples given that the network doesn't perform well when given new examples (\ie it doesn't generalize).
 
-The idea of dropout is simplistic in nature. This layer "drops out" a random set of activations in that layer by setting them to zero in the forward pass. At each training stage, individual nodes are either "dropped out" of the net with probability $1-p$ or kept with probability $p$, where $p$ is a user-defined parameter, so that a reduced network is left. The removed nodes are then reinserted into the network with their original weights.
+The idea of dropout is simplistic in nature. This layer "drops out" a random set of activations in that layer by setting them to zero in the forward pass. At each training epoch, individual nodes are either "dropped out" from the net with probability $1-p$ or kept with probability $p$, where $p$ is a user-defined parameter, so that a reduced network is left. The removed nodes are then reinserted into the network with their original weights.
 
 This pruning, in a way, forces the network to be redundant; the network should be able to provide the right classification or output for a specific example even if some of the activations are dropped out.
 
@@ -199,7 +199,7 @@ An interesting analysis of the use of dropout in order to manage overfitting can
 
 Finally, a loss layer specifies how the network training penalizes the deviation between the predicted and true labels. This is normally the last layer in the network. Various loss functions appropriate for different tasks may be used there. 
 
-\textbf{Softmax loss} is used for predicting a class of K different classes (\ie the digit represented by an image from the MNIST dataset of handwritten digits, see chapter \ref{} for further details).
+\textbf{Softmax loss} is used for predicting a class of K different classes (\ie the digit represented by an image from the MNIST dataset of handwritten digits, see chapter \ref{ch:basic_tf_model} for further details).
 
 The function
 \begin{equation} \notag
@@ -226,7 +226,7 @@ Many different architectures have been proposed. Among them, LeNet [\cite{lecun-
 \section{Hyperparameters}
 
 
-\acp{CNN} use more hyperparameters than a standard \ac{mlp}. While the usual rules for learning rates and regularization constants still apply, the following should be kept in mind when optimising a convolutional network[\cite{}].
+\acp{CNN} use more hyperparameters than a standard \ac{MLP}. While the usual rules for learning rates and regularization constants still apply, the following should be kept in mind when optimising a convolutional network [\cite{conv_wiki}].
 
 \begin{description}
 	
