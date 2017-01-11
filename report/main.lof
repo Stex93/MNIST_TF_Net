@@ -1,0 +1,65 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {american}
+\defcounter {refsection}{0}\relax 
+\deactivateaddvspace 
+\defcounter {refsection}{0}\relax 
+\select@language {american}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Implementation of a $5x5$ receptive field in a \acs {CNN}\relax }}{4}{figure.caption.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2}{\ignorespaces Visual explanation of the convolution operation\relax }}{5}{figure.caption.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3}{\ignorespaces Example of -D convolution without kernel-flipping, as reported in [\cite {Goodfellow-et-al-2016}]\relax }}{6}{figure.caption.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4}{\ignorespaces Application of a filter for edge detection (Source: [\cite {Goodfellow-et-al-2016}])\relax }}{7}{figure.caption.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5}{\ignorespaces Application of three filters to a given input producing three different feature maps\relax }}{8}{figure.caption.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6}{\ignorespaces Zero padding of two applied to a $32x32x3$ picture\relax }}{8}{figure.caption.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7}{\ignorespaces \ac {ReLU} function\relax }}{9}{figure.caption.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8}{\ignorespaces \ac {ReLU} operation. Source \url {http://mlss.tuebingen.mpg.de/2015/slides/fergus/Fergus_1.pdf}\relax }}{9}{figure.caption.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {9}{\ignorespaces Max pooling with a $2x2$ filter and stride $S=2$\relax }}{10}{figure.caption.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {10}{\ignorespaces Convolutional neural network for the classification of an image\relax }}{13}{figure.caption.21}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {11}{\ignorespaces Graph visualization using TensorBoard\relax }}{21}{figure.caption.23}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {12}{\ignorespaces Digit images from MNIST dataset\relax }}{23}{figure.caption.24}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {13}{\ignorespaces Example of translation from image to numeric matrix\relax }}{25}{figure.caption.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {14}{\ignorespaces A detailed schema of a convolutional and pooling layer with detailed notations\relax }}{28}{figure.caption.26}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {15}{\ignorespaces A schema of the two convolutional and pooling layers with detailed notations\relax }}{28}{figure.caption.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {16}{\ignorespaces A schema of the densely connected layer and dropout layer with detailed notations\relax }}{30}{figure.caption.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {17}{\ignorespaces Example of the GUI and the recognition of handwritten digit 5\relax }}{32}{figure.caption.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {18}{\ignorespaces Example of the GUI and the recognition of handwritten digit 8\relax }}{33}{figure.caption.30}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {19}{\ignorespaces Comparison of training speeds of the four TensorFlow models with different number of features\relax }}{38}{figure.caption.32}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {20}{\ignorespaces Comparison of training stability of the four TensorFlow models with different number of features\relax }}{39}{figure.caption.33}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {21}{\ignorespaces Comparison of training accuracy curves of the four TensorFlow models with different number of features\relax }}{41}{figure.caption.34}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {22}{\ignorespaces Comparison of training accuracy curves of two TensorFlow models with lower number of features\relax }}{42}{figure.caption.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {23}{\ignorespaces Comparison of training accuracy curves of two TensorFlow models with higher number of features\relax }}{43}{figure.caption.36}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
