@@ -2,7 +2,7 @@
 \chapter{Analysis of collected data}\label{ch:data_analysis}
 %*****************************************
 
-In order to reach satisfying conclusions, we will analyze carefully the collected data every time the structure of the network has been changed, trying to understand how it performs, what kind of adjustment we can do to improve the results, and comparing the different structured networks performances on the same classifying task with MNIST images.
+In order to reach satisfying conclusions, we will analyze carefully the collected data every time the structure of the network has been changed, trying to understand how it performs, what kind of adjustment we can do to improve the results, and comparing the different structured networks performances on the same classifying task with \acs{MNIST} images.
 
 \section{Gathering data}
 
@@ -236,9 +236,9 @@ We can not leave out an important observation: training a high-valued parameters
 
 After a long and in-depth analysis of the training phase, we can enjoy the results obtained evaluating the model in test phase. It is even more important than training accuracies because here we can analyze how powerful is the model we built and if it generalizes well.
 
-We can evaluate generalization capabilities thanks to a part of MNIST dataset which provide images not used during training phase. Providing images the model has never seen grant us a good checking of its capabilities.
+We can evaluate generalization capabilities thanks to a part of \acs{MNIST} dataset which provide images not used during training phase. Providing images the model has never seen grant us a good checking of its capabilities.
 
-As introduced in Chapter \ref{ch:basic_tf_model} focusing on MNIST dataset, a large number of different classifiers have been trained on this dataset with different results. In Table \ref{tab:test_accuracies} we gather the test accuracies of our four TensorFlow models, here we observe clearly that we have a rapid reduction of the increase in test accuracy values. Indeed, on balance, from a model with 2 and 4 features to a model with 4 and 8 features we increase the final performance of $0.588 \%$, passing to 8 and 16 features we add just $0.257 \%$ more and finally $0.132 \%$ more. The average ratio between these values is about 2, it means that every time we double the number of features, we halve the improvement.
+As introduced in Chapter \ref{ch:basic_tf_model} focusing on \acs{MNIST} dataset, a large number of different classifiers have been trained on this dataset with different results. In Table \ref{tab:test_accuracies} we gather the test accuracies of our four TensorFlow models, here we observe clearly that we have a rapid reduction of the increase in test accuracy values. Indeed, on balance, from a model with 2 and 4 features to a model with 4 and 8 features we increase the final performance of $0.588 \%$, passing to 8 and 16 features we add just $0.257 \%$ more and finally $0.132 \%$ more. The average ratio between these values is about 2, it means that every time we double the number of features, we halve the improvement.
 
 \begin{table}
 	\caption{Test accuracies of the four TensorFlow models with different number of features}

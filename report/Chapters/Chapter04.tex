@@ -2,28 +2,28 @@
 \chapter{A basic model for handwritten digits recognition}\label{ch:basic_tf_model}
 %*****************************************
 
-In this chapter we will discover a basic TensorFlow model developed in order to classify images from the MNIST dataset. Our scope is to illustrate the structure of the \acs{CNN} and how that basic model can be readjust as needed, gathering data about accuracy during training process and test accuracy on unknown images from the dataset.
+In this chapter we will discover a basic TensorFlow model developed in order to classify images from the \acs{MNIST} dataset. Our scope is to illustrate the structure of the \acs{CNN} and how that basic model can be readjust as needed, gathering data about accuracy during training process and test accuracy on unknown images from the dataset.
 
-After an introduction to the MNIST dataset, we will study the structure of the Convolutional Neural Network used in our experiments in depth, trying to understand which parameters are relevant for the improvement of the results, and how the structure can influence more than any other factor the accuracy of the network during training.
+After an introduction to the \acs{MNIST} dataset, we will study the structure of the Convolutional Neural Network used in our experiments in depth, trying to understand which parameters are relevant for the improvement of the results, and how the structure can influence more than any other factor the accuracy of the network during training.
 
 We identify two levels where we can act to modify the neural network. A architectural one, where we add, move and remove convolutional or pooling levels, and a parameter level, where we modify number of features, patch dimension, and so on. The first one is more important while designing the structure of the network, the second one is a more precise intervention useful for tuning.
 
 \section{A focus on the MNIST dataset}
 
-Before beginning, let us focus on MNIST dataset, which is widely used in machine learning for training and testing. The acronym MNIST stands for Mixed National Institute of Standards and Technology because this database, containing a large number of handwritten digits, is a re-mixing of a previous dataset (NIST dataset) and collects $60000$ images for training and $10000$ for testing. The images were taken half from the American Census Bureau employees and half from American high school students and includes labels telling which digit every image is.
+Before beginning, let us focus on \acs{MNIST} dataset, which is widely used in machine learning for training and testing. The acronym \acs{MNIST} stands for Mixed National Institute of Standards and Technology because this database, containing a large number of handwritten digits, is a re-mixing of a previous dataset (NIST dataset) and collects $60000$ images for training and $10000$ for testing. The images were taken half from the American Census Bureau employees and half from American high school students and includes labels telling which digit every image is.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\textwidth]{Images/MNIST_images}
-	\caption{Digit images from MNIST dataset}
+	\caption{Digit images from \acs{MNIST} dataset}
 	\label{fig:MNIST_images}
 \end{figure}
 
-Figure \ref{fig:MNIST_images} shows four examples of handwritten digit images from MNIST dataset, in order we have 5, 0, 4, 1.
+Figure \ref{fig:MNIST_images} shows four examples of handwritten digit images from \acs{MNIST} dataset, in order we have 5, 0, 4, 1.
 
 \subsection{Usage in the machine learning}
 
-As mentioned earlier, the MNIST dataset is widely used for training and testing neural networks, because it is a reference dataset in machine learning. During the years, lots of models in neural networks research were trained and tested on this dataset. Sometimes exciting results led to stale that neural networks achieved "near-human performance", but the first attempts obtained quite poor results: a linear classifier had a error rate from $12.0 \%$ to $7.6 \%$, which is really not satisfying for such a simple task.
+As mentioned earlier, the \acs{MNIST} dataset is widely used for training and testing neural networks, because it is a reference dataset in machine learning. During the years, lots of models in neural networks research were trained and tested on this dataset. Sometimes exciting results led to stale that neural networks achieved "near-human performance", but the first attempts obtained quite poor results: a linear classifier had a error rate from $12.0 \%$ to $7.6 \%$, which is really not satisfying for such a simple task.
 
 Other solutions led to better results. Non-linear classifiers drastically reduced error rate to $3.3 \%$, but more appreciable results were obtained with 2-layers ($784-800-10$) neural networks, with an error rate of: $1.6 \%$, $0.7 \%$ with elastic distortion. Boosted stumps achieved an error rate of $0.87 \%$, support vector machines $0.56 \%$, K-nearest neighbors $0.52 \%$ and 6-layers deep neural network $0.35 \%$.
 
@@ -56,7 +56,7 @@ Tuning the hyperparameters of the network is very delicate, it is a precision in
 
 \begin{description}
 	
-	\item[Number of features] This is one of the most important parameters to set, because here is specified how many features the network will try to identify. There is not a formula which allows us to find the perfect number of features based on the complexity of a task, but after several attempts with different values for this parameter we found a good solution for MNIST images. It can be concluded that a simple task, e.g. classifying $28x28$ grey scale images of digits, requires a small amount of filters to be learn (and consequently features to be identified): 8 in first convolutional layer, 16 in the second one. When we will analyze the results of the experiments, in Chapter \ref{ch:data_analysis}, with different values for this parameters, we will find that very good performances can be obtained with 2 and 4 features, too. More difficult task with bigger and higher quality images, would probably require tens or hundreds features. An opposite problem is a too high value, the result is that some filters became the same or very similar, so it could cause an increase in the complexity of the model without any benefit.
+	\item[Number of features] This is one of the most important parameters to set, because here is specified how many features the network will try to identify. There is not a formula which allows us to find the perfect number of features based on the complexity of a task, but after several attempts with different values for this parameter we found a good solution for \acs{MNIST} images. It can be concluded that a simple task, e.g. classifying $28x28$ grey scale images of digits, requires a small amount of filters to be learn (and consequently features to be identified): 8 in first convolutional layer, 16 in the second one. When we will analyze the results of the experiments, in Chapter \ref{ch:data_analysis}, with different values for this parameters, we will find that very good performances can be obtained with 2 and 4 features, too. More difficult task with bigger and higher quality images, would probably require tens or hundreds features. An opposite problem is a too high value, the result is that some filters became the same or very similar, so it could cause an increase in the complexity of the model without any benefit.
 
 	\item[Patch size] The patch size allows us to adjust the size of the receptive field. Contrary to expectations, this parameter will not change from a convolutional and pooling layer to the next one, because while it is a fixed value, the image dimension is reduced, so the patch cover a greater area and allows the recognition of features, even more complex, in a bigger patch.  In our example with $28x28$ images a good patch size value is $5x5$. Obviously a bigger image would require an appropriately sized patch.
 	
@@ -64,7 +64,7 @@ Tuning the hyperparameters of the network is very delicate, it is a precision in
 	
 	\item[Input and output channels] These parameters can vary from a convolutional layer to another. In the first layer the input channel is linked to the colors of the input images, so in our example we have the value 1; the number of output channel depends on the number of features recognized in the layer. In deeper layers the input channel must correspond to the output channel of the previous layer, and the output channel to the features recognized in the layer.
 	
-	\item[Padding dimension and color] As described previously with the formula, we determined the zero padding dimension. It is very important because with the stride size value permit to keep stable dimensions of input and output layer after layer. It is important to notice that the color of the padding, i.e. white, corresponds to the color of the background of the MNIST images. It is a fluke, but what would happen if the padding color changed to black?
+	\item[Padding dimension and color] As described previously with the formula, we determined the zero padding dimension. It is very important because with the stride size value permit to keep stable dimensions of input and output layer after layer. It is important to notice that the color of the padding, i.e. white, corresponds to the color of the background of the \acs{MNIST} images. It is a fluke, but what would happen if the padding color changed to black?
 
 \end{description}
 
@@ -72,7 +72,7 @@ Tuning the hyperparameters of the network is very delicate, it is a precision in
 
 We introduced in Chapter \ref{ch:conv_nets} the different types of layers useful to build a \acs{CNN}, now we can analyze how they are combined in our TensorFlow model. This architecture was not modified, so it is exactly the one suggested in the TensorFlow example.
 
-After the MNIST images are loaded, the TensorFlow session created and the variables initialized, we can start building the multilayer \acs{CNN}.
+After the \acs{MNIST} images are loaded, the TensorFlow session created and the variables initialized, we can start building the multilayer \acs{CNN}.
 
 \subsection{Weights initialization}
 
@@ -249,9 +249,9 @@ Certainly tasks like facial recognition or high-defined images classification re
 
 \section{GUI for real time testing}
 
-In order to have new experiences with our \acs{CNN} a simple \acs{GUI} was implemented. It allows us to test our trained network with real data not coming from MNIST dataset.
+In order to have new experiences with our \acs{CNN} a simple \acs{GUI} was implemented. It allows us to test our trained network with real data not coming from \acs{MNIST} dataset.
 
-The \acs{GUI} uses a pre-trained network which detects $16$ and $32$ features in first and second convolutional layer. Users can draw digits with the mouse in a small box. The input is then processed in order to make it similar to images from the MNIST dataset. In particular the digit is rescaled in order to fit a $28x28$ pixel grid. Color values are normalized from $0$ to $255$ range to $0$ to $1$. $1$ represents a black pixel, while $0$ a white one.
+The \acs{GUI} uses a pre-trained network which detects $16$ and $32$ features in first and second convolutional layer. Users can draw digits with the mouse in a small box. The input is then processed in order to make it similar to images from the \acs{MNIST} dataset. In particular the digit is rescaled in order to fit a $28x28$ pixel grid. Color values are normalized from $0$ to $255$ range to $0$ to $1$. $1$ represents a black pixel, while $0$ a white one.
 
 The processed image is then mapped to a $28x28$ numeric matrix which is the input for the neural network. The digit corresponding to the input matrix is finally shown to the user. Figures \ref{fig:GUI_5} and \ref{fig:GUI_8} show two examples of digit recognition using the \acs{GUI}, in the first one the model recognize and correctly classify a $5$, in the second a $8$.
 

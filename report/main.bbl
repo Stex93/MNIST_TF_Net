@@ -1673,6 +1673,16 @@
       \field{title}{{Tensorflow}, An open-source software library for Machine Intelligence}
       \field{year}{2017}
     \endentry
+    \entry{understanding_convolutions}{misc}{}
+      \field{sortinit}{U}
+      \field{sortinithash}{1554584e7f69d2b4fe0a645e73d50194}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://colah.github.io/posts/2014-07-Understanding-Convolutions/}}
+      \field{note}{Accessed: 2016-12-29}
+      \field{title}{Understanding Convolutions}
+      \field{year}{2014}
+    \endentry
     \entry{DBLP:journals/corr/WallachDH15}{article}{}
       \name{author}{3}{}{%
         {{uniquename=0,hash=7ccffcd38759d7007337667679a4281f}{%
