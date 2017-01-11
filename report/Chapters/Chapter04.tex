@@ -107,7 +107,7 @@ h_conv1 = tf.nn.relu(conv2d(x_image, W_conv1) + b_conv1)
 h_pool1 = max_pool_2x2(h_conv1)
 \end{lstlisting}
 
-We can spend some words about the parameters of the function "weight_variable": the two $5$ are the filter dimensions, while feature1 is the number of filters which corresponds to the number of feature the network will identify.
+We can spend some words about the parameters of the function "weight\_variable": the two $5$ are the filter dimensions, while feature1 is the number of filters which corresponds to the number of feature the network will identify.
 
 Figure \ref{fig:conv_layer} will help the reader to properly visualize the structure of this layer, from the patches on the image which we can see in the figure, connected to the feature maps in convolutional layer, to the feature maps connected to the max pooling layer.
 
@@ -171,7 +171,7 @@ def max_pool_2x2(x):
 
 The densely connected layer is the core of the classification process in our \acs{CNN}, it is implemented as matrix multiplication added to a bias offset. With that layer it is also possible to learn combinations of features.
 
-We call the function weight_variable to initialize the weights, the shape we define in the parameter is of dimension $7*7$ because we started from a $28x28$ image, in the first convolutional layer the max pooling reduced the dimensions to $14x14$, and similarly the second layer reduced it to $7x7$. And it is multiplied by the number of features identified in the second convolutional layer.
+We call the function weight\_variable to initialize the weights, the shape we define in the parameter is of dimension $7*7$ because we started from a $28x28$ image, in the first convolutional layer the max pooling reduced the dimensions to $14x14$, and similarly the second layer reduced it to $7x7$. And it is multiplied by the number of features identified in the second convolutional layer.
 
 \begin{lstlisting}
 W_fc1 = weight_variable([7 * 7 * features2, 1024])
@@ -184,7 +184,7 @@ h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)
 
 In order to reduce overfitting we introduced a dropout layer, which is very important to better perform with new examples. The implementation of that operations is really simple: a random set of activations is set to zero, then the pruned nodes are reinitialized and reinserted into the network. The dropout layer is used only at training time, and not during testing.
 
-In the following two lines of code we find the variable keep_prob. This value specifies the probability that a node will be pruned or not.
+In the following two lines of code we find the variable keep\_prob. This value specifies the probability that a node will be pruned or not.
 
 \begin{lstlisting}
 keep_prob = tf.placeholder(tf.float32)
