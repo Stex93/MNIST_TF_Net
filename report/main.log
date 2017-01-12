@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6200 64-bit) (preloaded format=pdflatex 2017.1.5)  12 JAN 2017 09:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6200 64-bit) (preloaded format=pdflatex 2017.1.5)  12 JAN 2017 15:07
 entering extended mode
 **./main.tex
 (main.tex
@@ -2444,15 +2444,8 @@ Package pdftex.def Info: Images/GUI_8.jpg used on input line 269.
  (Chapters/Chapter05.tex
 chapter 5.
 
-Overfull \hbox (4.4241pt too wide) in paragraph at lines 15--16
-[]\T1/pplj/m/n/10.95 Gathered data can be sum-ma-rized in ac-cu-racy dur-ing tr
-ain-ing phase
- []
-
-
-Overfull \hbox (8.45807pt too wide) in paragraph at lines 27--28
-[] []\T1/pplj/m/sc/10.95/80ls ex-e-cu-tion times[] \T1/pplj/m/n/10.95 Mea-sure-
-ments of ex-e-cu-tion times were not made
+Overfull \hbox (0.41953pt too wide) in paragraph at lines 22--23
+[]\T1/pplj/m/n/10.95 Measurements of ex-e-cu-tion times were not made
  []
 
 [34
@@ -2464,43 +2457,42 @@ ments of ex-e-cu-tion times were not made
 File: Images/training_speed.png Graphic file (type png)
 
 <use Images/training_speed.png>
-Package pdftex.def Info: Images/training_speed.png used on input line 110.
+Package pdftex.def Info: Images/training_speed.png used on input line 106.
 (pdftex.def)             Requested size: 336.0pt x 196.78113pt.
  [37]
-Underfull \hbox (badness 10000) in paragraph at lines 133--137
+Underfull \hbox (badness 10000) in paragraph at lines 129--133
 
  []
 
-<Images/training_stability.png, id=993, 638.385pt x 306.39468pt>
+<Images/training_stability.png, id=992, 638.385pt x 306.39468pt>
 File: Images/training_stability.png Graphic file (type png)
 
 <use Images/training_stability.png>
-Package pdftex.def Info: Images/training_stability.png used on input line 146.
+Package pdftex.def Info: Images/training_stability.png used on input line 140.
 (pdftex.def)             Requested size: 336.0pt x 161.26169pt.
- [38 <./Images/training_speed.png>] [39 <./Images/training_stability.png>] [40]
-
-<Images/cfr_all.png, id=1011, 971.88094pt x 305.64188pt>
+ [38 <./Images/training_speed.png>] [39 <./Images/training_stability.png>]
+<Images/cfr_all.png, id=1006, 971.88094pt x 305.64188pt>
 File: Images/cfr_all.png Graphic file (type png)
 
 <use Images/cfr_all.png>
-Package pdftex.def Info: Images/cfr_all.png used on input line 168.
+Package pdftex.def Info: Images/cfr_all.png used on input line 162.
 (pdftex.def)             Requested size: 666.04997pt x 209.46135pt.
- [41 <./Images/cfr_all.png>]
-<Images/cfr_2_4_vs_4_8.png, id=1017, 974.13937pt x 302.63063pt>
+ [40 <./Images/cfr_all.png>]
+<Images/cfr_2_4_vs_4_8.png, id=1012, 974.13937pt x 302.63063pt>
 File: Images/cfr_2_4_vs_4_8.png Graphic file (type png)
 
 <use Images/cfr_2_4_vs_4_8.png>
-Package pdftex.def Info: Images/cfr_2_4_vs_4_8.png used on input line 177.
+Package pdftex.def Info: Images/cfr_2_4_vs_4_8.png used on input line 171.
 (pdftex.def)             Requested size: 666.04997pt x 206.91745pt.
- [42 <./Images/cfr_2_4_vs_4_8.png>]
-<Images/cfr_8_16_vs_16_32.png, id=1024, 971.12813pt x 302.63063pt>
+ [41 <./Images/cfr_2_4_vs_4_8.png>]
+<Images/cfr_8_16_vs_16_32.png, id=1018, 971.12813pt x 302.63063pt>
 File: Images/cfr_8_16_vs_16_32.png Graphic file (type png)
 
 <use Images/cfr_8_16_vs_16_32.png>
-Package pdftex.def Info: Images/cfr_8_16_vs_16_32.png used on input line 186.
+Package pdftex.def Info: Images/cfr_8_16_vs_16_32.png used on input line 180.
 (pdftex.def)             Requested size: 666.04997pt x 207.55931pt.
- [43 <./Images/cfr_8_16_vs_16_32.png>]
-[44
+ [42 <./Images/cfr_8_16_vs_16_32.png>]
+[43
 
 
 
@@ -2508,12 +2500,12 @@ Package pdftex.def Info: Images/cfr_8_16_vs_16_32.png used on input line 186.
 
 
 ]
-Overfull \hbox (1.49379pt too wide) in paragraph at lines 239--240
+Overfull \hbox (1.49379pt too wide) in paragraph at lines 235--236
 []\T1/pplj/m/n/10.95 We can eval-u-ate gen-er-al-iza-tion ca-pa-bil-i-ties than
 ks to a part of [][]
  []
 
-) [45]
+) [44]
 \openout2 = `Chapters/Chapter06.aux'.
 
  (Chapters/Chapter06.tex
@@ -2536,12 +2528,12 @@ Overfull \hbox (11.49774pt too wide) in paragraph at lines 21--22
  the achieved
  []
 
-[46
+[45
 
 
 
 
-]) [47]
+]) [46]
 \openout2 = `FrontBackmatter/Bibliography.aux'.
 
  (FrontBackmatter/Bibliography.tex
@@ -2562,7 +2554,7 @@ Overfull \hbox (21.9357pt too wide) in paragraph at lines 15--15
 0.95 arXiv preprint arXiv:1408.5093\T1/pplj/m/n/10.95 . 
  []
 
-[48
+[47
 
 
 
@@ -2593,7 +2585,7 @@ Overfull \hbox (19.36507pt too wide) in paragraph at lines 15--15
 tion in Structure-
  []
 
-[49]
+[48]
 Overfull \hbox (9.30748pt too wide) in paragraph at lines 17--17
 [][]\T1/pplj/m/it/10.95 A Be-gin-ner's Guide To Un-der-stand-ing Con-vo-lu-tion
 al Neu-ral Net-works \T1/pplj/m/n/10.95 (2016).
@@ -2617,7 +2609,7 @@ Overfull \hbox (7.40187pt too wide) in paragraph at lines 17--17
 ] tensorflow -[]
  []
 
-) [50
+) [49
 
 
 ]
@@ -2827,16 +2819,16 @@ FrontBackmatter/Bibliography.tex
 
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 38DAC0CDF69685A24EEDC017C6EB8D73;5374.
+(rerunfilecheck)             Checksum: 9905B0287CFFA7105D8E46F75879930A;5377.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32563 strings out of 493329
- 600114 string characters out of 3129971
- 1300033 words of memory out of 3000000
- 35180 multiletter control sequences out of 15000+200000
+ 32561 strings out of 493329
+ 600093 string characters out of 3129971
+ 1300040 words of memory out of 3000000
+ 35179 multiletter control sequences out of 15000+200000
  74417 words of font info for 114 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,23n,90p,10499b,3493s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2857,9 +2849,9 @@ rograms/MiKTeX 2.9/fonts/type1/bera/fvmr8a.pfb><C:/Users/Fabio/AppData/Local/Pr
 ograms/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Fabio/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Fabio/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (57 pages, 1993805 bytes).
+Output written on main.pdf (56 pages, 1987553 bytes).
 PDF statistics:
- 1235 PDF objects out of 1440 (max. 8388607)
- 358 named destinations out of 1000 (max. 500000)
+ 1230 PDF objects out of 1440 (max. 8388607)
+ 357 named destinations out of 1000 (max. 500000)
  14017 words of extra memory for PDF output out of 14400 (max. 10000000)
 
