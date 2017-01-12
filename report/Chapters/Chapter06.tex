@@ -2,9 +2,9 @@
 \chapter{Conclusions and future work}\label{ch:conclusions}
 %*****************************************
 
-Research in machine learning area attempts to make better representations, more performing, possibly limiting computational costs in terms of time and space. Some remarkable results were obtained with a new kind of \acsp{DNN}: Convolutional Neural Networks (\acsp{CNN}). Thus we analyzed a \acs{CNN} model built with TensorFlow framework, an open source distribution by Google.
+Research in machine learning attempts to make better representations, more performing, possibly limiting computational costs in terms of time and space. Some remarkable results were obtained with a new kind of \acs{DNN}: Convolutional Neural Networks (\acsp{CNN}). Thus we analyzed a \acs{CNN} model built with the TensorFlow framework, an open source distribution by Google.
 
-TensoFlow was chosen for its flexible architecture, which allows to deploy the computation to one or more \acsp{CPU} or \acsp{GPU} in a desktop, server, or mobile device with a single API.
+TensorFlow was chosen because of its flexible architecture, which allows to deploy the computation to one or more \acsp{CPU} or \acsp{GPU} in a desktop, server, or mobile device with a single API.
 
 \begin{description}
 	\item[Chapter \ref{ch:conv_nets}] introduced the main features and building blocks of convolutional neural netowrks architecture, with special regard to the parameters which have been taken into account when designing one of them.
@@ -18,30 +18,30 @@ TensoFlow was chosen for its flexible architecture, which allows to deploy the c
 
 Finally we can draw the conclusions of the work done in this project: \acsp{CNN} are a more powerful kind of Deep Neural Network, because they allow to obtain better results on more complex tasks, with not exorbitant training computational costs. The reducing of computational costs and memory space is obtained with fewer weights, i.e. fewer connections between neurons, which are also more performing than fully connected neural networks.
 
-With the Convolutional Neural Network model built and the achieved results, we can conclude that the performances are very satisfactory, against computational costs and execution times quite content.
+With the Convolutional Neural Network model built and the achieved results, we can conclude that the performances are very satisfactory, with limited computational costs and execution times.
 
-However our work is not on a siding, there could be a lot of possible questions to answer continuing this project. Here are some of them.
+However our work is not on a siding, there could be a lot questions still to answer continuing this project. Here are some of them.
 
 About the padding:
 \begin{itemize}
-	\item could the padding be changed?
-	\item what could happen with different dimensions and colors of the padding?
-	\item how much the padding affect the results and the performances of \acsp{CNN}?
-	\item can we do without the padding?
-	\item there could be other solutions to avoid the usage of padding?
-	\item in more complex images with non uniform background color, is 0 padding a good solution? 
+	\item Could the padding type be changed?
+	\item What could it happen with different dimensions and colors of the padding?
+	\item How much the padding affects the results and the performances of a \acsp{CNN}?
+	\item Can we do without the padding?
+	\item Could there be other solutions to avoid the usage of padding?
+	\item In more complex images with non uniform background color, is 0 padding a good solution? 
 \end{itemize}
 
 About the tuning of hyperparameters, in particular the number of filters, which reflects in the number of features the network identify:
 \begin{itemize}
-	\item could be formalized a procedure to precisely determine the number of this hyperparameter?
-	\item which could be a good trade off between training times and final accuracy according to necessities?
+	\item Could be formalized a procedure to precisely determine the number of filters to learn?
+	\item Which could be a good trade off between training times and final accuracy according to necessities?
 \end{itemize}
 
 Last but not least, transfer learning:
 \begin{itemize}
-	\item could be possible use the same trained network retraining the fully connected layer for new tasks?
-	\item an example could be our Convolutional Neural Network which recognize only the digits. Could we train another network on alphabet letters and then transfer its learning to our model?
+	\item Could it be possible to use the same trained network retraining the fully connected layer for new tasks?
+	\item An example could be our convolutional ceural cetwork which recognizes only the digits. Could we train another network on letters and then transfer its learning to our model?
 \end{itemize}
 
 Our analysis turned out to be very interesting, but possible future projects could be even more interesting and useful in machine learning and Deep Neural Network research.
