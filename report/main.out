@@ -36,7 +36,7 @@
 \BOOKMARK [1][-]{section.3.6}{3.6 A very simple model}{chapter.3}% 36
 \BOOKMARK [0][]{chapter.4}{4 A basic model for handwritten digits recognition}{}% 37
 \BOOKMARK [1][-]{section.4.1}{4.1 A focus on the MNIST dataset}{chapter.4}% 38
-\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 Usage in the machine learning}{section.4.1}% 39
+\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 Usage in machine learning}{section.4.1}% 39
 \BOOKMARK [2][-]{subsection.4.1.2}{4.1.2 Technical informations about images}{section.4.1}% 40
 \BOOKMARK [1][-]{section.4.2}{4.2 Choosing the hyperparameters}{chapter.4}% 41
 \BOOKMARK [1][-]{section.4.3}{4.3 The architectural level}{chapter.4}% 42
@@ -52,9 +52,9 @@
 \BOOKMARK [2][-]{subsection.4.4.2}{4.4.2 Testing and evaluating}{section.4.4}% 52
 \BOOKMARK [1][-]{section.4.5}{4.5 Modifications of the architecture}{chapter.4}% 53
 \BOOKMARK [1][-]{section.4.6}{4.6 GUI for real time testing}{chapter.4}% 54
-\BOOKMARK [1][-]{section.4.7}{4.7 Save and restore a TensorFlow model}{chapter.4}% 55
+\BOOKMARK [1][-]{section.4.7}{4.7 Saving and restoring the model}{chapter.4}% 55
 \BOOKMARK [0][]{chapter.5}{5 Analysis of the collected data}{}% 56
-\BOOKMARK [1][-]{section.5.1}{5.1 Gathering data}{chapter.5}% 57
+\BOOKMARK [1][-]{section.5.1}{5.1 Data gathering}{chapter.5}% 57
 \BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 What, when, why}{section.5.1}% 58
 \BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 Storage format}{section.5.1}% 59
 \BOOKMARK [1][-]{section.5.2}{5.2 Executions and parameters choice}{chapter.5}% 60

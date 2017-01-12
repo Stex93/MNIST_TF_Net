@@ -4,7 +4,7 @@
 
 In order to reach satisfying conclusions, we will analyze carefully the data collected every time the structure of the network was changed, trying to understand how it performed, what kind of adjustment we can do to improve the results, and comparing the differently structured networks performances on the same classification task with the \acs{MNIST} images.
 
-\section{Gathering data}
+\section{Data gathering}
 
 To begin with, we will describe the data gathering process focusing on what, when and why we collected data during network executions. This point is important to understand the scope of our analysis and the conclusions we will reach at the end of this report.
 
@@ -112,23 +112,13 @@ Figure \ref{fig:training_speed} shows the first part of the training phase, abou
 
 Considering the same training accuracy value, e.g. $0.85$, we observe the following facts. The model with fewer features (Model 2\_4) reaches the referring value in more epochs than models with more features.
 
-\paragraph{Model 2\_4}
+\begin{description}
+	\item[Model 2\_4] The TensorFlow model with fewer features reaches the referring value of training accuracy in more than $500$ epochs.
+	\item[Model 4\_8] Increasing the number of features we obtain the same training accuracy value of $0.85$ in about $350$ epochs.
+	\item[Model 8\_16] The model with $8$ and $16$ features in the first and second convolutional layer reach that training accuracy value in about $200/250$ epochs.
+	\item[Model 16\_32] The last model with the higher number of features is the fastest, reaching the referring training accuracy value in about $150$ epochs.
+\end{description}
 
-The TensorFlow model with fewer features reaches the referring value of training accuracy in more than $500$ epochs.
-
-\paragraph{Model 4\_8}
-
-Increasing the number of features we obtain the same training accuracy value of $0.85$ in about $350$ epochs.
-
-\paragraph{Model 8\_16}
-
-The model with $8$ and $16$ features in the first and second convolutional layer reach that training accuracy value in about $200/250$ epochs.
-
-\paragraph{Model 16\_32}
-
-The last model with the higher number of features is the fastest, reaching the referring training accuracy value in about $150$ epochs.
-\\
-\\
 Even without focusing on the precise number of epochs, we can notice at a glance the slower and faster model. The same observations we just made, can be done considering a precise epoch during the first part of the training phase where the learning curve mainly grows.
 
 \subsection{Training stability}
@@ -152,7 +142,7 @@ After an interesting analysis of how quick and stable can be the training phase,
 
 Figure \ref{fig:cfr_all} shows a complete plots of the different learning curves of training phases in our four different TensorFlow models. Analyzing this chart we can see immediately that the features number greatly influences performances, the figure speaks for itself.
 
-Together with the two previous perspective, we can also observe that improvements are not proportional to the number of features. Rather we have greater improvement between the models 2\_4 and 4\_8, instead of between 8\_16 and 16\_32. In the first case we can observe visible differences in training speed, stability and performance, which are less marked in the second case. We can observe much better these aspects in Figure \ref{fig:cfr_low} where the focus is on models 2\_4 and 4\_8 and Figure \ref{fig:cfr_high} where there are only models 8\_16 and 16\_32.
+Together with the two previous perspective, we can also observe that improvements are not proportional to the number of features. Rather we have greater improvement between the models 2\_4 and 4\_8, instead of between 8\_16 and 16\_32. In the first case we can observe visible differences in training speed, stability and performance, which are less marked in the second case. We can observe much better these aspects in figure \ref{fig:cfr_low} where the focus is on models 2\_4 and 4\_8 and figure \ref{fig:cfr_high} where there are only models 8\_16 and 16\_32.
 
 The observation we just made is really important because it allows us to understand with experiments the extent to which it is convenient, or we consider convenient, increase the number of features that the network should recognize. Until we consider useful a certain improvement of these perspectives, we can set higher values. 
 
@@ -201,11 +191,11 @@ Despite we do not gathered data about execution times, as we said before, we tak
 		\textbf{Model 16\_32} & 22' 30'' \\ 
 		\hline 
 	\end{tabular}
-	\caption{Approximate times measurements of diverse TensorFlow models executions}
+	\caption{Approximate time measurements of diverse TensorFlow models executions}
 	\label{tab:approx_times}
 \end{table}
 
-In order to complete time measurements in Table \ref{tab:approx_times}, here are some technical informations about relevant hardware characteristics:
+In order to complete time measurements in table \ref{tab:approx_times}, here are some technical informations about relevant hardware characteristics:
 \begin{itemize}
 	\item Ultrabook Toshiba Satellite;
 	\item Processor Intel Core i5;
@@ -221,9 +211,9 @@ What we are about to say has already been said in the previous pages, while we w
 
 It is clear that better trainings can be obtained with higher number of features. But it is also clear that there in not direct proportion between number of features and training speed, stability, accuracy and time execution; so we have to conclude that increasing this key parameter is the way to improve our \acs{CNN}, but how to increase the values is at your own risk, according to:
 \begin{itemize}
-	\item computing power availability;
-	\item time availability;
-	\item desired performances.
+	\item Computing power availability;
+	\item Time availability;
+	\item Desired performances.
 \end{itemize}
 
 We can not leave out an important observation: training a high-valued parameters model can be expensive, very expensive, but we have to consider that this phase is only required the first time, and then we can have a well trained network with very good performances. It might be worth it.
@@ -234,7 +224,7 @@ After a long and in-depth analysis of the training phase, we can enjoy the resul
 
 We can evaluate generalization capabilities thanks to a part of \acs{MNIST} dataset which provide images not used during training phase. Providing images the model has never seen grant us a good checking of its capabilities.
 
-As introduced in Chapter \ref{ch:basic_tf_model} focusing on \acs{MNIST} dataset, a large number of different classifiers have been trained on this dataset with different results. In Table \ref{tab:test_accuracies} we gather the test accuracies of our four TensorFlow models, here we observe clearly that we have a rapid reduction of the increase in test accuracy values. Indeed, on balance, from a model with 2 and 4 features to a model with 4 and 8 features we increase the final performance of $0.588 \%$, passing to 8 and 16 features we add just $0.257 \%$ more and finally $0.132 \%$ more. The average ratio between these values is about 2, it means that every time we double the number of features, we halve the improvement.
+As introduced in chapter \ref{ch:basic_tf_model} focusing on \acs{MNIST} dataset, a large number of different classifiers have been trained on this dataset with different results. In table \ref{tab:test_accuracies} we gather the test accuracies of our four TensorFlow models, here we observe clearly that we have a rapid reduction of the increase in test accuracy values. Indeed, on balance, from a model with 2 and 4 features to a model with 4 and 8 features we increase the final performance of $0.588 \%$, passing to 8 and 16 features we add just $0.257 \%$ more and finally $0.132 \%$ more. The average ratio between these values is about 2, it means that every time we double the number of features, we halve the improvement.
 
 \begin{table}
 	\centering
@@ -260,18 +250,18 @@ The handwritten digit which have been chosen is $2$ because it contains straight
 
 \subsection{Input image}
 
-In Figure \ref{fig:digit_2} is reported an image from the MNIST dataset of a handwritten digit 2. On this image the filters will be applied in the convolutional layers of the model.
+In figure \ref{fig:digit_2} is reported an image from the MNIST dataset of a handwritten digit 2. On this image the filters will be applied in the convolutional layers of the model.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.6\textwidth]{Images/digit_2}
+	\includegraphics[width=0.4\textwidth]{Images/digit_2}
 	\caption{Image of a handwritten digit 2 from the MNIST dataset}
 	\label{fig:digit_2}
 \end{figure}
 
 \subsection{Filters of the first convolutional layer}
 
-In Figure \ref{fig:outputLev1} is visualized the resulting feature maps after the application of the filters of the first convolutional layer to the example image. There are $8$ features because it is the number of filters in the layer.
+In figure \ref{fig:outputLev1} is visualized the resulting feature maps after the application of the filters of the first convolutional layer to the example image. There are $8$ features because it is the number of filters in the layer.
 
 Different feature maps can be distinguished:
 \begin{itemize}
@@ -285,21 +275,21 @@ Other filters identify different feature maps, but focusing on some of them it i
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.6\textwidth]{Images/conv_outputLev1_digit2}
+	\includegraphics[width=0.7\textwidth]{Images/conv_outputLev1_digit2}
 	\caption{Visualization of the feature maps resulting from the application of the filters of the first convolutional layer to the example image.}
 	\label{fig:outputLev1}
 \end{figure}
 
 \subsection{Filters of the second convolutional layer}
 
-In Figure \ref{fig:outputLev2} are visualized the features maps resulting after the application of the filters, $16$ in the second convolutional layer, on the output from the previous layer.
+In figure \ref{fig:outputLev2} are visualized the features maps resulting after the application of the filters, $16$ in the second convolutional layer, on one of the outputs from the previous layer.
 
-Diversely from Figure \ref{fig:outputLev1} the features maps are less distinguishable, this is the consequence of the max pooling operation.
+Differently from figure \ref{fig:outputLev1} the features maps are less distinguishable, this is the consequence of the max pooling operation.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.6\textwidth]{Images/conv_outputLev2_digit2}
-	\caption{Visualization of the feature maps resulting from the application of the filters of the second convolutional layer to the output of the previous layer.}
+	\includegraphics[width=0.7\textwidth]{Images/conv_outputLev2_digit2}
+	\caption{Visualization of the feature maps resulting from the application of the filters of the second convolutional layer to one of the feature maps produced by the previous layer.}
 	\label{fig:outputLev2}
 \end{figure}
 

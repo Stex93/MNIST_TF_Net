@@ -9,13 +9,13 @@ This library of algorithms originated from Google's need to instruct neural netw
 
 The aim of this chapter is to present the main data structures and operations provided by \acs{TF} as well as to explain their basic usage. In particular the notions of computation graph, constants, variables and feeds will be explained. Then, TensorBoard, a powerful tool for visualizing learning, will be presented. Finally, the last section includes a very simple example model built using TensorFlow.
 
-The material provided in this chapter is taken form [\cite{tensorflow}].
+The material provided in this chapter is taken from [\cite{tensorflow}].
 
 \section{Overview}
 
 TensorFlow is Google Brain's second generation machine learning system. While the reference implementation runs on single devices, \ac{TF} can run on multiple \acsp{CPU} and \acsp{GPU} (with optional \acs{CUDA} extensions for general-purpose computing on graphics processing units). It runs on 64-bit Linux or Mac OS X desktop or server systems, as well as on mobile computing platforms, including Android and Apple's iOS.
 
-It provides a Python API, as well as a less documented C++ API. In particular, the TensorFlow Python API supports Python 2.7 and Python 3.3+. It can be easily installed as a common Python package through \lstinline|pip| or in Anaconda with a \lstinline|conda| installation.
+It provides a Python \acs{API}, as well as a less documented C++ \acs{API}. In particular, the TensorFlow Python \acs{API} supports Python 2.7 and Python 3.3+. It can be easily installed as a common Python package through \lstinline|pip| or in Anaconda with a \lstinline|conda| installation.
 
 TensorFlow computations are expressed as stateful dataflow \textbf{graphs}. Nodes in the graph are called \emph{ops} (\ie operations). An op takes zero or more \lstinline|Tensor| objects, performs some computation, and produces zero or more \lstinline|Tensors|. In TensorFlow terminology, a Tensor is simply a typed multi-dimensional array. For instance, a batch of images can be represented as a 4D tensor \lstinline|Tensor| of floating point numbers with dimensions \lstinline|[batch, height, width, channels]|.
 
@@ -190,7 +190,7 @@ TensorBoard operates by reading TensorFlow events files, which contain summary d
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{Images/tensorboard}
-	\caption{Graph visualization using TensorBoard}\label{fig:tensorboard}
+	\caption{Graph visualization of a node using TensorBoard}\label{fig:tensorboard}
 \end{figure}
 
 Figure \ref{fig:tensorboard} shows an example of graph visualization using this tool. Every node can be expanded or minimized in order to analyze the graph at different granularities.
