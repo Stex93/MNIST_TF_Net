@@ -69,5 +69,9 @@
 \BOOKMARK [2][-]{subsection.5.3.5}{5.3.5 Training time}{section.5.3}% 69
 \BOOKMARK [2][-]{subsection.5.3.6}{5.3.6 Influences of parameters on the network}{section.5.3}% 70
 \BOOKMARK [1][-]{section.5.4}{5.4 Analysis of test accuracy}{chapter.5}% 71
-\BOOKMARK [0][]{chapter.6}{6 Conclusions and future work}{}% 72
-\BOOKMARK [0][]{dummy.6}{References}{}% 73
+\BOOKMARK [1][-]{section.5.5}{5.5 Visualization of filters and feature maps}{chapter.5}% 72
+\BOOKMARK [2][-]{subsection.5.5.1}{5.5.1 Input image}{section.5.5}% 73
+\BOOKMARK [2][-]{subsection.5.5.2}{5.5.2 Filters of the first convolutional layer}{section.5.5}% 74
+\BOOKMARK [2][-]{subsection.5.5.3}{5.5.3 Filters of the second convolutional layer}{section.5.5}% 75
+\BOOKMARK [0][]{chapter.6}{6 Conclusions and future work}{}% 76
+\BOOKMARK [0][]{dummy.6}{References}{}% 77

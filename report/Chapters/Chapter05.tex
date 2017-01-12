@@ -251,3 +251,53 @@ As introduced in Chapter \ref{ch:basic_tf_model} focusing on \acs{MNIST} dataset
 	\caption{Test accuracies of the four TensorFlow models with different number of features}
 	\label{tab:test_accuracies}
 \end{table}
+
+\section{Visualization of filters and feature maps}
+
+In this section are shown the images of an input image, and the relative filters the Convolutional Neural Network produced in both the two convolutional layers. It will help to understand and visualize what features the model recognizes and uses in order to classify the images.
+
+The handwritten digit which have been chosen is $2$ because it contains straight lines with different orientation and a curve. This permit to appreciate the results in the filter images which will follow in successive subsections. 
+
+\subsection{Input image}
+
+In Figure \ref{fig:digit_2} is reported an image from the MNIST dataset of a handwritten digit 2. On this image the filters will be applied in the convolutional layers of the model.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{Images/digit_2}
+	\caption{Image of a handwritten digit 2 from the MNIST dataset}
+	\label{fig:digit_2}
+\end{figure}
+
+\subsection{Filters of the first convolutional layer}
+
+In Figure \ref{fig:outputLev1} is visualized the resulting feature maps after the application of the filters of the first convolutional layer to the example image. There are $8$ features because it is the number of filters in the layer.
+
+Different feature maps can be distinguished:
+\begin{itemize}
+	\item In the second feature map the upper edges can be clearly identified;
+	\item In the eighth feature map on the contrary the lower edges can be identified;
+	\item In the first feature map the right edge is detected;
+	\item In the sisth feature map the left edge is detected.
+\end{itemize}
+
+Other filters identify different feature maps, but focusing on some of them it is remarkable that there are similar features, e.g. the third and the seventh feature maps.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{Images/conv_outputLev1_digit2}
+	\caption{Visualization of the feature maps resulting from the application of the filters of the first convolutional layer to the example image.}
+	\label{fig:outputLev1}
+\end{figure}
+
+\subsection{Filters of the second convolutional layer}
+
+In Figure \ref{fig:outputLev2} are visualized the features maps resulting after the application of the filters, $16$ in the second convolutional layer, on the output from the previous layer.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{Images/conv_outputLev2_digit2}
+	\caption{Visualization of the feature maps resulting from the application of the filters of the second convolutional layer to the output of the previous layer.}
+	\label{fig:outputLev2}
+\end{figure}
+

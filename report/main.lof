@@ -62,4 +62,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {23}{\ignorespaces Comparison of training accuracy curves of two TensorFlow models with higher number of features\relax }}{42}{figure.caption.35}
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {24}{\ignorespaces Image of a handwritten digit 2 from the MNIST dataset\relax }}{45}{figure.caption.38}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {25}{\ignorespaces Visualization of the feature maps resulting from the application of the filters of the first convolutional layer to the example image.\relax }}{46}{figure.caption.39}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {26}{\ignorespaces Visualization of the feature maps resulting from the application of the filters of the second convolutional layer to the output of the previous layer.\relax }}{46}{figure.caption.40}
+\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

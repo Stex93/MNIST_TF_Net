@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6200 64-bit) (preloaded format=pdflatex 2017.1.5)  12 JAN 2017 15:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6200 64-bit) (preloaded format=pdflatex 2017.1.5)  12 JAN 2017 15:56
 entering extended mode
 **./main.tex
 (main.tex
@@ -1992,7 +1992,7 @@ File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 \openout2 = `FrontBackmatter/Titlepage.aux'.
 
  (FrontBackmatter/Titlepage.tex
-<Images/logo.png, id=295, 572.1375pt x 582.175pt>
+<Images/logo.png, id=311, 572.1375pt x 582.175pt>
 File: Images/logo.png Graphic file (type png)
  <use Images/logo.png>
 Package pdftex.def Info: Images/logo.png used on input line 24.
@@ -2152,7 +2152,24 @@ Overfull \hbox (3.84229pt too wide) in paragraph at lines 57--57
 
 [6
 
-])
+]
+Overfull \hbox (0.8858pt too wide) in paragraph at lines 65--65
+ [][] []\T1/pplj/m/n/10.95 Image of a hand-writ-ten digit 2 from the MNIST 
+ []
+
+
+Overfull \hbox (3.51376pt too wide) in paragraph at lines 67--67
+ [][] []\T1/pplj/m/n/10.95 Visualization of the fea-ture maps re-sult-ing from 
+
+ []
+
+
+Overfull \hbox (3.51376pt too wide) in paragraph at lines 69--69
+ [][] []\T1/pplj/m/n/10.95 Visualization of the fea-ture maps re-sult-ing from 
+
+ []
+
+)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
@@ -2162,7 +2179,7 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 42
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
-) [7]
+ [7]) [8]
 \openout2 = `Chapters/Chapter01.aux'.
 
  (Chapters/Chapter01.tex
@@ -2200,7 +2217,7 @@ Package acronym Info: Label `acro:CNN' newly defined as it shall be overridden
 although it is yet undefined on input line 5.
 Package acronym Info: Label `acro:MLP' newly defined as it shall be overridden
 although it is yet undefined on input line 15.
-<Images/receptive_field.jpg, id=519, 473.77pt x 344.78813pt>
+<Images/receptive_field.jpg, id=549, 473.77pt x 344.78813pt>
 File: Images/receptive_field.jpg Graphic file (type jpg)
 
 <use Images/receptive_field.jpg>
@@ -2218,7 +2235,7 @@ n/9 s[]
  []
 
 [4 <./Images/receptive_field.jpg>]
-<Images/convolution.png, id=539, 601.24625pt x 680.5425pt>
+<Images/convolution.png, id=569, 601.24625pt x 680.5425pt>
 File: Images/convolution.png Graphic file (type png)
 
 <use Images/convolution.png>
@@ -2230,28 +2247,28 @@ Package pdftex.def Info: Images/convolution.png used on input line 48.
                    \relax 
 l.63 \begin{equation}
                       \notag
-<Images/convolution_example.jpg, id=549, 375.4025pt x 371.88937pt>
+<Images/convolution_example.jpg, id=580, 375.4025pt x 371.88937pt>
 File: Images/convolution_example.jpg Graphic file (type jpg)
 
 <use Images/convolution_example.jpg>
 Package pdftex.def Info: Images/convolution_example.jpg used on input line 71.
 (pdftex.def)             Requested size: 235.19897pt x 233.0034pt.
  [6 <./Images/convolution_example.jpg>]
-<Images/filter_application.jpg, id=560, 550.55687pt x 240.39813pt>
+<Images/filter_application.jpg, id=590, 550.55687pt x 240.39813pt>
 File: Images/filter_application.jpg Graphic file (type jpg)
 
 <use Images/filter_application.jpg>
 Package pdftex.def Info: Images/filter_application.jpg used on input line 91.
 (pdftex.def)             Requested size: 235.19897pt x 102.69789pt.
 
-<Images/feature_maps.jpg, id=565, 453.19313pt x 212.29312pt>
+<Images/feature_maps.jpg, id=595, 453.19313pt x 212.29312pt>
 File: Images/feature_maps.jpg Graphic file (type jpg)
 
 <use Images/feature_maps.jpg>
 Package pdftex.def Info: Images/feature_maps.jpg used on input line 103.
 (pdftex.def)             Requested size: 235.19897pt x 110.17601pt.
 
-<Images/zero_padding.jpg, id=566, 248.42813pt x 221.82875pt>
+<Images/zero_padding.jpg, id=596, 248.42813pt x 221.82875pt>
 File: Images/zero_padding.jpg Graphic file (type jpg)
 
 <use Images/zero_padding.jpg>
@@ -2265,13 +2282,13 @@ gnored
                                                   \fi \fi 
 l.132 \begin{equation}
                        \notag <./Images/feature_maps.jpg> <./Images/zero_paddin
-g.jpg>] <Images/relu_function.png, id=577, 578.16pt x 433.62pt>
+g.jpg>] <Images/relu_function.png, id=607, 578.16pt x 433.62pt>
 File: Images/relu_function.png Graphic file (type png)
 
 <use Images/relu_function.png>
 Package pdftex.def Info: Images/relu_function.png used on input line 138.
 (pdftex.def)             Requested size: 168.0pt x 125.998pt.
- <Images/relu.png, id=583, 513.92pt x 192.72pt>
+ <Images/relu.png, id=613, 513.92pt x 192.72pt>
 File: Images/relu.png Graphic file (type png)
 
 <use Images/relu.png>
@@ -2292,7 +2309,7 @@ lss . tuebingen . mpg . de / 2015 /
                                                   \fi \fi 
 l.154 \subsection{Pooling layer}
                                  <./Images/relu_function.png> <./Images/relu.pn
-g>] <Images/max_pooling.png, id=600, 572.1375pt x 331.2375pt>
+g>] <Images/max_pooling.png, id=630, 572.1375pt x 331.2375pt>
 File: Images/max_pooling.png Graphic file (type png)
 
 <use Images/max_pooling.png>
@@ -2305,7 +2322,7 @@ ed
                    \relax 
 l.205 \begin{equation}
                        \notag
-<Images/conv_architecture.png, id=623, 513.92pt x 180.675pt>
+<Images/conv_architecture.png, id=654, 513.92pt x 180.675pt>
 File: Images/conv_architecture.png Graphic file (type png)
 
 <use Images/conv_architecture.png>
@@ -2370,7 +2387,7 @@ Overfull \hbox (4.17366pt too wide) in paragraph at lines 186--187
 -Flow pro-grams,
  []
 
-<Images/tensorboard.png, id=777, 354.32375pt x 441.65pt>
+<Images/tensorboard.png, id=807, 354.32375pt x 441.65pt>
 File: Images/tensorboard.png Graphic file (type png)
 
 <use Images/tensorboard.png>
@@ -2382,7 +2399,7 @@ Package pdftex.def Info: Images/tensorboard.png used on input line 192.
 
 (Chapters/Chapter04.tex
 chapter 4.
-<Images/MNIST_images.png, id=836, 638.385pt x 159.59625pt>
+<Images/MNIST_images.png, id=866, 638.385pt x 159.59625pt>
 File: Images/MNIST_images.png Graphic file (type png)
 
 <use Images/MNIST_images.png>
@@ -2394,7 +2411,7 @@ Package pdftex.def Info: Images/MNIST_images.png used on input line 17.
 
 
  <./Images/MNIST_images.png>]
-<Images/image_to_matrix.png, id=849, 679.53876pt x 338.26375pt>
+<Images/image_to_matrix.png, id=880, 679.53876pt x 338.26375pt>
 File: Images/image_to_matrix.png Graphic file (type png)
 
 <use Images/image_to_matrix.png>
@@ -2405,34 +2422,34 @@ Overfull \hbox (7.72937pt too wide) in paragraph at lines 67--68
 []\T1/pplj/m/n/10.95 As de-scribed pre-vi-ously with the
  []
 
-[26] <Images/conv_layer.png, id=879, 554.07pt x 421.575pt>
+[26] <Images/conv_layer.png, id=909, 554.07pt x 421.575pt>
 File: Images/conv_layer.png Graphic file (type png)
 
 <use Images/conv_layer.png>
 Package pdftex.def Info: Images/conv_layer.png used on input line 118.
 (pdftex.def)             Requested size: 336.0pt x 255.64868pt.
  [27]
-<Images/conv_layers.jpg, id=900, 1253.68375pt x 466.74374pt>
+<Images/conv_layers.jpg, id=930, 1253.68375pt x 466.74374pt>
 File: Images/conv_layers.jpg Graphic file (type jpg)
 
 <use Images/conv_layers.jpg>
 Package pdftex.def Info: Images/conv_layers.jpg used on input line 142.
 (pdftex.def)             Requested size: 336.0pt x 125.08952pt.
  [28 <./Images/conv_layer.png> <./Images/conv_layers.jpg>] [29] <Images/other_l
-ayers.jpg, id=922, 667.49374pt x 397.485pt>
+ayers.jpg, id=953, 667.49374pt x 397.485pt>
 File: Images/other_layers.jpg Graphic file (type jpg)
 
 <use Images/other_layers.jpg>
 Package pdftex.def Info: Images/other_layers.jpg used on input line 200.
 (pdftex.def)             Requested size: 336.0pt x 200.08846pt.
  [30 <./Images/other_layers.jpg>] [31]
-<Images/GUI_5.jpg, id=957, 587.19376pt x 398.48875pt>
+<Images/GUI_5.jpg, id=987, 587.19376pt x 398.48875pt>
 File: Images/GUI_5.jpg Graphic file (type jpg)
  <use Images/GUI_5.jpg>
 Package pdftex.def Info: Images/GUI_5.jpg used on input line 262.
 (pdftex.def)             Requested size: 268.80103pt x 182.41322pt.
 
-<Images/GUI_8.jpg, id=958, 590.205pt x 400.49625pt>
+<Images/GUI_8.jpg, id=988, 590.205pt x 400.49625pt>
 File: Images/GUI_8.jpg Graphic file (type jpg)
  <use Images/GUI_8.jpg>
 Package pdftex.def Info: Images/GUI_8.jpg used on input line 269.
@@ -2453,7 +2470,7 @@ Overfull \hbox (0.41953pt too wide) in paragraph at lines 22--23
 
 
 
-] [35] [36] <Images/training_speed.png, id=985, 514.17094pt x 301.125pt>
+] [35] [36] <Images/training_speed.png, id=1015, 514.17094pt x 301.125pt>
 File: Images/training_speed.png Graphic file (type png)
 
 <use Images/training_speed.png>
@@ -2464,28 +2481,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--133
 
  []
 
-<Images/training_stability.png, id=992, 638.385pt x 306.39468pt>
+<Images/training_stability.png, id=1022, 638.385pt x 306.39468pt>
 File: Images/training_stability.png Graphic file (type png)
 
 <use Images/training_stability.png>
 Package pdftex.def Info: Images/training_stability.png used on input line 140.
 (pdftex.def)             Requested size: 336.0pt x 161.26169pt.
  [38 <./Images/training_speed.png>] [39 <./Images/training_stability.png>]
-<Images/cfr_all.png, id=1006, 971.88094pt x 305.64188pt>
+<Images/cfr_all.png, id=1036, 971.88094pt x 305.64188pt>
 File: Images/cfr_all.png Graphic file (type png)
 
 <use Images/cfr_all.png>
 Package pdftex.def Info: Images/cfr_all.png used on input line 162.
 (pdftex.def)             Requested size: 666.04997pt x 209.46135pt.
  [40 <./Images/cfr_all.png>]
-<Images/cfr_2_4_vs_4_8.png, id=1012, 974.13937pt x 302.63063pt>
+<Images/cfr_2_4_vs_4_8.png, id=1042, 974.13937pt x 302.63063pt>
 File: Images/cfr_2_4_vs_4_8.png Graphic file (type png)
 
 <use Images/cfr_2_4_vs_4_8.png>
 Package pdftex.def Info: Images/cfr_2_4_vs_4_8.png used on input line 171.
 (pdftex.def)             Requested size: 666.04997pt x 206.91745pt.
  [41 <./Images/cfr_2_4_vs_4_8.png>]
-<Images/cfr_8_16_vs_16_32.png, id=1018, 971.12813pt x 302.63063pt>
+<Images/cfr_8_16_vs_16_32.png, id=1049, 971.12813pt x 302.63063pt>
 File: Images/cfr_8_16_vs_16_32.png Graphic file (type png)
 
 <use Images/cfr_8_16_vs_16_32.png>
@@ -2505,10 +2522,34 @@ Overfull \hbox (1.49379pt too wide) in paragraph at lines 235--236
 ks to a part of [][]
  []
 
-) [44]
+[44] <Images/digit_2.png, id=1071, 361.35pt x 361.35pt>
+File: Images/digit_2.png Graphic file (type png)
+
+<use Images/digit_2.png>
+Package pdftex.def Info: Images/digit_2.png used on input line 267.
+(pdftex.def)             Requested size: 201.60205pt x 201.60475pt.
+
+<Images/conv_outputLev1_digit2.png, id=1073, 462.528pt x 300.6432pt>
+File: Images/conv_outputLev1_digit2.png Graphic file (type png)
+
+<use Images/conv_outputLev1_digit2.png>
+Package pdftex.def Info: Images/conv_outputLev1_digit2.png used on input line 2
+88.
+(pdftex.def)             Requested size: 201.60205pt x 131.0402pt.
+
+<Images/conv_outputLev2_digit2.png, id=1075, 440.1243pt x 361.35pt>
+File: Images/conv_outputLev2_digit2.png Graphic file (type png)
+
+<use Images/conv_outputLev2_digit2.png>
+Package pdftex.def Info: Images/conv_outputLev2_digit2.png used on input line 2
+99.
+(pdftex.def)             Requested size: 201.60205pt x 165.52277pt.
+ [45 <./Images/digit_2.png>]) [46 <./Images/conv_outputLev1_digit2.png> <./Imag
+es/conv_outputLev2_digit2.png>]
 \openout2 = `Chapters/Chapter06.aux'.
 
- (Chapters/Chapter06.tex
+
+(Chapters/Chapter06.tex
 chapter 6.
 
 Overfull \hbox (4.35051pt too wide) in paragraph at lines 14--15
@@ -2528,12 +2569,12 @@ Overfull \hbox (11.49774pt too wide) in paragraph at lines 21--22
  the achieved
  []
 
-[45
+[47
 
 
 
 
-]) [46]
+]) [48]
 \openout2 = `FrontBackmatter/Bibliography.aux'.
 
  (FrontBackmatter/Bibliography.tex
@@ -2554,7 +2595,7 @@ Overfull \hbox (21.9357pt too wide) in paragraph at lines 15--15
 0.95 arXiv preprint arXiv:1408.5093\T1/pplj/m/n/10.95 . 
  []
 
-[47
+[49
 
 
 
@@ -2585,7 +2626,7 @@ Overfull \hbox (19.36507pt too wide) in paragraph at lines 15--15
 tion in Structure-
  []
 
-[48]
+[50]
 Overfull \hbox (9.30748pt too wide) in paragraph at lines 17--17
 [][]\T1/pplj/m/it/10.95 A Be-gin-ner's Guide To Un-der-stand-ing Con-vo-lu-tion
 al Neu-ral Net-works \T1/pplj/m/n/10.95 (2016).
@@ -2609,7 +2650,7 @@ Overfull \hbox (7.40187pt too wide) in paragraph at lines 17--17
 ] tensorflow -[]
  []
 
-) [49
+) [51
 
 
 ]
@@ -2813,22 +2854,25 @@ Images/training_stability.png
 Images/cfr_all.png
 Images/cfr_2_4_vs_4_8.png
 Images/cfr_8_16_vs_16_32.png
+Images/digit_2.png
+Images/conv_outputLev1_digit2.png
+Images/conv_outputLev2_digit2.png
 Chapters/Chapter06.tex
 FrontBackmatter/Bibliography.tex
  ***********
 
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9905B0287CFFA7105D8E46F75879930A;5377.
+(rerunfilecheck)             Checksum: AB9D0661846817D391052AB8A2952773;5745.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32561 strings out of 493329
- 600093 string characters out of 3129971
- 1300040 words of memory out of 3000000
- 35179 multiletter control sequences out of 15000+200000
+ 32602 strings out of 493329
+ 600958 string characters out of 3129971
+ 1300488 words of memory out of 3000000
+ 35207 multiletter control sequences out of 15000+200000
  74417 words of font info for 114 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,23n,90p,10499b,3493s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2849,9 +2893,9 @@ rograms/MiKTeX 2.9/fonts/type1/bera/fvmr8a.pfb><C:/Users/Fabio/AppData/Local/Pr
 ograms/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Fabio/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Fabio/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (56 pages, 1987553 bytes).
+Output written on main.pdf (59 pages, 2186178 bytes).
 PDF statistics:
- 1230 PDF objects out of 1440 (max. 8388607)
- 357 named destinations out of 1000 (max. 500000)
- 14017 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 1280 PDF objects out of 1440 (max. 8388607)
+ 367 named destinations out of 1000 (max. 500000)
+ 14064 words of extra memory for PDF output out of 14400 (max. 10000000)
 

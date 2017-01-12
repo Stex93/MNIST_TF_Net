@@ -144,8 +144,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.4}Analysis of test accuracy}{44}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}\spacedlowsmallcaps {Conclusions and future work}}{45}{chapter.6}
+\contentsline {section}{\numberline {5.5}Visualization of filters and feature maps}{44}{section.5.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.5.1}Input image}{45}{subsection.5.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.5.2}Filters of the first convolutional layer}{45}{subsection.5.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.5.3}Filters of the second convolutional layer}{46}{subsection.5.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}\spacedlowsmallcaps {Conclusions and future work}}{47}{chapter.6}
 \defcounter {refsection}{0}\relax 
 \vspace {\beforebibskip }
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\spacedlowsmallcaps {References}}{47}{dummy.6}
+\contentsline {chapter}{\spacedlowsmallcaps {References}}{49}{dummy.6}
