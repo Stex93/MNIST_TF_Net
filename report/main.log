@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6200 64-bit) (preloaded format=pdflatex 2017.1.5)  12 JAN 2017 00:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6200 64-bit) (preloaded format=pdflatex 2017.1.5)  12 JAN 2017 09:48
 entering extended mode
 **./main.tex
 (main.tex
@@ -2519,23 +2519,29 @@ ks to a part of [][]
  (Chapters/Chapter06.tex
 chapter 6.
 
-Overfull \hbox (1.21568pt too wide) in paragraph at lines 17--18
+Overfull \hbox (4.35051pt too wide) in paragraph at lines 14--15
+[]\T1/pplj/m/n/10.95 described the Con-vo-lu-tional Neu-ral Net-work model buil
+t
+ []
+
+
+Overfull \hbox (1.21568pt too wide) in paragraph at lines 19--20
 []\T1/pplj/m/n/10.95 Finally we can draw the con-clu-sions of the work done in 
 this project:
  []
 
 
-Overfull \hbox (11.49774pt too wide) in paragraph at lines 19--20
+Overfull \hbox (11.49774pt too wide) in paragraph at lines 21--22
 []\T1/pplj/m/n/10.95 With the Con-vo-lu-tional Neu-ral Net-work model built and
  the achieved
  []
 
-) [46
+[46
 
 
 
 
-] [47]
+]) [47]
 \openout2 = `FrontBackmatter/Bibliography.aux'.
 
  (FrontBackmatter/Bibliography.tex
@@ -2829,7 +2835,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  32563 strings out of 493329
  600114 string characters out of 3129971
- 1299998 words of memory out of 3000000
+ 1300033 words of memory out of 3000000
  35180 multiletter control sequences out of 15000+200000
  74417 words of font info for 114 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2851,9 +2857,9 @@ rograms/MiKTeX 2.9/fonts/type1/bera/fvmr8a.pfb><C:/Users/Fabio/AppData/Local/Pr
 ograms/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Fabio/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Fabio/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (57 pages, 2006507 bytes).
+Output written on main.pdf (57 pages, 1993805 bytes).
 PDF statistics:
- 1234 PDF objects out of 1440 (max. 8388607)
+ 1235 PDF objects out of 1440 (max. 8388607)
  358 named destinations out of 1000 (max. 500000)
  14017 words of extra memory for PDF output out of 14400 (max. 10000000)
 

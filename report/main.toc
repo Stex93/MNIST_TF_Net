@@ -152,14 +152,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}\spacedlowsmallcaps {Conclusions and future work}}{46}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Chapter \ref {ch:conv_nets}}{46}{chapter.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Chapter \ref {ch:tensorflow_basics}}{46}{chapter.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Chapter \ref {ch:basic_tf_model}}{46}{chapter.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Chapter \ref {ch:data_analysis}}{46}{chapter.6}
-\defcounter {refsection}{0}\relax 
 \vspace {\beforebibskip }
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\spacedlowsmallcaps {References}}{48}{dummy.6}
